@@ -1,0 +1,1 @@
+C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\Weather App.csproj;x86
