@@ -121,7 +121,6 @@ C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\bin\x86\Debug\Sys
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\bin\x86\Debug\System.Xml.XmlSerializer.dll
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\bin\x86\Debug\Template10Library.dll
-C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\obj\x86\Debug\Weather App.csprojResolveAssemblyReference.cache
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\obj\x86\Debug\App.g.i.cs
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\obj\x86\Debug\App.g.cs
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\Weather App\obj\x86\Debug\Views\Busy.g.i.cs
