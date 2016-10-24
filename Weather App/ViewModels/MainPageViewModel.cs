@@ -9,16 +9,59 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml;
 using SharedLibrary.SharedLibraryVM;
 using SharedLibrary.Models;
+using System.Collections.ObjectModel;
 
 namespace Weather_App.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+
+        /// <summary>
+            /// The <see cref="DayList" /> property's name.
+            /// </summary>
+        public const string MyPropertyPropertyName = "MyProperty";
+
+        private ObservableCollection<Day> _dayList = null;
+
+        /// <summary>
+        /// Sets and gets the MyProperty property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public ObservableCollection<Day> DayList
+        {
+            get
+            {
+                return _dayList;
+            }
+
+            set
+            {
+                if (_dayList == value)
+                {
+                    return;
+                }
+
+                _dayList = value;
+                RaisePropertyChanged(MyPropertyPropertyName);
+            }
+        }
+
         public MainPageViewModel()
         {
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
                 Value = "Designtime value";
+                DayList = new ObservableCollection<Day>();
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(1) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(2) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(3) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(4) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(5) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(6) });
+            }
+            else {
+
             }
         }
 
@@ -48,14 +91,6 @@ namespace Weather_App.ViewModels
             args.Cancel = false;
             await Task.CompletedTask;
         }
-
-        //public string TimeWhenLoadingPage
-        //{
-        //    get
-        //    {
-        //        return DateTime.Now.ToString("HH:mm:ss");
-        //    }
-        //}
 
      
         public void GotoDetailsPage() =>

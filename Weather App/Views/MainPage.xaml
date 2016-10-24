@@ -10,12 +10,50 @@
       xmlns:viewModels="using:Weather_App.ViewModels"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d" Loaded="Page_Loaded">
-    
+
 
     <Page.DataContext>
         <vm:MainPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
 
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ListBox ItemsSource="{Binding DayList}">
+            <ListBox.Resources>
+                <DataTemplate x:Key="DayListTemplate">
+                    <Grid Margin="10">
+                        <TextBlock Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+                <!--ItemsPanel - Panel that is put around all the items -->
+                <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+                    <!--
+                    What is Virtualizing StackPanel
+                    Virtualizing StackPanel generates container items when needed & throws them from memory when 
+                    they are no longer in the view. When the panel has huge number of items, at that time there 
+                    is no need to keep the extra items in memory which are not in view. This solves the memory 
+                    problem. 
+                    Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
+                    -->
+                    <VirtualizingStackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.Resources>
+            <ListBox.ItemsPanel>
+                <StaticResource ResourceKey="ItemsPanelTemplate1"/>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <StaticResource ResourceKey="DayListTemplate"/>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+
+
+    <!--
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <VisualStateManager.VisualStateGroups>
@@ -25,7 +63,8 @@
                         <AdaptiveTrigger MinWindowWidth="{StaticResource NarrowMinWidth}" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <!--  TODO: change properties for narrow view  -->
+    -->
+    <!--  TODO: change properties for narrow view  
                         <Setter Target="stateTextBox.Text" Value="Narrow Visual State" />
                     </VisualState.Setters>
                 </VisualState>
@@ -34,7 +73,8 @@
                         <AdaptiveTrigger MinWindowWidth="{StaticResource NormalMinWidth}" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <!--  TODO: change properties for normal view  -->
+    -->
+    <!--  TODO: change properties for normal view  
                         <Setter Target="stateTextBox.Text" Value="Normal Visual State" />
                     </VisualState.Setters>
                 </VisualState>
@@ -43,7 +83,8 @@
                         <AdaptiveTrigger MinWindowWidth="{StaticResource WideMinWidth}" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <!--  TODO: change properties for wide view  -->
+    -->
+    <!--  TODO: change properties for wide view  
                         <Setter Target="stateTextBox.Text" Value="Wide Visual State" />
                     </VisualState.Setters>
                 </VisualState>
@@ -53,8 +94,8 @@
         <controls:PageHeader x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
                              RelativePanel.AlignRightWithPanel="True"
                              RelativePanel.AlignTopWithPanel="True" Text="Main Page">
-
-            <!--  secondary commands  -->
+        -->
+    <!--  secondary commands  
             <controls:PageHeader.SecondaryCommands>
                 <AppBarButton Click="{x:Bind ViewModel.GotoSettings}" Label="Settings" />
                 <AppBarButton Click="{x:Bind ViewModel.GotoPrivacy}" Label="Privacy" />
@@ -72,11 +113,13 @@
                      Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      TextWrapping="Wrap">
                 <Interactivity:Interaction.Behaviors>
-                    <!--  enable submit on enter key  -->
+    -->
+    <!--  enable submit on enter key  
                     <Behaviors:KeyBehavior Key="Enter">
                         <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
                     </Behaviors:KeyBehavior>
-                    <!--  focus on textbox when page loads  -->
+    -->
+    <!--  focus on textbox when page loads  
                     <Core:EventTriggerBehavior>
                         <Behaviors:FocusAction />
                     </Core:EventTriggerBehavior>
@@ -87,6 +130,7 @@
 
         </controls:Resizer>
         <StackPanel>
+          
             <TextBlock x:Name="WindText" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
             <TextBlock x:Name="TempText1" HorizontalAlignment="Right" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
             <TextBlock x:Name="LocationText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
@@ -94,6 +138,9 @@
           
         </StackPanel>
     </RelativePanel>
-     
+    -->
+
+
+
 </Page>
 

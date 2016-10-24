@@ -107,11 +107,14 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Clouds.cs" />
     <Compile Include="Models\Coord.cs" />
+    <Compile Include="Models\Day.cs" />
     <Compile Include="Models\Main.cs" />
     <Compile Include="Models\RootObject.cs" />
     <Compile Include="Models\Sys.cs" />
+    <Compile Include="Models\Sys2.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Models\Wind.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,7 +123,9 @@
     <Compile Include="SharedLibraryVM\LocationService.cs" />
     <EmbeddedResource Include="Properties\SharedLibrary.rd.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

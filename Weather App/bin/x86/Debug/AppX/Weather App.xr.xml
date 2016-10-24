@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="DayList" />
+    <RootPropertyPathName Name="Time" />
+    <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="DayOfWeek" />
     <RootPropertyPathName Name="AboutPartViewModel" />
     <RootPropertyPathName Name="Version" />
     <RootPropertyPathName Name="Publisher" />
@@ -48,7 +51,6 @@
       <RootProperty Name="VisualStateNormalMinWidth" />
       <RootProperty Name="Frame" />
       <RootProperty Name="Text" />
-      <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -58,16 +60,15 @@
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
-      <RootProperty Name="Target" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Template10.Controls.Resizer">
       <RootProperty Name="GrabberBrush" />
       <RootProperty Name="GrabberVisibility" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="ElementControl" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension">
+      <RootProperty Name="ResourceKey" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
     </RootType>
@@ -82,6 +83,8 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Margin" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -106,13 +109,10 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="LineHeight" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
@@ -174,40 +174,28 @@
     </RootType>
     <RootType FullName="Weather_App.Views.DetailPage" />
     <RootType FullName="Weather_App.ViewModels.MainPageViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="MinWidth" />
-      <RootProperty Name="MinHeight" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
-      <RootMethod Name="GetBehaviors" />
-      <RootMethod Name="SetBehaviors" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="ItemsPanel" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
     </RootType>
-    <RootType FullName="Template10.Behaviors.KeyBehavior">
-      <RootProperty Name="Key" />
-      <RootProperty Name="Actions" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
-      <RootProperty Name="Actions" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
+      <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Template10.Behaviors.FocusAction" />
-    <RootType FullName="Microsoft.Xaml.Interactions.Core.CallMethodAction">
-      <RootProperty Name="MethodName" />
-      <RootProperty Name="TargetObject" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="Label" />
-      <RootEvent Name="Click" />
+    <RootType FullName="Windows.UI.Xaml.Controls.VirtualizingStackPanel">
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Weather_App.Views.MainPage" />
     <RootType FullName="Weather_App.ViewModels.SettingsPageViewModel" />
@@ -246,6 +234,13 @@
       <RootProperty Name="IsOn" />
       <RootProperty Name="OffContent" />
       <RootProperty Name="OnContent" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Margin" />

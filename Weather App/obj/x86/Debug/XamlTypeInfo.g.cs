@@ -156,7 +156,7 @@ namespace Weather_App.Weather_App_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[76];
+            _typeNameTable = new string[70];
             _typeNameTable[0] = "Template10.Common.BootStrapper";
             _typeNameTable[1] = "Windows.UI.Xaml.Application";
             _typeNameTable[2] = "Template10.Common.StateItems";
@@ -215,26 +215,20 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             _typeNameTable[55] = "Weather_App.Views.DetailPage";
             _typeNameTable[56] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[57] = "Weather_App.ViewModels.MainPageViewModel";
-            _typeNameTable[58] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[59] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[60] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[61] = "Template10.Behaviors.KeyBehavior";
-            _typeNameTable[62] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[63] = "Windows.System.VirtualKey";
-            _typeNameTable[64] = "Template10.Behaviors.KeyBehavior.Kinds";
-            _typeNameTable[65] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[66] = "Microsoft.Xaml.Interactivity.Behavior";
-            _typeNameTable[67] = "Template10.Behaviors.FocusAction";
-            _typeNameTable[68] = "Microsoft.Xaml.Interactions.Core.CallMethodAction";
-            _typeNameTable[69] = "Weather_App.Views.MainPage";
-            _typeNameTable[70] = "Weather_App.ViewModels.SettingsPageViewModel";
-            _typeNameTable[71] = "Weather_App.ViewModels.SettingsPartViewModel";
-            _typeNameTable[72] = "Weather_App.ViewModels.AboutPartViewModel";
-            _typeNameTable[73] = "Weather_App.Views.SettingsPage";
-            _typeNameTable[74] = "Weather_App.Views.Shell";
-            _typeNameTable[75] = "Weather_App.Views.Splash";
+            _typeNameTable[58] = "System.Collections.ObjectModel.ObservableCollection`1<SharedLibrary.Models.Day>";
+            _typeNameTable[59] = "System.Collections.ObjectModel.Collection`1<SharedLibrary.Models.Day>";
+            _typeNameTable[60] = "SharedLibrary.Models.Day";
+            _typeNameTable[61] = "Int32";
+            _typeNameTable[62] = "System.DateTime";
+            _typeNameTable[63] = "Weather_App.Views.MainPage";
+            _typeNameTable[64] = "Weather_App.ViewModels.SettingsPageViewModel";
+            _typeNameTable[65] = "Weather_App.ViewModels.SettingsPartViewModel";
+            _typeNameTable[66] = "Weather_App.ViewModels.AboutPartViewModel";
+            _typeNameTable[67] = "Weather_App.Views.SettingsPage";
+            _typeNameTable[68] = "Weather_App.Views.Shell";
+            _typeNameTable[69] = "Weather_App.Views.Splash";
 
-            _typeTable = new global::System.Type[76];
+            _typeTable = new global::System.Type[70];
             _typeTable[0] = typeof(global::Template10.Common.BootStrapper);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Template10.Common.StateItems);
@@ -293,24 +287,18 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             _typeTable[55] = typeof(global::Weather_App.Views.DetailPage);
             _typeTable[56] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[57] = typeof(global::Weather_App.ViewModels.MainPageViewModel);
-            _typeTable[58] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[59] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[60] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[61] = typeof(global::Template10.Behaviors.KeyBehavior);
-            _typeTable[62] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[63] = typeof(global::Windows.System.VirtualKey);
-            _typeTable[64] = typeof(global::Template10.Behaviors.KeyBehavior.Kinds);
-            _typeTable[65] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[66] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
-            _typeTable[67] = typeof(global::Template10.Behaviors.FocusAction);
-            _typeTable[68] = typeof(global::Microsoft.Xaml.Interactions.Core.CallMethodAction);
-            _typeTable[69] = typeof(global::Weather_App.Views.MainPage);
-            _typeTable[70] = typeof(global::Weather_App.ViewModels.SettingsPageViewModel);
-            _typeTable[71] = typeof(global::Weather_App.ViewModels.SettingsPartViewModel);
-            _typeTable[72] = typeof(global::Weather_App.ViewModels.AboutPartViewModel);
-            _typeTable[73] = typeof(global::Weather_App.Views.SettingsPage);
-            _typeTable[74] = typeof(global::Weather_App.Views.Shell);
-            _typeTable[75] = typeof(global::Weather_App.Views.Splash);
+            _typeTable[58] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::SharedLibrary.Models.Day>);
+            _typeTable[59] = typeof(global::System.Collections.ObjectModel.Collection<global::SharedLibrary.Models.Day>);
+            _typeTable[60] = typeof(global::SharedLibrary.Models.Day);
+            _typeTable[61] = typeof(global::System.Int32);
+            _typeTable[62] = typeof(global::System.DateTime);
+            _typeTable[63] = typeof(global::Weather_App.Views.MainPage);
+            _typeTable[64] = typeof(global::Weather_App.ViewModels.SettingsPageViewModel);
+            _typeTable[65] = typeof(global::Weather_App.ViewModels.SettingsPartViewModel);
+            _typeTable[66] = typeof(global::Weather_App.ViewModels.AboutPartViewModel);
+            _typeTable[67] = typeof(global::Weather_App.Views.SettingsPage);
+            _typeTable[68] = typeof(global::Weather_App.Views.Shell);
+            _typeTable[69] = typeof(global::Weather_App.Views.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -358,18 +346,15 @@ namespace Weather_App.Weather_App_XamlTypeInfo
         private object Activate_50_DetailPageViewModel() { return new global::Weather_App.ViewModels.DetailPageViewModel(); }
         private object Activate_55_DetailPage() { return new global::Weather_App.Views.DetailPage(); }
         private object Activate_57_MainPageViewModel() { return new global::Weather_App.ViewModels.MainPageViewModel(); }
-        private object Activate_59_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_61_KeyBehavior() { return new global::Template10.Behaviors.KeyBehavior(); }
-        private object Activate_62_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_65_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_67_FocusAction() { return new global::Template10.Behaviors.FocusAction(); }
-        private object Activate_68_CallMethodAction() { return new global::Microsoft.Xaml.Interactions.Core.CallMethodAction(); }
-        private object Activate_69_MainPage() { return new global::Weather_App.Views.MainPage(); }
-        private object Activate_70_SettingsPageViewModel() { return new global::Weather_App.ViewModels.SettingsPageViewModel(); }
-        private object Activate_71_SettingsPartViewModel() { return new global::Weather_App.ViewModels.SettingsPartViewModel(); }
-        private object Activate_72_AboutPartViewModel() { return new global::Weather_App.ViewModels.AboutPartViewModel(); }
-        private object Activate_73_SettingsPage() { return new global::Weather_App.Views.SettingsPage(); }
-        private object Activate_74_Shell() { return new global::Weather_App.Views.Shell(); }
+        private object Activate_58_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::SharedLibrary.Models.Day>(); }
+        private object Activate_59_Collection() { return new global::System.Collections.ObjectModel.Collection<global::SharedLibrary.Models.Day>(); }
+        private object Activate_60_Day() { return new global::SharedLibrary.Models.Day(); }
+        private object Activate_63_MainPage() { return new global::Weather_App.Views.MainPage(); }
+        private object Activate_64_SettingsPageViewModel() { return new global::Weather_App.ViewModels.SettingsPageViewModel(); }
+        private object Activate_65_SettingsPartViewModel() { return new global::Weather_App.ViewModels.SettingsPartViewModel(); }
+        private object Activate_66_AboutPartViewModel() { return new global::Weather_App.ViewModels.AboutPartViewModel(); }
+        private object Activate_67_SettingsPage() { return new global::Weather_App.Views.SettingsPage(); }
+        private object Activate_68_Shell() { return new global::Weather_App.Views.Shell(); }
         private void MapAdd_2_StateItems(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -396,16 +381,16 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             var newItem = (global::Template10.Controls.HamburgerButtonInfo)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_59_BehaviorCollection(object instance, object item)
+        private void VectorAdd_58_ObservableCollection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
-            var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::SharedLibrary.Models.Day>)instance;
+            var newItem = (global::SharedLibrary.Models.Day)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_62_ActionCollection(object instance, object item)
+        private void VectorAdd_59_Collection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
-            var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::SharedLibrary.Models.Day>)instance;
+            var newItem = (global::SharedLibrary.Models.Day)item;
             collection.Add(newItem);
         }
 
@@ -828,307 +813,101 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             case 57:   //  Weather_App.ViewModels.MainPageViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.Activator = Activate_57_MainPageViewModel;
+                userType.AddMemberName("DayList");
                 userType.AddMemberName("Value");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 58:   //  Microsoft.Xaml.Interactivity.Interaction
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.AddMemberName("Behaviors");
-                xamlType = userType;
-                break;
-
-            case 59:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_59_BehaviorCollection;
+            case 58:   //  System.Collections.ObjectModel.ObservableCollection`1<SharedLibrary.Models.Day>
+                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<SharedLibrary.Models.Day>"));
+                userType.CollectionAdd = VectorAdd_58_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 60:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 59:   //  System.Collections.ObjectModel.Collection`1<SharedLibrary.Models.Day>
+                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_59_Collection;
+                userType.CollectionAdd = VectorAdd_59_Collection;
+                xamlType = userType;
+                break;
+
+            case 60:   //  SharedLibrary.Models.Day
+                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_60_Day;
+                userType.AddMemberName("dt");
+                userType.AddMemberName("Time");
+                userType.AddMemberName("temp");
+                userType.AddMemberName("temp_min");
+                userType.AddMemberName("temp_max");
+                userType.AddMemberName("pressure");
+                userType.AddMemberName("sea_level");
+                userType.AddMemberName("grnd_level");
+                userType.AddMemberName("humidity");
+                userType.AddMemberName("temp_kf");
+                userType.AddMemberName("night");
+                userType.AddMemberName("eve");
+                userType.AddMemberName("morn");
+                userType.AddMemberName("dt_txt");
+                xamlType = userType;
+                break;
+
+            case 61:   //  Int32
                 xamlType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 61:   //  Template10.Behaviors.KeyBehavior
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_61_KeyBehavior;
-                userType.SetContentPropertyName("Template10.Behaviors.KeyBehavior.Actions");
-                userType.AddMemberName("Actions");
-                userType.AddMemberName("Key");
-                userType.AddMemberName("AssociatedObject");
-                userType.AddMemberName("AndControl");
-                userType.AddMemberName("AndAlt");
-                userType.AddMemberName("AndShift");
-                userType.AddMemberName("Event");
-                xamlType = userType;
-                break;
-
-            case 62:   //  Microsoft.Xaml.Interactivity.ActionCollection
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_62_ActionCollection;
+            case 62:   //  System.DateTime
+                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 63:   //  Windows.System.VirtualKey
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("None", global::Windows.System.VirtualKey.None);
-                userType.AddEnumValue("LeftButton", global::Windows.System.VirtualKey.LeftButton);
-                userType.AddEnumValue("RightButton", global::Windows.System.VirtualKey.RightButton);
-                userType.AddEnumValue("Cancel", global::Windows.System.VirtualKey.Cancel);
-                userType.AddEnumValue("MiddleButton", global::Windows.System.VirtualKey.MiddleButton);
-                userType.AddEnumValue("XButton1", global::Windows.System.VirtualKey.XButton1);
-                userType.AddEnumValue("XButton2", global::Windows.System.VirtualKey.XButton2);
-                userType.AddEnumValue("Back", global::Windows.System.VirtualKey.Back);
-                userType.AddEnumValue("Tab", global::Windows.System.VirtualKey.Tab);
-                userType.AddEnumValue("Clear", global::Windows.System.VirtualKey.Clear);
-                userType.AddEnumValue("Enter", global::Windows.System.VirtualKey.Enter);
-                userType.AddEnumValue("Shift", global::Windows.System.VirtualKey.Shift);
-                userType.AddEnumValue("Control", global::Windows.System.VirtualKey.Control);
-                userType.AddEnumValue("Menu", global::Windows.System.VirtualKey.Menu);
-                userType.AddEnumValue("Pause", global::Windows.System.VirtualKey.Pause);
-                userType.AddEnumValue("CapitalLock", global::Windows.System.VirtualKey.CapitalLock);
-                userType.AddEnumValue("Kana", global::Windows.System.VirtualKey.Kana);
-                userType.AddEnumValue("Hangul", global::Windows.System.VirtualKey.Hangul);
-                userType.AddEnumValue("Junja", global::Windows.System.VirtualKey.Junja);
-                userType.AddEnumValue("Final", global::Windows.System.VirtualKey.Final);
-                userType.AddEnumValue("Hanja", global::Windows.System.VirtualKey.Hanja);
-                userType.AddEnumValue("Kanji", global::Windows.System.VirtualKey.Kanji);
-                userType.AddEnumValue("Escape", global::Windows.System.VirtualKey.Escape);
-                userType.AddEnumValue("Convert", global::Windows.System.VirtualKey.Convert);
-                userType.AddEnumValue("NonConvert", global::Windows.System.VirtualKey.NonConvert);
-                userType.AddEnumValue("Accept", global::Windows.System.VirtualKey.Accept);
-                userType.AddEnumValue("ModeChange", global::Windows.System.VirtualKey.ModeChange);
-                userType.AddEnumValue("Space", global::Windows.System.VirtualKey.Space);
-                userType.AddEnumValue("PageUp", global::Windows.System.VirtualKey.PageUp);
-                userType.AddEnumValue("PageDown", global::Windows.System.VirtualKey.PageDown);
-                userType.AddEnumValue("End", global::Windows.System.VirtualKey.End);
-                userType.AddEnumValue("Home", global::Windows.System.VirtualKey.Home);
-                userType.AddEnumValue("Left", global::Windows.System.VirtualKey.Left);
-                userType.AddEnumValue("Up", global::Windows.System.VirtualKey.Up);
-                userType.AddEnumValue("Right", global::Windows.System.VirtualKey.Right);
-                userType.AddEnumValue("Down", global::Windows.System.VirtualKey.Down);
-                userType.AddEnumValue("Select", global::Windows.System.VirtualKey.Select);
-                userType.AddEnumValue("Print", global::Windows.System.VirtualKey.Print);
-                userType.AddEnumValue("Execute", global::Windows.System.VirtualKey.Execute);
-                userType.AddEnumValue("Snapshot", global::Windows.System.VirtualKey.Snapshot);
-                userType.AddEnumValue("Insert", global::Windows.System.VirtualKey.Insert);
-                userType.AddEnumValue("Delete", global::Windows.System.VirtualKey.Delete);
-                userType.AddEnumValue("Help", global::Windows.System.VirtualKey.Help);
-                userType.AddEnumValue("Number0", global::Windows.System.VirtualKey.Number0);
-                userType.AddEnumValue("Number1", global::Windows.System.VirtualKey.Number1);
-                userType.AddEnumValue("Number2", global::Windows.System.VirtualKey.Number2);
-                userType.AddEnumValue("Number3", global::Windows.System.VirtualKey.Number3);
-                userType.AddEnumValue("Number4", global::Windows.System.VirtualKey.Number4);
-                userType.AddEnumValue("Number5", global::Windows.System.VirtualKey.Number5);
-                userType.AddEnumValue("Number6", global::Windows.System.VirtualKey.Number6);
-                userType.AddEnumValue("Number7", global::Windows.System.VirtualKey.Number7);
-                userType.AddEnumValue("Number8", global::Windows.System.VirtualKey.Number8);
-                userType.AddEnumValue("Number9", global::Windows.System.VirtualKey.Number9);
-                userType.AddEnumValue("A", global::Windows.System.VirtualKey.A);
-                userType.AddEnumValue("B", global::Windows.System.VirtualKey.B);
-                userType.AddEnumValue("C", global::Windows.System.VirtualKey.C);
-                userType.AddEnumValue("D", global::Windows.System.VirtualKey.D);
-                userType.AddEnumValue("E", global::Windows.System.VirtualKey.E);
-                userType.AddEnumValue("F", global::Windows.System.VirtualKey.F);
-                userType.AddEnumValue("G", global::Windows.System.VirtualKey.G);
-                userType.AddEnumValue("H", global::Windows.System.VirtualKey.H);
-                userType.AddEnumValue("I", global::Windows.System.VirtualKey.I);
-                userType.AddEnumValue("J", global::Windows.System.VirtualKey.J);
-                userType.AddEnumValue("K", global::Windows.System.VirtualKey.K);
-                userType.AddEnumValue("L", global::Windows.System.VirtualKey.L);
-                userType.AddEnumValue("M", global::Windows.System.VirtualKey.M);
-                userType.AddEnumValue("N", global::Windows.System.VirtualKey.N);
-                userType.AddEnumValue("O", global::Windows.System.VirtualKey.O);
-                userType.AddEnumValue("P", global::Windows.System.VirtualKey.P);
-                userType.AddEnumValue("Q", global::Windows.System.VirtualKey.Q);
-                userType.AddEnumValue("R", global::Windows.System.VirtualKey.R);
-                userType.AddEnumValue("S", global::Windows.System.VirtualKey.S);
-                userType.AddEnumValue("T", global::Windows.System.VirtualKey.T);
-                userType.AddEnumValue("U", global::Windows.System.VirtualKey.U);
-                userType.AddEnumValue("V", global::Windows.System.VirtualKey.V);
-                userType.AddEnumValue("W", global::Windows.System.VirtualKey.W);
-                userType.AddEnumValue("X", global::Windows.System.VirtualKey.X);
-                userType.AddEnumValue("Y", global::Windows.System.VirtualKey.Y);
-                userType.AddEnumValue("Z", global::Windows.System.VirtualKey.Z);
-                userType.AddEnumValue("LeftWindows", global::Windows.System.VirtualKey.LeftWindows);
-                userType.AddEnumValue("RightWindows", global::Windows.System.VirtualKey.RightWindows);
-                userType.AddEnumValue("Application", global::Windows.System.VirtualKey.Application);
-                userType.AddEnumValue("Sleep", global::Windows.System.VirtualKey.Sleep);
-                userType.AddEnumValue("NumberPad0", global::Windows.System.VirtualKey.NumberPad0);
-                userType.AddEnumValue("NumberPad1", global::Windows.System.VirtualKey.NumberPad1);
-                userType.AddEnumValue("NumberPad2", global::Windows.System.VirtualKey.NumberPad2);
-                userType.AddEnumValue("NumberPad3", global::Windows.System.VirtualKey.NumberPad3);
-                userType.AddEnumValue("NumberPad4", global::Windows.System.VirtualKey.NumberPad4);
-                userType.AddEnumValue("NumberPad5", global::Windows.System.VirtualKey.NumberPad5);
-                userType.AddEnumValue("NumberPad6", global::Windows.System.VirtualKey.NumberPad6);
-                userType.AddEnumValue("NumberPad7", global::Windows.System.VirtualKey.NumberPad7);
-                userType.AddEnumValue("NumberPad8", global::Windows.System.VirtualKey.NumberPad8);
-                userType.AddEnumValue("NumberPad9", global::Windows.System.VirtualKey.NumberPad9);
-                userType.AddEnumValue("Multiply", global::Windows.System.VirtualKey.Multiply);
-                userType.AddEnumValue("Add", global::Windows.System.VirtualKey.Add);
-                userType.AddEnumValue("Separator", global::Windows.System.VirtualKey.Separator);
-                userType.AddEnumValue("Subtract", global::Windows.System.VirtualKey.Subtract);
-                userType.AddEnumValue("Decimal", global::Windows.System.VirtualKey.Decimal);
-                userType.AddEnumValue("Divide", global::Windows.System.VirtualKey.Divide);
-                userType.AddEnumValue("F1", global::Windows.System.VirtualKey.F1);
-                userType.AddEnumValue("F2", global::Windows.System.VirtualKey.F2);
-                userType.AddEnumValue("F3", global::Windows.System.VirtualKey.F3);
-                userType.AddEnumValue("F4", global::Windows.System.VirtualKey.F4);
-                userType.AddEnumValue("F5", global::Windows.System.VirtualKey.F5);
-                userType.AddEnumValue("F6", global::Windows.System.VirtualKey.F6);
-                userType.AddEnumValue("F7", global::Windows.System.VirtualKey.F7);
-                userType.AddEnumValue("F8", global::Windows.System.VirtualKey.F8);
-                userType.AddEnumValue("F9", global::Windows.System.VirtualKey.F9);
-                userType.AddEnumValue("F10", global::Windows.System.VirtualKey.F10);
-                userType.AddEnumValue("F11", global::Windows.System.VirtualKey.F11);
-                userType.AddEnumValue("F12", global::Windows.System.VirtualKey.F12);
-                userType.AddEnumValue("F13", global::Windows.System.VirtualKey.F13);
-                userType.AddEnumValue("F14", global::Windows.System.VirtualKey.F14);
-                userType.AddEnumValue("F15", global::Windows.System.VirtualKey.F15);
-                userType.AddEnumValue("F16", global::Windows.System.VirtualKey.F16);
-                userType.AddEnumValue("F17", global::Windows.System.VirtualKey.F17);
-                userType.AddEnumValue("F18", global::Windows.System.VirtualKey.F18);
-                userType.AddEnumValue("F19", global::Windows.System.VirtualKey.F19);
-                userType.AddEnumValue("F20", global::Windows.System.VirtualKey.F20);
-                userType.AddEnumValue("F21", global::Windows.System.VirtualKey.F21);
-                userType.AddEnumValue("F22", global::Windows.System.VirtualKey.F22);
-                userType.AddEnumValue("F23", global::Windows.System.VirtualKey.F23);
-                userType.AddEnumValue("F24", global::Windows.System.VirtualKey.F24);
-                userType.AddEnumValue("NavigationView", global::Windows.System.VirtualKey.NavigationView);
-                userType.AddEnumValue("NavigationMenu", global::Windows.System.VirtualKey.NavigationMenu);
-                userType.AddEnumValue("NavigationUp", global::Windows.System.VirtualKey.NavigationUp);
-                userType.AddEnumValue("NavigationDown", global::Windows.System.VirtualKey.NavigationDown);
-                userType.AddEnumValue("NavigationLeft", global::Windows.System.VirtualKey.NavigationLeft);
-                userType.AddEnumValue("NavigationRight", global::Windows.System.VirtualKey.NavigationRight);
-                userType.AddEnumValue("NavigationAccept", global::Windows.System.VirtualKey.NavigationAccept);
-                userType.AddEnumValue("NavigationCancel", global::Windows.System.VirtualKey.NavigationCancel);
-                userType.AddEnumValue("NumberKeyLock", global::Windows.System.VirtualKey.NumberKeyLock);
-                userType.AddEnumValue("Scroll", global::Windows.System.VirtualKey.Scroll);
-                userType.AddEnumValue("LeftShift", global::Windows.System.VirtualKey.LeftShift);
-                userType.AddEnumValue("RightShift", global::Windows.System.VirtualKey.RightShift);
-                userType.AddEnumValue("LeftControl", global::Windows.System.VirtualKey.LeftControl);
-                userType.AddEnumValue("RightControl", global::Windows.System.VirtualKey.RightControl);
-                userType.AddEnumValue("LeftMenu", global::Windows.System.VirtualKey.LeftMenu);
-                userType.AddEnumValue("RightMenu", global::Windows.System.VirtualKey.RightMenu);
-                userType.AddEnumValue("GoBack", global::Windows.System.VirtualKey.GoBack);
-                userType.AddEnumValue("GoForward", global::Windows.System.VirtualKey.GoForward);
-                userType.AddEnumValue("Refresh", global::Windows.System.VirtualKey.Refresh);
-                userType.AddEnumValue("Stop", global::Windows.System.VirtualKey.Stop);
-                userType.AddEnumValue("Search", global::Windows.System.VirtualKey.Search);
-                userType.AddEnumValue("Favorites", global::Windows.System.VirtualKey.Favorites);
-                userType.AddEnumValue("GoHome", global::Windows.System.VirtualKey.GoHome);
-                userType.AddEnumValue("GamepadA", global::Windows.System.VirtualKey.GamepadA);
-                userType.AddEnumValue("GamepadB", global::Windows.System.VirtualKey.GamepadB);
-                userType.AddEnumValue("GamepadX", global::Windows.System.VirtualKey.GamepadX);
-                userType.AddEnumValue("GamepadY", global::Windows.System.VirtualKey.GamepadY);
-                userType.AddEnumValue("GamepadRightShoulder", global::Windows.System.VirtualKey.GamepadRightShoulder);
-                userType.AddEnumValue("GamepadLeftShoulder", global::Windows.System.VirtualKey.GamepadLeftShoulder);
-                userType.AddEnumValue("GamepadLeftTrigger", global::Windows.System.VirtualKey.GamepadLeftTrigger);
-                userType.AddEnumValue("GamepadRightTrigger", global::Windows.System.VirtualKey.GamepadRightTrigger);
-                userType.AddEnumValue("GamepadDPadUp", global::Windows.System.VirtualKey.GamepadDPadUp);
-                userType.AddEnumValue("GamepadDPadDown", global::Windows.System.VirtualKey.GamepadDPadDown);
-                userType.AddEnumValue("GamepadDPadLeft", global::Windows.System.VirtualKey.GamepadDPadLeft);
-                userType.AddEnumValue("GamepadDPadRight", global::Windows.System.VirtualKey.GamepadDPadRight);
-                userType.AddEnumValue("GamepadMenu", global::Windows.System.VirtualKey.GamepadMenu);
-                userType.AddEnumValue("GamepadView", global::Windows.System.VirtualKey.GamepadView);
-                userType.AddEnumValue("GamepadLeftThumbstickButton", global::Windows.System.VirtualKey.GamepadLeftThumbstickButton);
-                userType.AddEnumValue("GamepadRightThumbstickButton", global::Windows.System.VirtualKey.GamepadRightThumbstickButton);
-                userType.AddEnumValue("GamepadLeftThumbstickUp", global::Windows.System.VirtualKey.GamepadLeftThumbstickUp);
-                userType.AddEnumValue("GamepadLeftThumbstickDown", global::Windows.System.VirtualKey.GamepadLeftThumbstickDown);
-                userType.AddEnumValue("GamepadLeftThumbstickRight", global::Windows.System.VirtualKey.GamepadLeftThumbstickRight);
-                userType.AddEnumValue("GamepadLeftThumbstickLeft", global::Windows.System.VirtualKey.GamepadLeftThumbstickLeft);
-                userType.AddEnumValue("GamepadRightThumbstickUp", global::Windows.System.VirtualKey.GamepadRightThumbstickUp);
-                userType.AddEnumValue("GamepadRightThumbstickDown", global::Windows.System.VirtualKey.GamepadRightThumbstickDown);
-                userType.AddEnumValue("GamepadRightThumbstickRight", global::Windows.System.VirtualKey.GamepadRightThumbstickRight);
-                userType.AddEnumValue("GamepadRightThumbstickLeft", global::Windows.System.VirtualKey.GamepadRightThumbstickLeft);
-                xamlType = userType;
-                break;
-
-            case 64:   //  Template10.Behaviors.KeyBehavior.Kinds
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("KeyUp", global::Template10.Behaviors.KeyBehavior.Kinds.KeyUp);
-                userType.AddEnumValue("KeyDown", global::Template10.Behaviors.KeyBehavior.Kinds.KeyDown);
-                xamlType = userType;
-                break;
-
-            case 65:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior"));
-                userType.Activator = Activate_65_EventTriggerBehavior;
-                userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
-                userType.AddMemberName("Actions");
-                userType.AddMemberName("EventName");
-                userType.AddMemberName("SourceObject");
-                xamlType = userType;
-                break;
-
-            case 66:   //  Microsoft.Xaml.Interactivity.Behavior
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.AddMemberName("AssociatedObject");
-                xamlType = userType;
-                break;
-
-            case 67:   //  Template10.Behaviors.FocusAction
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_67_FocusAction;
-                userType.AddMemberName("TargetObject");
-                xamlType = userType;
-                break;
-
-            case 68:   //  Microsoft.Xaml.Interactions.Core.CallMethodAction
-                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_68_CallMethodAction;
-                userType.AddMemberName("MethodName");
-                userType.AddMemberName("TargetObject");
-                xamlType = userType;
-                break;
-
-            case 69:   //  Weather_App.Views.MainPage
+            case 63:   //  Weather_App.Views.MainPage
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_69_MainPage;
+                userType.Activator = Activate_63_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 70:   //  Weather_App.ViewModels.SettingsPageViewModel
+            case 64:   //  Weather_App.ViewModels.SettingsPageViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_70_SettingsPageViewModel;
+                userType.Activator = Activate_64_SettingsPageViewModel;
                 userType.AddMemberName("SettingsPartViewModel");
                 userType.AddMemberName("AboutPartViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Weather_App.ViewModels.SettingsPartViewModel
+            case 65:   //  Weather_App.ViewModels.SettingsPartViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Weather_App.ViewModels.AboutPartViewModel
+            case 66:   //  Weather_App.ViewModels.AboutPartViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Weather_App.Views.SettingsPage
+            case 67:   //  Weather_App.Views.SettingsPage
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_73_SettingsPage;
+                userType.Activator = Activate_67_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 74:   //  Weather_App.Views.Shell
+            case 68:   //  Weather_App.Views.Shell
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_74_Shell;
+                userType.Activator = Activate_68_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 75:   //  Weather_App.Views.Splash
+            case 69:   //  Weather_App.Views.Splash
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -2052,143 +1831,165 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.SessionState = (global::Template10.Common.IStateItems)Value;
         }
-        private object get_89_MainPageViewModel_Value(object instance)
+        private object get_89_MainPageViewModel_DayList(object instance)
+        {
+            var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
+            return that.DayList;
+        }
+        private void set_89_MainPageViewModel_DayList(object instance, object Value)
+        {
+            var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
+            that.DayList = (global::System.Collections.ObjectModel.ObservableCollection<global::SharedLibrary.Models.Day>)Value;
+        }
+        private object get_90_Day_dt(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.dt;
+        }
+        private void set_90_Day_dt(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.dt = (global::System.Int32)Value;
+        }
+        private object get_91_Day_Time(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.Time;
+        }
+        private void set_91_Day_Time(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.Time = (global::System.DateTime)Value;
+        }
+        private object get_92_Day_temp(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.temp;
+        }
+        private void set_92_Day_temp(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.temp = (global::System.Double)Value;
+        }
+        private object get_93_Day_temp_min(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.temp_min;
+        }
+        private void set_93_Day_temp_min(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.temp_min = (global::System.Double)Value;
+        }
+        private object get_94_Day_temp_max(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.temp_max;
+        }
+        private void set_94_Day_temp_max(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.temp_max = (global::System.Double)Value;
+        }
+        private object get_95_Day_pressure(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.pressure;
+        }
+        private void set_95_Day_pressure(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.pressure = (global::System.Double)Value;
+        }
+        private object get_96_Day_sea_level(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.sea_level;
+        }
+        private void set_96_Day_sea_level(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.sea_level = (global::System.Double)Value;
+        }
+        private object get_97_Day_grnd_level(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.grnd_level;
+        }
+        private void set_97_Day_grnd_level(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.grnd_level = (global::System.Double)Value;
+        }
+        private object get_98_Day_humidity(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.humidity;
+        }
+        private void set_98_Day_humidity(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.humidity = (global::System.Int32)Value;
+        }
+        private object get_99_Day_temp_kf(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.temp_kf;
+        }
+        private void set_99_Day_temp_kf(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.temp_kf = (global::System.Int32)Value;
+        }
+        private object get_100_Day_night(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.night;
+        }
+        private void set_100_Day_night(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.night = (global::System.Int32)Value;
+        }
+        private object get_101_Day_eve(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.eve;
+        }
+        private void set_101_Day_eve(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.eve = (global::System.Int32)Value;
+        }
+        private object get_102_Day_morn(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.morn;
+        }
+        private void set_102_Day_morn(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.morn = (global::System.Int32)Value;
+        }
+        private object get_103_Day_dt_txt(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.dt_txt;
+        }
+        private void set_103_Day_dt_txt(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.dt_txt = (global::System.String)Value;
+        }
+        private object get_104_MainPageViewModel_Value(object instance)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             return that.Value;
         }
-        private void set_89_MainPageViewModel_Value(object instance, object Value)
+        private void set_104_MainPageViewModel_Value(object instance, object Value)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             that.Value = (global::System.String)Value;
-        }
-        private object get_90_Interaction_Behaviors(object instance)
-        {
-            return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
-        }
-        private void set_90_Interaction_Behaviors(object instance, object Value)
-        {
-            global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
-        }
-        private object get_91_KeyBehavior_Actions(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.Actions;
-        }
-        private object get_92_KeyBehavior_Key(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.Key;
-        }
-        private void set_92_KeyBehavior_Key(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.Key = (global::Windows.System.VirtualKey)Value;
-        }
-        private object get_93_KeyBehavior_AssociatedObject(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AssociatedObject;
-        }
-        private object get_94_KeyBehavior_AndControl(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AndControl;
-        }
-        private void set_94_KeyBehavior_AndControl(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.AndControl = (global::System.Boolean)Value;
-        }
-        private object get_95_KeyBehavior_AndAlt(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AndAlt;
-        }
-        private void set_95_KeyBehavior_AndAlt(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.AndAlt = (global::System.Boolean)Value;
-        }
-        private object get_96_KeyBehavior_AndShift(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AndShift;
-        }
-        private void set_96_KeyBehavior_AndShift(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.AndShift = (global::System.Boolean)Value;
-        }
-        private object get_97_KeyBehavior_Event(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.Event;
-        }
-        private void set_97_KeyBehavior_Event(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.Event = (global::Template10.Behaviors.KeyBehavior.Kinds)Value;
-        }
-        private object get_98_EventTriggerBehavior_Actions(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.Actions;
-        }
-        private object get_99_EventTriggerBehavior_EventName(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.EventName;
-        }
-        private void set_99_EventTriggerBehavior_EventName(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            that.EventName = (global::System.String)Value;
-        }
-        private object get_100_EventTriggerBehavior_SourceObject(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.SourceObject;
-        }
-        private void set_100_EventTriggerBehavior_SourceObject(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            that.SourceObject = (global::System.Object)Value;
-        }
-        private object get_101_Behavior_AssociatedObject(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactivity.Behavior)instance;
-            return that.AssociatedObject;
-        }
-        private object get_102_FocusAction_TargetObject(object instance)
-        {
-            var that = (global::Template10.Behaviors.FocusAction)instance;
-            return that.TargetObject;
-        }
-        private void set_102_FocusAction_TargetObject(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.FocusAction)instance;
-            that.TargetObject = (global::Windows.UI.Xaml.Controls.Control)Value;
-        }
-        private object get_103_CallMethodAction_MethodName(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            return that.MethodName;
-        }
-        private void set_103_CallMethodAction_MethodName(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            that.MethodName = (global::System.String)Value;
-        }
-        private object get_104_CallMethodAction_TargetObject(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            return that.TargetObject;
-        }
-        private void set_104_CallMethodAction_TargetObject(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            that.TargetObject = (global::System.Object)Value;
         }
         private object get_105_SettingsPageViewModel_SettingsPartViewModel(object instance)
         {
@@ -2807,110 +2608,101 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 xamlMember.Getter = get_88_ViewModelBase_SessionState;
                 xamlMember.Setter = set_88_ViewModelBase_SessionState;
                 break;
+            case "Weather_App.ViewModels.MainPageViewModel.DayList":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.MainPageViewModel");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "DayList", "System.Collections.ObjectModel.ObservableCollection`1<SharedLibrary.Models.Day>");
+                xamlMember.Getter = get_89_MainPageViewModel_DayList;
+                xamlMember.Setter = set_89_MainPageViewModel_DayList;
+                break;
+            case "SharedLibrary.Models.Day.dt":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "dt", "Int32");
+                xamlMember.Getter = get_90_Day_dt;
+                xamlMember.Setter = set_90_Day_dt;
+                break;
+            case "SharedLibrary.Models.Day.Time":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Time", "System.DateTime");
+                xamlMember.Getter = get_91_Day_Time;
+                xamlMember.Setter = set_91_Day_Time;
+                break;
+            case "SharedLibrary.Models.Day.temp":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "temp", "Double");
+                xamlMember.Getter = get_92_Day_temp;
+                xamlMember.Setter = set_92_Day_temp;
+                break;
+            case "SharedLibrary.Models.Day.temp_min":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "temp_min", "Double");
+                xamlMember.Getter = get_93_Day_temp_min;
+                xamlMember.Setter = set_93_Day_temp_min;
+                break;
+            case "SharedLibrary.Models.Day.temp_max":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "temp_max", "Double");
+                xamlMember.Getter = get_94_Day_temp_max;
+                xamlMember.Setter = set_94_Day_temp_max;
+                break;
+            case "SharedLibrary.Models.Day.pressure":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "pressure", "Double");
+                xamlMember.Getter = get_95_Day_pressure;
+                xamlMember.Setter = set_95_Day_pressure;
+                break;
+            case "SharedLibrary.Models.Day.sea_level":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "sea_level", "Double");
+                xamlMember.Getter = get_96_Day_sea_level;
+                xamlMember.Setter = set_96_Day_sea_level;
+                break;
+            case "SharedLibrary.Models.Day.grnd_level":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "grnd_level", "Double");
+                xamlMember.Getter = get_97_Day_grnd_level;
+                xamlMember.Setter = set_97_Day_grnd_level;
+                break;
+            case "SharedLibrary.Models.Day.humidity":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "humidity", "Int32");
+                xamlMember.Getter = get_98_Day_humidity;
+                xamlMember.Setter = set_98_Day_humidity;
+                break;
+            case "SharedLibrary.Models.Day.temp_kf":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "temp_kf", "Int32");
+                xamlMember.Getter = get_99_Day_temp_kf;
+                xamlMember.Setter = set_99_Day_temp_kf;
+                break;
+            case "SharedLibrary.Models.Day.night":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "night", "Int32");
+                xamlMember.Getter = get_100_Day_night;
+                xamlMember.Setter = set_100_Day_night;
+                break;
+            case "SharedLibrary.Models.Day.eve":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "eve", "Int32");
+                xamlMember.Getter = get_101_Day_eve;
+                xamlMember.Setter = set_101_Day_eve;
+                break;
+            case "SharedLibrary.Models.Day.morn":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "morn", "Int32");
+                xamlMember.Getter = get_102_Day_morn;
+                xamlMember.Setter = set_102_Day_morn;
+                break;
+            case "SharedLibrary.Models.Day.dt_txt":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "dt_txt", "String");
+                xamlMember.Getter = get_103_Day_dt_txt;
+                xamlMember.Setter = set_103_Day_dt_txt;
+                break;
             case "Weather_App.ViewModels.MainPageViewModel.Value":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.MainPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_89_MainPageViewModel_Value;
-                xamlMember.Setter = set_89_MainPageViewModel_Value;
-                break;
-            case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
-                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_90_Interaction_Behaviors;
-                xamlMember.Setter = set_90_Interaction_Behaviors;
-                break;
-            case "Template10.Behaviors.KeyBehavior.Actions":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_91_KeyBehavior_Actions;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Template10.Behaviors.KeyBehavior.Key":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Key", "Windows.System.VirtualKey");
-                xamlMember.Getter = get_92_KeyBehavior_Key;
-                xamlMember.Setter = set_92_KeyBehavior_Key;
-                break;
-            case "Template10.Behaviors.KeyBehavior.AssociatedObject":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_93_KeyBehavior_AssociatedObject;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Template10.Behaviors.KeyBehavior.AndControl":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AndControl", "Boolean");
-                xamlMember.Getter = get_94_KeyBehavior_AndControl;
-                xamlMember.Setter = set_94_KeyBehavior_AndControl;
-                break;
-            case "Template10.Behaviors.KeyBehavior.AndAlt":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AndAlt", "Boolean");
-                xamlMember.Getter = get_95_KeyBehavior_AndAlt;
-                xamlMember.Setter = set_95_KeyBehavior_AndAlt;
-                break;
-            case "Template10.Behaviors.KeyBehavior.AndShift":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AndShift", "Boolean");
-                xamlMember.Getter = get_96_KeyBehavior_AndShift;
-                xamlMember.Setter = set_96_KeyBehavior_AndShift;
-                break;
-            case "Template10.Behaviors.KeyBehavior.Event":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Event", "Template10.Behaviors.KeyBehavior.Kinds");
-                xamlMember.Getter = get_97_KeyBehavior_Event;
-                xamlMember.Setter = set_97_KeyBehavior_Event;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_98_EventTriggerBehavior_Actions;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "EventName", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_99_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_99_EventTriggerBehavior_EventName;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_100_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_100_EventTriggerBehavior_SourceObject;
-                break;
-            case "Microsoft.Xaml.Interactivity.Behavior.AssociatedObject":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_101_Behavior_AssociatedObject;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Template10.Behaviors.FocusAction.TargetObject":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.FocusAction");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "TargetObject", "Windows.UI.Xaml.Controls.Control");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_102_FocusAction_TargetObject;
-                xamlMember.Setter = set_102_FocusAction_TargetObject;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.CallMethodAction.MethodName":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.CallMethodAction");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "MethodName", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_103_CallMethodAction_MethodName;
-                xamlMember.Setter = set_103_CallMethodAction_MethodName;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.CallMethodAction.TargetObject":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.CallMethodAction");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "TargetObject", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_104_CallMethodAction_TargetObject;
-                xamlMember.Setter = set_104_CallMethodAction_TargetObject;
+                xamlMember.Getter = get_104_MainPageViewModel_Value;
+                xamlMember.Setter = set_104_MainPageViewModel_Value;
                 break;
             case "Weather_App.ViewModels.SettingsPageViewModel.SettingsPartViewModel":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.SettingsPageViewModel");

@@ -18,10 +18,7 @@ namespace Weather_App.Views
         {
             InitializeComponent();
             NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-            //DataContextChanged += (s, e) =>
-            //{
-            //    VM = DataContext as MainPageViewModel;
-            //};
+          
         }
 
         //public MainPageViewModel VM { get; set; }
@@ -73,21 +70,20 @@ namespace Weather_App.Views
 
 
 
-                double conv = .5556;
-                int fah = (((int)weather.main.temp) - 32);
-                int celcius = ((int)(fah * conv));
+                //double conv = .5556;
+                //int fah = (((int)weather.main.temp) - 32);
+                //int celcius = ((int)(fah * conv));
 
-                //TempText.Text = ((int)weather.main.temp).ToString() + (char)176;
-                TempText1.Text = celcius.ToString() + (char)176 + "C";
-                DescriptionText.Text = weather.weather[0].description;
-                //LocationText.Text = weather.name;
-                WindText.Text = ((int)weather.wind.speed).ToString();
+                ////TempText.Text = ((int)weather.main.temp).ToString() + (char)176;
+                //TempText1.Text = celcius.ToString() + (char)176 + "C";
+                //DescriptionText.Text = weather.weather[0].description;
+                ////LocationText.Text = weather.name;
+                //WindText.Text = ((int)weather.wind.speed).ToString();
 
             }
             catch (Exception)
             {
-                //LocationText.Text = (ex.Message);
-                LocationText.Text = "Unable to access Weather";
+               // LocationText.Text = "Unable to access Weather";
             }
 
         }
