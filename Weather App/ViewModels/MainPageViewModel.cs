@@ -4,7 +4,11 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Template10.Services.NavigationService;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml;
+using SharedLibrary.SharedLibraryVM;
+using SharedLibrary.Models;
 
 namespace Weather_App.ViewModels
 {
@@ -45,6 +49,15 @@ namespace Weather_App.ViewModels
             await Task.CompletedTask;
         }
 
+        //public string TimeWhenLoadingPage
+        //{
+        //    get
+        //    {
+        //        return DateTime.Now.ToString("HH:mm:ss");
+        //    }
+        //}
+
+     
         public void GotoDetailsPage() =>
             NavigationService.Navigate(typeof(Views.DetailPage), Value);
 

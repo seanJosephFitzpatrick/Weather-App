@@ -428,8 +428,11 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 userType.AddMemberName("ShowShellBackButton");
                 userType.AddMemberName("ForceShowShellBackButton");
                 userType.AddMemberName("OriginalActivatedArgs");
-                userType.AddMemberName("EnableAutoRestoreAfterTerminated");
                 userType.AddMemberName("CurrentState");
+                userType.AddMemberName("EnableAutoRestoreAfterTerminated");
+                userType.AddMemberName("AutoRestoreAfterTerminated");
+                userType.AddMemberName("AutoExtendExecutionSession");
+                userType.AddMemberName("AutoSuspendAllFrames");
                 userType.AddMemberName("ModalDialog");
                 userType.AddMemberName("ModalContent");
                 xamlType = userType;
@@ -506,9 +509,16 @@ namespace Weather_App.Weather_App_XamlTypeInfo
 
             case 14:   //  Template10.Common.BootStrapper.States
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Starting", global::Template10.Common.BootStrapper.States.Starting);
-                userType.AddEnumValue("Splashing", global::Template10.Common.BootStrapper.States.Splashing);
-                userType.AddEnumValue("ShowingContent", global::Template10.Common.BootStrapper.States.ShowingContent);
+                userType.AddEnumValue("None", global::Template10.Common.BootStrapper.States.None);
+                userType.AddEnumValue("Running", global::Template10.Common.BootStrapper.States.Running);
+                userType.AddEnumValue("BeforeInit", global::Template10.Common.BootStrapper.States.BeforeInit);
+                userType.AddEnumValue("AfterInit", global::Template10.Common.BootStrapper.States.AfterInit);
+                userType.AddEnumValue("BeforeLaunch", global::Template10.Common.BootStrapper.States.BeforeLaunch);
+                userType.AddEnumValue("AfterLaunch", global::Template10.Common.BootStrapper.States.AfterLaunch);
+                userType.AddEnumValue("BeforeActivate", global::Template10.Common.BootStrapper.States.BeforeActivate);
+                userType.AddEnumValue("AfterActivate", global::Template10.Common.BootStrapper.States.AfterActivate);
+                userType.AddEnumValue("BeforeStart", global::Template10.Common.BootStrapper.States.BeforeStart);
+                userType.AddEnumValue("AfterStart", global::Template10.Common.BootStrapper.States.AfterStart);
                 xamlType = userType;
                 break;
 
@@ -618,6 +628,7 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 userType.AddMemberName("Command");
                 userType.AddMemberName("ToolTip");
                 userType.AddMemberName("CommandParameter");
+                userType.AddMemberName("GroupName");
                 userType.AddMemberName("PageType");
                 userType.AddMemberName("PageParameter");
                 userType.AddMemberName("ClearHistory");
@@ -1236,915 +1247,955 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             var that = (global::Template10.Common.BootStrapper)instance;
             return that.OriginalActivatedArgs;
         }
-        private object get_7_BootStrapper_EnableAutoRestoreAfterTerminated(object instance)
-        {
-            var that = (global::Template10.Common.BootStrapper)instance;
-            return that.EnableAutoRestoreAfterTerminated;
-        }
-        private void set_7_BootStrapper_EnableAutoRestoreAfterTerminated(object instance, object Value)
-        {
-            var that = (global::Template10.Common.BootStrapper)instance;
-            that.EnableAutoRestoreAfterTerminated = (global::System.Boolean)Value;
-        }
-        private object get_8_BootStrapper_CurrentState(object instance)
+        private object get_7_BootStrapper_CurrentState(object instance)
         {
             var that = (global::Template10.Common.BootStrapper)instance;
             return that.CurrentState;
         }
-        private void set_8_BootStrapper_CurrentState(object instance, object Value)
+        private void set_7_BootStrapper_CurrentState(object instance, object Value)
         {
             var that = (global::Template10.Common.BootStrapper)instance;
             that.CurrentState = (global::Template10.Common.BootStrapper.States)Value;
         }
-        private object get_9_BootStrapper_ModalDialog(object instance)
+        private object get_8_BootStrapper_EnableAutoRestoreAfterTerminated(object instance)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            return that.EnableAutoRestoreAfterTerminated;
+        }
+        private void set_8_BootStrapper_EnableAutoRestoreAfterTerminated(object instance, object Value)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            that.EnableAutoRestoreAfterTerminated = (global::System.Boolean)Value;
+        }
+        private object get_9_BootStrapper_AutoRestoreAfterTerminated(object instance)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            return that.AutoRestoreAfterTerminated;
+        }
+        private void set_9_BootStrapper_AutoRestoreAfterTerminated(object instance, object Value)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            that.AutoRestoreAfterTerminated = (global::System.Boolean)Value;
+        }
+        private object get_10_BootStrapper_AutoExtendExecutionSession(object instance)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            return that.AutoExtendExecutionSession;
+        }
+        private void set_10_BootStrapper_AutoExtendExecutionSession(object instance, object Value)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            that.AutoExtendExecutionSession = (global::System.Boolean)Value;
+        }
+        private object get_11_BootStrapper_AutoSuspendAllFrames(object instance)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            return that.AutoSuspendAllFrames;
+        }
+        private void set_11_BootStrapper_AutoSuspendAllFrames(object instance, object Value)
+        {
+            var that = (global::Template10.Common.BootStrapper)instance;
+            that.AutoSuspendAllFrames = (global::System.Boolean)Value;
+        }
+        private object get_12_BootStrapper_ModalDialog(object instance)
         {
             var that = (global::Template10.Common.BootStrapper)instance;
             return that.ModalDialog;
         }
-        private object get_10_BootStrapper_ModalContent(object instance)
+        private object get_13_BootStrapper_ModalContent(object instance)
         {
             var that = (global::Template10.Common.BootStrapper)instance;
             return that.ModalContent;
         }
-        private void set_10_BootStrapper_ModalContent(object instance, object Value)
+        private void set_13_BootStrapper_ModalContent(object instance, object Value)
         {
             var that = (global::Template10.Common.BootStrapper)instance;
             that.ModalContent = (global::Windows.UI.Xaml.UIElement)Value;
         }
-        private object get_11_Color_A(object instance)
+        private object get_14_Color_A(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.A;
         }
-        private void set_11_Color_A(object instance, object Value)
+        private void set_14_Color_A(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.A = (global::System.Byte)Value;
         }
-        private object get_12_Color_B(object instance)
+        private object get_15_Color_B(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.B;
         }
-        private void set_12_Color_B(object instance, object Value)
+        private void set_15_Color_B(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.B = (global::System.Byte)Value;
         }
-        private object get_13_Color_G(object instance)
+        private object get_16_Color_G(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.G;
         }
-        private void set_13_Color_G(object instance, object Value)
+        private void set_16_Color_G(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.G = (global::System.Byte)Value;
         }
-        private object get_14_Color_R(object instance)
+        private object get_17_Color_R(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.R;
         }
-        private void set_14_Color_R(object instance, object Value)
+        private void set_17_Color_R(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.R = (global::System.Byte)Value;
         }
-        private object get_15_HamburgerMenu_PrimaryButtons(object instance)
+        private object get_18_HamburgerMenu_PrimaryButtons(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.PrimaryButtons;
         }
-        private void set_15_HamburgerMenu_PrimaryButtons(object instance, object Value)
+        private void set_18_HamburgerMenu_PrimaryButtons(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.PrimaryButtons = (global::System.Collections.ObjectModel.ObservableCollection<global::Template10.Controls.HamburgerButtonInfo>)Value;
         }
-        private object get_16_HamburgerButtonInfo_Content(object instance)
+        private object get_19_HamburgerButtonInfo_Content(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.Content;
         }
-        private void set_16_HamburgerButtonInfo_Content(object instance, object Value)
+        private void set_19_HamburgerButtonInfo_Content(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.Content = (global::Windows.UI.Xaml.UIElement)Value;
         }
-        private object get_17_HamburgerButtonInfo_ButtonType(object instance)
+        private object get_20_HamburgerButtonInfo_ButtonType(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.ButtonType;
         }
-        private void set_17_HamburgerButtonInfo_ButtonType(object instance, object Value)
+        private void set_20_HamburgerButtonInfo_ButtonType(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.ButtonType = (global::Template10.Controls.HamburgerButtonInfo.ButtonTypes)Value;
         }
-        private object get_18_HamburgerButtonInfo_NavigationTransitionInfo(object instance)
+        private object get_21_HamburgerButtonInfo_NavigationTransitionInfo(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.NavigationTransitionInfo;
         }
-        private void set_18_HamburgerButtonInfo_NavigationTransitionInfo(object instance, object Value)
+        private void set_21_HamburgerButtonInfo_NavigationTransitionInfo(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.NavigationTransitionInfo = (global::Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo)Value;
         }
-        private object get_19_HamburgerButtonInfo_Command(object instance)
+        private object get_22_HamburgerButtonInfo_Command(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.Command;
         }
-        private void set_19_HamburgerButtonInfo_Command(object instance, object Value)
+        private void set_22_HamburgerButtonInfo_Command(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_20_HamburgerButtonInfo_ToolTip(object instance)
+        private object get_23_HamburgerButtonInfo_ToolTip(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.ToolTip;
         }
-        private void set_20_HamburgerButtonInfo_ToolTip(object instance, object Value)
+        private void set_23_HamburgerButtonInfo_ToolTip(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.ToolTip = (global::System.Object)Value;
         }
-        private object get_21_HamburgerButtonInfo_CommandParameter(object instance)
+        private object get_24_HamburgerButtonInfo_CommandParameter(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.CommandParameter;
         }
-        private void set_21_HamburgerButtonInfo_CommandParameter(object instance, object Value)
+        private void set_24_HamburgerButtonInfo_CommandParameter(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.CommandParameter = (global::System.Object)Value;
         }
-        private object get_22_HamburgerButtonInfo_PageType(object instance)
+        private object get_25_HamburgerButtonInfo_GroupName(object instance)
+        {
+            var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
+            return that.GroupName;
+        }
+        private void set_25_HamburgerButtonInfo_GroupName(object instance, object Value)
+        {
+            var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
+            that.GroupName = (global::System.Object)Value;
+        }
+        private object get_26_HamburgerButtonInfo_PageType(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.PageType;
         }
-        private void set_22_HamburgerButtonInfo_PageType(object instance, object Value)
+        private void set_26_HamburgerButtonInfo_PageType(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.PageType = (global::System.Type)Value;
         }
-        private object get_23_HamburgerButtonInfo_PageParameter(object instance)
+        private object get_27_HamburgerButtonInfo_PageParameter(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.PageParameter;
         }
-        private void set_23_HamburgerButtonInfo_PageParameter(object instance, object Value)
+        private void set_27_HamburgerButtonInfo_PageParameter(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.PageParameter = (global::System.Object)Value;
         }
-        private object get_24_HamburgerButtonInfo_ClearHistory(object instance)
+        private object get_28_HamburgerButtonInfo_ClearHistory(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.ClearHistory;
         }
-        private void set_24_HamburgerButtonInfo_ClearHistory(object instance, object Value)
+        private void set_28_HamburgerButtonInfo_ClearHistory(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.ClearHistory = (global::System.Boolean)Value;
         }
-        private object get_25_HamburgerButtonInfo_ClearCache(object instance)
+        private object get_29_HamburgerButtonInfo_ClearCache(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.ClearCache;
         }
-        private void set_25_HamburgerButtonInfo_ClearCache(object instance, object Value)
+        private void set_29_HamburgerButtonInfo_ClearCache(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.ClearCache = (global::System.Boolean)Value;
         }
-        private object get_26_HamburgerButtonInfo_Visibility(object instance)
+        private object get_30_HamburgerButtonInfo_Visibility(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.Visibility;
         }
-        private void set_26_HamburgerButtonInfo_Visibility(object instance, object Value)
+        private void set_30_HamburgerButtonInfo_Visibility(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.Visibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_27_HamburgerButtonInfo_IsEnabled(object instance)
+        private object get_31_HamburgerButtonInfo_IsEnabled(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.IsEnabled;
         }
-        private void set_27_HamburgerButtonInfo_IsEnabled(object instance, object Value)
+        private void set_31_HamburgerButtonInfo_IsEnabled(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.IsEnabled = (global::System.Boolean)Value;
         }
-        private object get_28_HamburgerButtonInfo_IsChecked(object instance)
+        private object get_32_HamburgerButtonInfo_IsChecked(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.IsChecked;
         }
-        private void set_28_HamburgerButtonInfo_IsChecked(object instance, object Value)
+        private void set_32_HamburgerButtonInfo_IsChecked(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.IsChecked = (global::System.Nullable<global::System.Boolean>)Value;
         }
-        private object get_29_HamburgerButtonInfo_MaxWidth(object instance)
+        private object get_33_HamburgerButtonInfo_MaxWidth(object instance)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             return that.MaxWidth;
         }
-        private void set_29_HamburgerButtonInfo_MaxWidth(object instance, object Value)
+        private void set_33_HamburgerButtonInfo_MaxWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerButtonInfo)instance;
             that.MaxWidth = (global::System.Double)Value;
         }
-        private object get_30_HamburgerMenu_PaneBorderThickness(object instance)
+        private object get_34_HamburgerMenu_PaneBorderThickness(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.PaneBorderThickness;
         }
-        private void set_30_HamburgerMenu_PaneBorderThickness(object instance, object Value)
+        private void set_34_HamburgerMenu_PaneBorderThickness(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.PaneBorderThickness = (global::Windows.UI.Xaml.Thickness)Value;
         }
-        private object get_31_HamburgerMenu_SecondarySeparator(object instance)
+        private object get_35_HamburgerMenu_SecondarySeparator(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.SecondarySeparator;
         }
-        private void set_31_HamburgerMenu_SecondarySeparator(object instance, object Value)
+        private void set_35_HamburgerMenu_SecondarySeparator(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.SecondarySeparator = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_32_HamburgerMenu_NavButtonBackground(object instance)
+        private object get_36_HamburgerMenu_NavButtonBackground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonBackground;
         }
-        private void set_32_HamburgerMenu_NavButtonBackground(object instance, object Value)
+        private void set_36_HamburgerMenu_NavButtonBackground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_33_HamburgerMenu_NavButtonForeground(object instance)
+        private object get_37_HamburgerMenu_NavButtonForeground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonForeground;
         }
-        private void set_33_HamburgerMenu_NavButtonForeground(object instance, object Value)
+        private void set_37_HamburgerMenu_NavButtonForeground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_34_HamburgerMenu_NavAreaBackground(object instance)
+        private object get_38_HamburgerMenu_NavAreaBackground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavAreaBackground;
         }
-        private void set_34_HamburgerMenu_NavAreaBackground(object instance, object Value)
+        private void set_38_HamburgerMenu_NavAreaBackground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavAreaBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_35_HamburgerMenu_HamburgerForeground(object instance)
+        private object get_39_HamburgerMenu_HamburgerForeground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.HamburgerForeground;
         }
-        private void set_35_HamburgerMenu_HamburgerForeground(object instance, object Value)
+        private void set_39_HamburgerMenu_HamburgerForeground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.HamburgerForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_36_HamburgerMenu_HamburgerBackground(object instance)
+        private object get_40_HamburgerMenu_HamburgerBackground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.HamburgerBackground;
         }
-        private void set_36_HamburgerMenu_HamburgerBackground(object instance, object Value)
+        private void set_40_HamburgerMenu_HamburgerBackground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.HamburgerBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_37_HamburgerMenu_VisualStateNarrowMinWidth(object instance)
+        private object get_41_HamburgerMenu_VisualStateNarrowMinWidth(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.VisualStateNarrowMinWidth;
         }
-        private void set_37_HamburgerMenu_VisualStateNarrowMinWidth(object instance, object Value)
+        private void set_41_HamburgerMenu_VisualStateNarrowMinWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.VisualStateNarrowMinWidth = (global::System.Double)Value;
         }
-        private object get_38_HamburgerMenu_VisualStateNormalMinWidth(object instance)
+        private object get_42_HamburgerMenu_VisualStateNormalMinWidth(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.VisualStateNormalMinWidth;
         }
-        private void set_38_HamburgerMenu_VisualStateNormalMinWidth(object instance, object Value)
+        private void set_42_HamburgerMenu_VisualStateNormalMinWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.VisualStateNormalMinWidth = (global::System.Double)Value;
         }
-        private object get_39_HamburgerMenu_VisualStateWideMinWidth(object instance)
+        private object get_43_HamburgerMenu_VisualStateWideMinWidth(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.VisualStateWideMinWidth;
         }
-        private void set_39_HamburgerMenu_VisualStateWideMinWidth(object instance, object Value)
+        private void set_43_HamburgerMenu_VisualStateWideMinWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.VisualStateWideMinWidth = (global::System.Double)Value;
         }
-        private object get_40_HamburgerMenu_AccentColor(object instance)
+        private object get_44_HamburgerMenu_AccentColor(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.AccentColor;
         }
-        private void set_40_HamburgerMenu_AccentColor(object instance, object Value)
+        private void set_44_HamburgerMenu_AccentColor(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.AccentColor = (global::Windows.UI.Color)Value;
         }
-        private object get_41_HamburgerMenu_PaneBorderBrush(object instance)
+        private object get_45_HamburgerMenu_PaneBorderBrush(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.PaneBorderBrush;
         }
-        private void set_41_HamburgerMenu_PaneBorderBrush(object instance, object Value)
+        private void set_45_HamburgerMenu_PaneBorderBrush(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.PaneBorderBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_42_HamburgerMenu_NavButtonCheckedForeground(object instance)
+        private object get_46_HamburgerMenu_NavButtonCheckedForeground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonCheckedForeground;
         }
-        private void set_42_HamburgerMenu_NavButtonCheckedForeground(object instance, object Value)
+        private void set_46_HamburgerMenu_NavButtonCheckedForeground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonCheckedForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_43_HamburgerMenu_NavButtonCheckedBackground(object instance)
+        private object get_47_HamburgerMenu_NavButtonCheckedBackground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonCheckedBackground;
         }
-        private void set_43_HamburgerMenu_NavButtonCheckedBackground(object instance, object Value)
+        private void set_47_HamburgerMenu_NavButtonCheckedBackground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonCheckedBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_44_HamburgerMenu_NavButtonCheckedIndicatorBrush(object instance)
+        private object get_48_HamburgerMenu_NavButtonCheckedIndicatorBrush(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonCheckedIndicatorBrush;
         }
-        private void set_44_HamburgerMenu_NavButtonCheckedIndicatorBrush(object instance, object Value)
+        private void set_48_HamburgerMenu_NavButtonCheckedIndicatorBrush(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonCheckedIndicatorBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_45_HamburgerMenu_NavButtonPressedForeground(object instance)
+        private object get_49_HamburgerMenu_NavButtonPressedForeground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonPressedForeground;
         }
-        private void set_45_HamburgerMenu_NavButtonPressedForeground(object instance, object Value)
+        private void set_49_HamburgerMenu_NavButtonPressedForeground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonPressedForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_46_HamburgerMenu_NavButtonPressedBackground(object instance)
+        private object get_50_HamburgerMenu_NavButtonPressedBackground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonPressedBackground;
         }
-        private void set_46_HamburgerMenu_NavButtonPressedBackground(object instance, object Value)
+        private void set_50_HamburgerMenu_NavButtonPressedBackground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonPressedBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_47_HamburgerMenu_NavButtonHoverForeground(object instance)
+        private object get_51_HamburgerMenu_NavButtonHoverForeground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonHoverForeground;
         }
-        private void set_47_HamburgerMenu_NavButtonHoverForeground(object instance, object Value)
+        private void set_51_HamburgerMenu_NavButtonHoverForeground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonHoverForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_48_HamburgerMenu_NavButtonHoverBackground(object instance)
+        private object get_52_HamburgerMenu_NavButtonHoverBackground(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavButtonHoverBackground;
         }
-        private void set_48_HamburgerMenu_NavButtonHoverBackground(object instance, object Value)
+        private void set_52_HamburgerMenu_NavButtonHoverBackground(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavButtonHoverBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_49_HamburgerMenu_HamburgerButtonVisibility(object instance)
+        private object get_53_HamburgerMenu_HamburgerButtonVisibility(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.HamburgerButtonVisibility;
         }
-        private void set_49_HamburgerMenu_HamburgerButtonVisibility(object instance, object Value)
+        private void set_53_HamburgerMenu_HamburgerButtonVisibility(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.HamburgerButtonVisibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_50_HamburgerMenu_DisplayMode(object instance)
+        private object get_54_HamburgerMenu_DisplayMode(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.DisplayMode;
         }
-        private void set_50_HamburgerMenu_DisplayMode(object instance, object Value)
+        private void set_54_HamburgerMenu_DisplayMode(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.DisplayMode = (global::Windows.UI.Xaml.Controls.SplitViewDisplayMode)Value;
         }
-        private object get_51_HamburgerMenu_VisualStateNarrowDisplayMode(object instance)
+        private object get_55_HamburgerMenu_VisualStateNarrowDisplayMode(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.VisualStateNarrowDisplayMode;
         }
-        private void set_51_HamburgerMenu_VisualStateNarrowDisplayMode(object instance, object Value)
+        private void set_55_HamburgerMenu_VisualStateNarrowDisplayMode(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.VisualStateNarrowDisplayMode = (global::Windows.UI.Xaml.Controls.SplitViewDisplayMode)Value;
         }
-        private object get_52_HamburgerMenu_VisualStateNormalDisplayMode(object instance)
+        private object get_56_HamburgerMenu_VisualStateNormalDisplayMode(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.VisualStateNormalDisplayMode;
         }
-        private void set_52_HamburgerMenu_VisualStateNormalDisplayMode(object instance, object Value)
+        private void set_56_HamburgerMenu_VisualStateNormalDisplayMode(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.VisualStateNormalDisplayMode = (global::Windows.UI.Xaml.Controls.SplitViewDisplayMode)Value;
         }
-        private object get_53_HamburgerMenu_VisualStateWideDisplayMode(object instance)
+        private object get_57_HamburgerMenu_VisualStateWideDisplayMode(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.VisualStateWideDisplayMode;
         }
-        private void set_53_HamburgerMenu_VisualStateWideDisplayMode(object instance, object Value)
+        private void set_57_HamburgerMenu_VisualStateWideDisplayMode(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.VisualStateWideDisplayMode = (global::Windows.UI.Xaml.Controls.SplitViewDisplayMode)Value;
         }
-        private object get_54_HamburgerMenu_SecondaryButtonOrientation(object instance)
+        private object get_58_HamburgerMenu_SecondaryButtonOrientation(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.SecondaryButtonOrientation;
         }
-        private void set_54_HamburgerMenu_SecondaryButtonOrientation(object instance, object Value)
+        private void set_58_HamburgerMenu_SecondaryButtonOrientation(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.SecondaryButtonOrientation = (global::Windows.UI.Xaml.Controls.Orientation)Value;
         }
-        private object get_55_HamburgerMenu_Selected(object instance)
+        private object get_59_HamburgerMenu_Selected(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.Selected;
         }
-        private void set_55_HamburgerMenu_Selected(object instance, object Value)
+        private void set_59_HamburgerMenu_Selected(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.Selected = (global::Template10.Controls.HamburgerButtonInfo)Value;
         }
-        private object get_56_HamburgerMenu_NavigationService(object instance)
+        private object get_60_HamburgerMenu_NavigationService(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavigationService;
         }
-        private void set_56_HamburgerMenu_NavigationService(object instance, object Value)
+        private void set_60_HamburgerMenu_NavigationService(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.NavigationService = (global::Template10.Services.NavigationService.INavigationService)Value;
         }
-        private object get_57_HamburgerMenu_IsFullScreen(object instance)
+        private object get_61_HamburgerMenu_IsFullScreen(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.IsFullScreen;
         }
-        private void set_57_HamburgerMenu_IsFullScreen(object instance, object Value)
+        private void set_61_HamburgerMenu_IsFullScreen(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.IsFullScreen = (global::System.Boolean)Value;
         }
-        private object get_58_HamburgerMenu_PaneWidth(object instance)
+        private object get_62_HamburgerMenu_PaneWidth(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.PaneWidth;
         }
-        private void set_58_HamburgerMenu_PaneWidth(object instance, object Value)
+        private void set_62_HamburgerMenu_PaneWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.PaneWidth = (global::System.Double)Value;
         }
-        private object get_59_HamburgerMenu_HamburgerButtonGridWidth(object instance)
+        private object get_63_HamburgerMenu_HamburgerButtonGridWidth(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.HamburgerButtonGridWidth;
         }
-        private void set_59_HamburgerMenu_HamburgerButtonGridWidth(object instance, object Value)
+        private void set_63_HamburgerMenu_HamburgerButtonGridWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.HamburgerButtonGridWidth = (global::System.Double)Value;
         }
-        private object get_60_HamburgerMenu_OpenCloseMode(object instance)
+        private object get_64_HamburgerMenu_OpenCloseMode(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.OpenCloseMode;
         }
-        private void set_60_HamburgerMenu_OpenCloseMode(object instance, object Value)
+        private void set_64_HamburgerMenu_OpenCloseMode(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.OpenCloseMode = (global::Template10.Controls.HamburgerMenu.OpenCloseModes)Value;
         }
-        private object get_61_HamburgerMenu_HeaderContent(object instance)
+        private object get_65_HamburgerMenu_HeaderContent(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.HeaderContent;
         }
-        private void set_61_HamburgerMenu_HeaderContent(object instance, object Value)
+        private void set_65_HamburgerMenu_HeaderContent(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.HeaderContent = (global::Windows.UI.Xaml.UIElement)Value;
         }
-        private object get_62_HamburgerMenu_IsOpen(object instance)
+        private object get_66_HamburgerMenu_IsOpen(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.IsOpen;
         }
-        private void set_62_HamburgerMenu_IsOpen(object instance, object Value)
+        private void set_66_HamburgerMenu_IsOpen(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.IsOpen = (global::System.Boolean)Value;
         }
-        private object get_63_HamburgerMenu_SecondaryButtons(object instance)
+        private object get_67_HamburgerMenu_SecondaryButtons(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.SecondaryButtons;
         }
-        private void set_63_HamburgerMenu_SecondaryButtons(object instance, object Value)
+        private void set_67_HamburgerMenu_SecondaryButtons(object instance, object Value)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             that.SecondaryButtons = (global::System.Collections.ObjectModel.ObservableCollection<global::Template10.Controls.HamburgerButtonInfo>)Value;
         }
-        private object get_64_HamburgerMenu_NavCommand(object instance)
+        private object get_68_HamburgerMenu_NavCommand(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.NavCommand;
         }
-        private object get_65_HamburgerMenu_PropertyChangedHandlers(object instance)
+        private object get_69_HamburgerMenu_PropertyChangedHandlers(object instance)
         {
             var that = (global::Template10.Controls.HamburgerMenu)instance;
             return that.PropertyChangedHandlers;
         }
-        private object get_66_PageHeader_VisualStateNarrowMinWidth(object instance)
+        private object get_70_PageHeader_VisualStateNarrowMinWidth(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.VisualStateNarrowMinWidth;
         }
-        private void set_66_PageHeader_VisualStateNarrowMinWidth(object instance, object Value)
+        private void set_70_PageHeader_VisualStateNarrowMinWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.VisualStateNarrowMinWidth = (global::System.Double)Value;
         }
-        private object get_67_PageHeader_VisualStateNormalMinWidth(object instance)
+        private object get_71_PageHeader_VisualStateNormalMinWidth(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.VisualStateNormalMinWidth;
         }
-        private void set_67_PageHeader_VisualStateNormalMinWidth(object instance, object Value)
+        private void set_71_PageHeader_VisualStateNormalMinWidth(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.VisualStateNormalMinWidth = (global::System.Double)Value;
         }
-        private object get_68_PageHeader_EllipsisVisibility(object instance)
+        private object get_72_PageHeader_EllipsisVisibility(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.EllipsisVisibility;
         }
-        private void set_68_PageHeader_EllipsisVisibility(object instance, object Value)
+        private void set_72_PageHeader_EllipsisVisibility(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.EllipsisVisibility = (global::Template10.Behaviors.EllipsisBehavior.Visibilities)Value;
         }
-        private object get_69_PageHeader_PrimaryCommandsVisibility(object instance)
+        private object get_73_PageHeader_PrimaryCommandsVisibility(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.PrimaryCommandsVisibility;
         }
-        private void set_69_PageHeader_PrimaryCommandsVisibility(object instance, object Value)
+        private void set_73_PageHeader_PrimaryCommandsVisibility(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.PrimaryCommandsVisibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_70_PageHeader_BackButtonVisibility(object instance)
+        private object get_74_PageHeader_BackButtonVisibility(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.BackButtonVisibility;
         }
-        private void set_70_PageHeader_BackButtonVisibility(object instance, object Value)
+        private void set_74_PageHeader_BackButtonVisibility(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.BackButtonVisibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_71_PageHeader_BackButtonContent(object instance)
+        private object get_75_PageHeader_BackButtonContent(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.BackButtonContent;
         }
-        private void set_71_PageHeader_BackButtonContent(object instance, object Value)
+        private void set_75_PageHeader_BackButtonContent(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.BackButtonContent = (global::Windows.UI.Xaml.Controls.Symbol)Value;
         }
-        private object get_72_PageHeader_Frame(object instance)
+        private object get_76_PageHeader_Frame(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.Frame;
         }
-        private void set_72_PageHeader_Frame(object instance, object Value)
+        private void set_76_PageHeader_Frame(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.Frame = (global::Windows.UI.Xaml.Controls.Frame)Value;
         }
-        private object get_73_PageHeader_EnableHamburgerMenuAutoLayout(object instance)
+        private object get_77_PageHeader_EnableHamburgerMenuAutoLayout(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.EnableHamburgerMenuAutoLayout;
         }
-        private void set_73_PageHeader_EnableHamburgerMenuAutoLayout(object instance, object Value)
+        private void set_77_PageHeader_EnableHamburgerMenuAutoLayout(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.EnableHamburgerMenuAutoLayout = (global::System.Boolean)Value;
         }
-        private object get_74_PageHeader_Text(object instance)
+        private object get_78_PageHeader_Text(object instance)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             return that.Text;
         }
-        private void set_74_PageHeader_Text(object instance, object Value)
+        private void set_78_PageHeader_Text(object instance, object Value)
         {
             var that = (global::Template10.Controls.PageHeader)instance;
             that.Text = (global::System.String)Value;
         }
-        private object get_75_Resizer_ElementControl(object instance)
+        private object get_79_Resizer_ElementControl(object instance)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             return that.ElementControl;
         }
-        private void set_75_Resizer_ElementControl(object instance, object Value)
+        private void set_79_Resizer_ElementControl(object instance, object Value)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             that.ElementControl = (global::Windows.UI.Xaml.Controls.Control)Value;
         }
-        private object get_76_Resizer_GrabberBrush(object instance)
+        private object get_80_Resizer_GrabberBrush(object instance)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             return that.GrabberBrush;
         }
-        private void set_76_Resizer_GrabberBrush(object instance, object Value)
+        private void set_80_Resizer_GrabberBrush(object instance, object Value)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             that.GrabberBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_77_Resizer_GrabberVisibility(object instance)
+        private object get_81_Resizer_GrabberVisibility(object instance)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             return that.GrabberVisibility;
         }
-        private void set_77_Resizer_GrabberVisibility(object instance, object Value)
+        private void set_81_Resizer_GrabberVisibility(object instance, object Value)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             that.GrabberVisibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_78_Resizer_GrabberSize(object instance)
+        private object get_82_Resizer_GrabberSize(object instance)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             return that.GrabberSize;
         }
-        private void set_78_Resizer_GrabberSize(object instance, object Value)
+        private void set_82_Resizer_GrabberSize(object instance, object Value)
         {
             var that = (global::Template10.Controls.Resizer)instance;
             that.GrabberSize = (global::Windows.Foundation.Size)Value;
         }
-        private object get_79_Busy_BusyText(object instance)
+        private object get_83_Busy_BusyText(object instance)
         {
             var that = (global::Weather_App.Views.Busy)instance;
             return that.BusyText;
         }
-        private void set_79_Busy_BusyText(object instance, object Value)
+        private void set_83_Busy_BusyText(object instance, object Value)
         {
             var that = (global::Weather_App.Views.Busy)instance;
             that.BusyText = (global::System.String)Value;
         }
-        private object get_80_Busy_IsBusy(object instance)
+        private object get_84_Busy_IsBusy(object instance)
         {
             var that = (global::Weather_App.Views.Busy)instance;
             return that.IsBusy;
         }
-        private void set_80_Busy_IsBusy(object instance, object Value)
+        private void set_84_Busy_IsBusy(object instance, object Value)
         {
             var that = (global::Weather_App.Views.Busy)instance;
             that.IsBusy = (global::System.Boolean)Value;
         }
-        private object get_81_DetailPageViewModel_Value(object instance)
+        private object get_85_DetailPageViewModel_Value(object instance)
         {
             var that = (global::Weather_App.ViewModels.DetailPageViewModel)instance;
             return that.Value;
         }
-        private void set_81_DetailPageViewModel_Value(object instance, object Value)
+        private void set_85_DetailPageViewModel_Value(object instance, object Value)
         {
             var that = (global::Weather_App.ViewModels.DetailPageViewModel)instance;
             that.Value = (global::System.String)Value;
         }
-        private object get_82_ViewModelBase_NavigationService(object instance)
+        private object get_86_ViewModelBase_NavigationService(object instance)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             return that.NavigationService;
         }
-        private void set_82_ViewModelBase_NavigationService(object instance, object Value)
+        private void set_86_ViewModelBase_NavigationService(object instance, object Value)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.NavigationService = (global::Template10.Services.NavigationService.INavigationService)Value;
         }
-        private object get_83_ViewModelBase_Dispatcher(object instance)
+        private object get_87_ViewModelBase_Dispatcher(object instance)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             return that.Dispatcher;
         }
-        private void set_83_ViewModelBase_Dispatcher(object instance, object Value)
+        private void set_87_ViewModelBase_Dispatcher(object instance, object Value)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.Dispatcher = (global::Template10.Common.IDispatcherWrapper)Value;
         }
-        private object get_84_ViewModelBase_SessionState(object instance)
+        private object get_88_ViewModelBase_SessionState(object instance)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             return that.SessionState;
         }
-        private void set_84_ViewModelBase_SessionState(object instance, object Value)
+        private void set_88_ViewModelBase_SessionState(object instance, object Value)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.SessionState = (global::Template10.Common.IStateItems)Value;
         }
-        private object get_85_MainPageViewModel_Value(object instance)
+        private object get_89_MainPageViewModel_Value(object instance)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             return that.Value;
         }
-        private void set_85_MainPageViewModel_Value(object instance, object Value)
+        private void set_89_MainPageViewModel_Value(object instance, object Value)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             that.Value = (global::System.String)Value;
         }
-        private object get_86_Interaction_Behaviors(object instance)
+        private object get_90_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_86_Interaction_Behaviors(object instance, object Value)
+        private void set_90_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_87_KeyBehavior_Actions(object instance)
+        private object get_91_KeyBehavior_Actions(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.Actions;
         }
-        private object get_88_KeyBehavior_Key(object instance)
+        private object get_92_KeyBehavior_Key(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.Key;
         }
-        private void set_88_KeyBehavior_Key(object instance, object Value)
+        private void set_92_KeyBehavior_Key(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             that.Key = (global::Windows.System.VirtualKey)Value;
         }
-        private object get_89_KeyBehavior_AssociatedObject(object instance)
+        private object get_93_KeyBehavior_AssociatedObject(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_90_KeyBehavior_AndControl(object instance)
+        private object get_94_KeyBehavior_AndControl(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.AndControl;
         }
-        private void set_90_KeyBehavior_AndControl(object instance, object Value)
+        private void set_94_KeyBehavior_AndControl(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             that.AndControl = (global::System.Boolean)Value;
         }
-        private object get_91_KeyBehavior_AndAlt(object instance)
+        private object get_95_KeyBehavior_AndAlt(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.AndAlt;
         }
-        private void set_91_KeyBehavior_AndAlt(object instance, object Value)
+        private void set_95_KeyBehavior_AndAlt(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             that.AndAlt = (global::System.Boolean)Value;
         }
-        private object get_92_KeyBehavior_AndShift(object instance)
+        private object get_96_KeyBehavior_AndShift(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.AndShift;
         }
-        private void set_92_KeyBehavior_AndShift(object instance, object Value)
+        private void set_96_KeyBehavior_AndShift(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             that.AndShift = (global::System.Boolean)Value;
         }
-        private object get_93_KeyBehavior_Event(object instance)
+        private object get_97_KeyBehavior_Event(object instance)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             return that.Event;
         }
-        private void set_93_KeyBehavior_Event(object instance, object Value)
+        private void set_97_KeyBehavior_Event(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.KeyBehavior)instance;
             that.Event = (global::Template10.Behaviors.KeyBehavior.Kinds)Value;
         }
-        private object get_94_EventTriggerBehavior_Actions(object instance)
+        private object get_98_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_95_EventTriggerBehavior_EventName(object instance)
+        private object get_99_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_95_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_99_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_96_EventTriggerBehavior_SourceObject(object instance)
+        private object get_100_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_96_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_100_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_97_Behavior_AssociatedObject(object instance)
+        private object get_101_Behavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactivity.Behavior)instance;
             return that.AssociatedObject;
         }
-        private object get_98_FocusAction_TargetObject(object instance)
+        private object get_102_FocusAction_TargetObject(object instance)
         {
             var that = (global::Template10.Behaviors.FocusAction)instance;
             return that.TargetObject;
         }
-        private void set_98_FocusAction_TargetObject(object instance, object Value)
+        private void set_102_FocusAction_TargetObject(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.FocusAction)instance;
             that.TargetObject = (global::Windows.UI.Xaml.Controls.Control)Value;
         }
-        private object get_99_CallMethodAction_MethodName(object instance)
+        private object get_103_CallMethodAction_MethodName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
             return that.MethodName;
         }
-        private void set_99_CallMethodAction_MethodName(object instance, object Value)
+        private void set_103_CallMethodAction_MethodName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
             that.MethodName = (global::System.String)Value;
         }
-        private object get_100_CallMethodAction_TargetObject(object instance)
+        private object get_104_CallMethodAction_TargetObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
             return that.TargetObject;
         }
-        private void set_100_CallMethodAction_TargetObject(object instance, object Value)
+        private void set_104_CallMethodAction_TargetObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
             that.TargetObject = (global::System.Object)Value;
         }
-        private object get_101_SettingsPageViewModel_SettingsPartViewModel(object instance)
+        private object get_105_SettingsPageViewModel_SettingsPartViewModel(object instance)
         {
             var that = (global::Weather_App.ViewModels.SettingsPageViewModel)instance;
             return that.SettingsPartViewModel;
         }
-        private object get_102_SettingsPageViewModel_AboutPartViewModel(object instance)
+        private object get_106_SettingsPageViewModel_AboutPartViewModel(object instance)
         {
             var that = (global::Weather_App.ViewModels.SettingsPageViewModel)instance;
             return that.AboutPartViewModel;
@@ -2199,653 +2250,678 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 xamlMember.Getter = get_6_BootStrapper_OriginalActivatedArgs;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Template10.Common.BootStrapper.EnableAutoRestoreAfterTerminated":
-                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
-                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "EnableAutoRestoreAfterTerminated", "Boolean");
-                xamlMember.Getter = get_7_BootStrapper_EnableAutoRestoreAfterTerminated;
-                xamlMember.Setter = set_7_BootStrapper_EnableAutoRestoreAfterTerminated;
-                break;
             case "Template10.Common.BootStrapper.CurrentState":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "CurrentState", "Template10.Common.BootStrapper.States");
-                xamlMember.Getter = get_8_BootStrapper_CurrentState;
-                xamlMember.Setter = set_8_BootStrapper_CurrentState;
+                xamlMember.Getter = get_7_BootStrapper_CurrentState;
+                xamlMember.Setter = set_7_BootStrapper_CurrentState;
+                break;
+            case "Template10.Common.BootStrapper.EnableAutoRestoreAfterTerminated":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "EnableAutoRestoreAfterTerminated", "Boolean");
+                xamlMember.Getter = get_8_BootStrapper_EnableAutoRestoreAfterTerminated;
+                xamlMember.Setter = set_8_BootStrapper_EnableAutoRestoreAfterTerminated;
+                break;
+            case "Template10.Common.BootStrapper.AutoRestoreAfterTerminated":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AutoRestoreAfterTerminated", "Boolean");
+                xamlMember.Getter = get_9_BootStrapper_AutoRestoreAfterTerminated;
+                xamlMember.Setter = set_9_BootStrapper_AutoRestoreAfterTerminated;
+                break;
+            case "Template10.Common.BootStrapper.AutoExtendExecutionSession":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AutoExtendExecutionSession", "Boolean");
+                xamlMember.Getter = get_10_BootStrapper_AutoExtendExecutionSession;
+                xamlMember.Setter = set_10_BootStrapper_AutoExtendExecutionSession;
+                break;
+            case "Template10.Common.BootStrapper.AutoSuspendAllFrames":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AutoSuspendAllFrames", "Boolean");
+                xamlMember.Getter = get_11_BootStrapper_AutoSuspendAllFrames;
+                xamlMember.Setter = set_11_BootStrapper_AutoSuspendAllFrames;
                 break;
             case "Template10.Common.BootStrapper.ModalDialog":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ModalDialog", "Template10.Controls.ModalDialog");
-                xamlMember.Getter = get_9_BootStrapper_ModalDialog;
+                xamlMember.Getter = get_12_BootStrapper_ModalDialog;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Common.BootStrapper.ModalContent":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Common.BootStrapper");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ModalContent", "Windows.UI.Xaml.UIElement");
-                xamlMember.Getter = get_10_BootStrapper_ModalContent;
-                xamlMember.Setter = set_10_BootStrapper_ModalContent;
+                xamlMember.Getter = get_13_BootStrapper_ModalContent;
+                xamlMember.Setter = set_13_BootStrapper_ModalContent;
                 break;
             case "Windows.UI.Color.A":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "A", "Byte");
-                xamlMember.Getter = get_11_Color_A;
-                xamlMember.Setter = set_11_Color_A;
+                xamlMember.Getter = get_14_Color_A;
+                xamlMember.Setter = set_14_Color_A;
                 break;
             case "Windows.UI.Color.B":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "B", "Byte");
-                xamlMember.Getter = get_12_Color_B;
-                xamlMember.Setter = set_12_Color_B;
+                xamlMember.Getter = get_15_Color_B;
+                xamlMember.Setter = set_15_Color_B;
                 break;
             case "Windows.UI.Color.G":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "G", "Byte");
-                xamlMember.Getter = get_13_Color_G;
-                xamlMember.Setter = set_13_Color_G;
+                xamlMember.Getter = get_16_Color_G;
+                xamlMember.Setter = set_16_Color_G;
                 break;
             case "Windows.UI.Color.R":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "R", "Byte");
-                xamlMember.Getter = get_14_Color_R;
-                xamlMember.Setter = set_14_Color_R;
+                xamlMember.Getter = get_17_Color_R;
+                xamlMember.Setter = set_17_Color_R;
                 break;
             case "Template10.Controls.HamburgerMenu.PrimaryButtons":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PrimaryButtons", "System.Collections.ObjectModel.ObservableCollection`1<Template10.Controls.HamburgerButtonInfo>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_HamburgerMenu_PrimaryButtons;
-                xamlMember.Setter = set_15_HamburgerMenu_PrimaryButtons;
+                xamlMember.Getter = get_18_HamburgerMenu_PrimaryButtons;
+                xamlMember.Setter = set_18_HamburgerMenu_PrimaryButtons;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.Content":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Content", "Windows.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_HamburgerButtonInfo_Content;
-                xamlMember.Setter = set_16_HamburgerButtonInfo_Content;
+                xamlMember.Getter = get_19_HamburgerButtonInfo_Content;
+                xamlMember.Setter = set_19_HamburgerButtonInfo_Content;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.ButtonType":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ButtonType", "Template10.Controls.HamburgerButtonInfo.ButtonTypes");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_HamburgerButtonInfo_ButtonType;
-                xamlMember.Setter = set_17_HamburgerButtonInfo_ButtonType;
+                xamlMember.Getter = get_20_HamburgerButtonInfo_ButtonType;
+                xamlMember.Setter = set_20_HamburgerButtonInfo_ButtonType;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.NavigationTransitionInfo":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavigationTransitionInfo", "Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_18_HamburgerButtonInfo_NavigationTransitionInfo;
-                xamlMember.Setter = set_18_HamburgerButtonInfo_NavigationTransitionInfo;
+                xamlMember.Getter = get_21_HamburgerButtonInfo_NavigationTransitionInfo;
+                xamlMember.Setter = set_21_HamburgerButtonInfo_NavigationTransitionInfo;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.Command":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_19_HamburgerButtonInfo_Command;
-                xamlMember.Setter = set_19_HamburgerButtonInfo_Command;
+                xamlMember.Getter = get_22_HamburgerButtonInfo_Command;
+                xamlMember.Setter = set_22_HamburgerButtonInfo_Command;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.ToolTip":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ToolTip", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_20_HamburgerButtonInfo_ToolTip;
-                xamlMember.Setter = set_20_HamburgerButtonInfo_ToolTip;
+                xamlMember.Getter = get_23_HamburgerButtonInfo_ToolTip;
+                xamlMember.Setter = set_23_HamburgerButtonInfo_ToolTip;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.CommandParameter":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_21_HamburgerButtonInfo_CommandParameter;
-                xamlMember.Setter = set_21_HamburgerButtonInfo_CommandParameter;
+                xamlMember.Getter = get_24_HamburgerButtonInfo_CommandParameter;
+                xamlMember.Setter = set_24_HamburgerButtonInfo_CommandParameter;
+                break;
+            case "Template10.Controls.HamburgerButtonInfo.GroupName":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "GroupName", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_25_HamburgerButtonInfo_GroupName;
+                xamlMember.Setter = set_25_HamburgerButtonInfo_GroupName;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.PageType":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PageType", "System.Type");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_22_HamburgerButtonInfo_PageType;
-                xamlMember.Setter = set_22_HamburgerButtonInfo_PageType;
+                xamlMember.Getter = get_26_HamburgerButtonInfo_PageType;
+                xamlMember.Setter = set_26_HamburgerButtonInfo_PageType;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.PageParameter":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PageParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_HamburgerButtonInfo_PageParameter;
-                xamlMember.Setter = set_23_HamburgerButtonInfo_PageParameter;
+                xamlMember.Getter = get_27_HamburgerButtonInfo_PageParameter;
+                xamlMember.Setter = set_27_HamburgerButtonInfo_PageParameter;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.ClearHistory":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ClearHistory", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_HamburgerButtonInfo_ClearHistory;
-                xamlMember.Setter = set_24_HamburgerButtonInfo_ClearHistory;
+                xamlMember.Getter = get_28_HamburgerButtonInfo_ClearHistory;
+                xamlMember.Setter = set_28_HamburgerButtonInfo_ClearHistory;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.ClearCache":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ClearCache", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_HamburgerButtonInfo_ClearCache;
-                xamlMember.Setter = set_25_HamburgerButtonInfo_ClearCache;
+                xamlMember.Getter = get_29_HamburgerButtonInfo_ClearCache;
+                xamlMember.Setter = set_29_HamburgerButtonInfo_ClearCache;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.Visibility":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Visibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_26_HamburgerButtonInfo_Visibility;
-                xamlMember.Setter = set_26_HamburgerButtonInfo_Visibility;
+                xamlMember.Getter = get_30_HamburgerButtonInfo_Visibility;
+                xamlMember.Setter = set_30_HamburgerButtonInfo_Visibility;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.IsEnabled":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "IsEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_27_HamburgerButtonInfo_IsEnabled;
-                xamlMember.Setter = set_27_HamburgerButtonInfo_IsEnabled;
+                xamlMember.Getter = get_31_HamburgerButtonInfo_IsEnabled;
+                xamlMember.Setter = set_31_HamburgerButtonInfo_IsEnabled;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.IsChecked":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "IsChecked", "System.Nullable`1<Boolean>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_28_HamburgerButtonInfo_IsChecked;
-                xamlMember.Setter = set_28_HamburgerButtonInfo_IsChecked;
+                xamlMember.Getter = get_32_HamburgerButtonInfo_IsChecked;
+                xamlMember.Setter = set_32_HamburgerButtonInfo_IsChecked;
                 break;
             case "Template10.Controls.HamburgerButtonInfo.MaxWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerButtonInfo");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "MaxWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_29_HamburgerButtonInfo_MaxWidth;
-                xamlMember.Setter = set_29_HamburgerButtonInfo_MaxWidth;
+                xamlMember.Getter = get_33_HamburgerButtonInfo_MaxWidth;
+                xamlMember.Setter = set_33_HamburgerButtonInfo_MaxWidth;
                 break;
             case "Template10.Controls.HamburgerMenu.PaneBorderThickness":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PaneBorderThickness", "Windows.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_30_HamburgerMenu_PaneBorderThickness;
-                xamlMember.Setter = set_30_HamburgerMenu_PaneBorderThickness;
+                xamlMember.Getter = get_34_HamburgerMenu_PaneBorderThickness;
+                xamlMember.Setter = set_34_HamburgerMenu_PaneBorderThickness;
                 break;
             case "Template10.Controls.HamburgerMenu.SecondarySeparator":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SecondarySeparator", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_31_HamburgerMenu_SecondarySeparator;
-                xamlMember.Setter = set_31_HamburgerMenu_SecondarySeparator;
+                xamlMember.Getter = get_35_HamburgerMenu_SecondarySeparator;
+                xamlMember.Setter = set_35_HamburgerMenu_SecondarySeparator;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonBackground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_HamburgerMenu_NavButtonBackground;
-                xamlMember.Setter = set_32_HamburgerMenu_NavButtonBackground;
+                xamlMember.Getter = get_36_HamburgerMenu_NavButtonBackground;
+                xamlMember.Setter = set_36_HamburgerMenu_NavButtonBackground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonForeground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_HamburgerMenu_NavButtonForeground;
-                xamlMember.Setter = set_33_HamburgerMenu_NavButtonForeground;
+                xamlMember.Getter = get_37_HamburgerMenu_NavButtonForeground;
+                xamlMember.Setter = set_37_HamburgerMenu_NavButtonForeground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavAreaBackground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavAreaBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_HamburgerMenu_NavAreaBackground;
-                xamlMember.Setter = set_34_HamburgerMenu_NavAreaBackground;
+                xamlMember.Getter = get_38_HamburgerMenu_NavAreaBackground;
+                xamlMember.Setter = set_38_HamburgerMenu_NavAreaBackground;
                 break;
             case "Template10.Controls.HamburgerMenu.HamburgerForeground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "HamburgerForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_HamburgerMenu_HamburgerForeground;
-                xamlMember.Setter = set_35_HamburgerMenu_HamburgerForeground;
+                xamlMember.Getter = get_39_HamburgerMenu_HamburgerForeground;
+                xamlMember.Setter = set_39_HamburgerMenu_HamburgerForeground;
                 break;
             case "Template10.Controls.HamburgerMenu.HamburgerBackground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "HamburgerBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_HamburgerMenu_HamburgerBackground;
-                xamlMember.Setter = set_36_HamburgerMenu_HamburgerBackground;
+                xamlMember.Getter = get_40_HamburgerMenu_HamburgerBackground;
+                xamlMember.Setter = set_40_HamburgerMenu_HamburgerBackground;
                 break;
             case "Template10.Controls.HamburgerMenu.VisualStateNarrowMinWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateNarrowMinWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_HamburgerMenu_VisualStateNarrowMinWidth;
-                xamlMember.Setter = set_37_HamburgerMenu_VisualStateNarrowMinWidth;
+                xamlMember.Getter = get_41_HamburgerMenu_VisualStateNarrowMinWidth;
+                xamlMember.Setter = set_41_HamburgerMenu_VisualStateNarrowMinWidth;
                 break;
             case "Template10.Controls.HamburgerMenu.VisualStateNormalMinWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateNormalMinWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_HamburgerMenu_VisualStateNormalMinWidth;
-                xamlMember.Setter = set_38_HamburgerMenu_VisualStateNormalMinWidth;
+                xamlMember.Getter = get_42_HamburgerMenu_VisualStateNormalMinWidth;
+                xamlMember.Setter = set_42_HamburgerMenu_VisualStateNormalMinWidth;
                 break;
             case "Template10.Controls.HamburgerMenu.VisualStateWideMinWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateWideMinWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_39_HamburgerMenu_VisualStateWideMinWidth;
-                xamlMember.Setter = set_39_HamburgerMenu_VisualStateWideMinWidth;
+                xamlMember.Getter = get_43_HamburgerMenu_VisualStateWideMinWidth;
+                xamlMember.Setter = set_43_HamburgerMenu_VisualStateWideMinWidth;
                 break;
             case "Template10.Controls.HamburgerMenu.AccentColor":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AccentColor", "Windows.UI.Color");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_HamburgerMenu_AccentColor;
-                xamlMember.Setter = set_40_HamburgerMenu_AccentColor;
+                xamlMember.Getter = get_44_HamburgerMenu_AccentColor;
+                xamlMember.Setter = set_44_HamburgerMenu_AccentColor;
                 break;
             case "Template10.Controls.HamburgerMenu.PaneBorderBrush":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PaneBorderBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_41_HamburgerMenu_PaneBorderBrush;
-                xamlMember.Setter = set_41_HamburgerMenu_PaneBorderBrush;
+                xamlMember.Getter = get_45_HamburgerMenu_PaneBorderBrush;
+                xamlMember.Setter = set_45_HamburgerMenu_PaneBorderBrush;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonCheckedForeground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonCheckedForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_42_HamburgerMenu_NavButtonCheckedForeground;
-                xamlMember.Setter = set_42_HamburgerMenu_NavButtonCheckedForeground;
+                xamlMember.Getter = get_46_HamburgerMenu_NavButtonCheckedForeground;
+                xamlMember.Setter = set_46_HamburgerMenu_NavButtonCheckedForeground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonCheckedBackground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonCheckedBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_43_HamburgerMenu_NavButtonCheckedBackground;
-                xamlMember.Setter = set_43_HamburgerMenu_NavButtonCheckedBackground;
+                xamlMember.Getter = get_47_HamburgerMenu_NavButtonCheckedBackground;
+                xamlMember.Setter = set_47_HamburgerMenu_NavButtonCheckedBackground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonCheckedIndicatorBrush":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonCheckedIndicatorBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_44_HamburgerMenu_NavButtonCheckedIndicatorBrush;
-                xamlMember.Setter = set_44_HamburgerMenu_NavButtonCheckedIndicatorBrush;
+                xamlMember.Getter = get_48_HamburgerMenu_NavButtonCheckedIndicatorBrush;
+                xamlMember.Setter = set_48_HamburgerMenu_NavButtonCheckedIndicatorBrush;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonPressedForeground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonPressedForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_45_HamburgerMenu_NavButtonPressedForeground;
-                xamlMember.Setter = set_45_HamburgerMenu_NavButtonPressedForeground;
+                xamlMember.Getter = get_49_HamburgerMenu_NavButtonPressedForeground;
+                xamlMember.Setter = set_49_HamburgerMenu_NavButtonPressedForeground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonPressedBackground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonPressedBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_46_HamburgerMenu_NavButtonPressedBackground;
-                xamlMember.Setter = set_46_HamburgerMenu_NavButtonPressedBackground;
+                xamlMember.Getter = get_50_HamburgerMenu_NavButtonPressedBackground;
+                xamlMember.Setter = set_50_HamburgerMenu_NavButtonPressedBackground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonHoverForeground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonHoverForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_47_HamburgerMenu_NavButtonHoverForeground;
-                xamlMember.Setter = set_47_HamburgerMenu_NavButtonHoverForeground;
+                xamlMember.Getter = get_51_HamburgerMenu_NavButtonHoverForeground;
+                xamlMember.Setter = set_51_HamburgerMenu_NavButtonHoverForeground;
                 break;
             case "Template10.Controls.HamburgerMenu.NavButtonHoverBackground":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavButtonHoverBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_48_HamburgerMenu_NavButtonHoverBackground;
-                xamlMember.Setter = set_48_HamburgerMenu_NavButtonHoverBackground;
+                xamlMember.Getter = get_52_HamburgerMenu_NavButtonHoverBackground;
+                xamlMember.Setter = set_52_HamburgerMenu_NavButtonHoverBackground;
                 break;
             case "Template10.Controls.HamburgerMenu.HamburgerButtonVisibility":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "HamburgerButtonVisibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_HamburgerMenu_HamburgerButtonVisibility;
-                xamlMember.Setter = set_49_HamburgerMenu_HamburgerButtonVisibility;
+                xamlMember.Getter = get_53_HamburgerMenu_HamburgerButtonVisibility;
+                xamlMember.Setter = set_53_HamburgerMenu_HamburgerButtonVisibility;
                 break;
             case "Template10.Controls.HamburgerMenu.DisplayMode":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "DisplayMode", "Windows.UI.Xaml.Controls.SplitViewDisplayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_HamburgerMenu_DisplayMode;
-                xamlMember.Setter = set_50_HamburgerMenu_DisplayMode;
+                xamlMember.Getter = get_54_HamburgerMenu_DisplayMode;
+                xamlMember.Setter = set_54_HamburgerMenu_DisplayMode;
                 break;
             case "Template10.Controls.HamburgerMenu.VisualStateNarrowDisplayMode":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateNarrowDisplayMode", "Windows.UI.Xaml.Controls.SplitViewDisplayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_HamburgerMenu_VisualStateNarrowDisplayMode;
-                xamlMember.Setter = set_51_HamburgerMenu_VisualStateNarrowDisplayMode;
+                xamlMember.Getter = get_55_HamburgerMenu_VisualStateNarrowDisplayMode;
+                xamlMember.Setter = set_55_HamburgerMenu_VisualStateNarrowDisplayMode;
                 break;
             case "Template10.Controls.HamburgerMenu.VisualStateNormalDisplayMode":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateNormalDisplayMode", "Windows.UI.Xaml.Controls.SplitViewDisplayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_HamburgerMenu_VisualStateNormalDisplayMode;
-                xamlMember.Setter = set_52_HamburgerMenu_VisualStateNormalDisplayMode;
+                xamlMember.Getter = get_56_HamburgerMenu_VisualStateNormalDisplayMode;
+                xamlMember.Setter = set_56_HamburgerMenu_VisualStateNormalDisplayMode;
                 break;
             case "Template10.Controls.HamburgerMenu.VisualStateWideDisplayMode":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateWideDisplayMode", "Windows.UI.Xaml.Controls.SplitViewDisplayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_HamburgerMenu_VisualStateWideDisplayMode;
-                xamlMember.Setter = set_53_HamburgerMenu_VisualStateWideDisplayMode;
+                xamlMember.Getter = get_57_HamburgerMenu_VisualStateWideDisplayMode;
+                xamlMember.Setter = set_57_HamburgerMenu_VisualStateWideDisplayMode;
                 break;
             case "Template10.Controls.HamburgerMenu.SecondaryButtonOrientation":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SecondaryButtonOrientation", "Windows.UI.Xaml.Controls.Orientation");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_54_HamburgerMenu_SecondaryButtonOrientation;
-                xamlMember.Setter = set_54_HamburgerMenu_SecondaryButtonOrientation;
+                xamlMember.Getter = get_58_HamburgerMenu_SecondaryButtonOrientation;
+                xamlMember.Setter = set_58_HamburgerMenu_SecondaryButtonOrientation;
                 break;
             case "Template10.Controls.HamburgerMenu.Selected":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Selected", "Template10.Controls.HamburgerButtonInfo");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_HamburgerMenu_Selected;
-                xamlMember.Setter = set_55_HamburgerMenu_Selected;
+                xamlMember.Getter = get_59_HamburgerMenu_Selected;
+                xamlMember.Setter = set_59_HamburgerMenu_Selected;
                 break;
             case "Template10.Controls.HamburgerMenu.NavigationService":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavigationService", "Template10.Services.NavigationService.INavigationService");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_HamburgerMenu_NavigationService;
-                xamlMember.Setter = set_56_HamburgerMenu_NavigationService;
+                xamlMember.Getter = get_60_HamburgerMenu_NavigationService;
+                xamlMember.Setter = set_60_HamburgerMenu_NavigationService;
                 break;
             case "Template10.Controls.HamburgerMenu.IsFullScreen":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "IsFullScreen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_HamburgerMenu_IsFullScreen;
-                xamlMember.Setter = set_57_HamburgerMenu_IsFullScreen;
+                xamlMember.Getter = get_61_HamburgerMenu_IsFullScreen;
+                xamlMember.Setter = set_61_HamburgerMenu_IsFullScreen;
                 break;
             case "Template10.Controls.HamburgerMenu.PaneWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PaneWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_HamburgerMenu_PaneWidth;
-                xamlMember.Setter = set_58_HamburgerMenu_PaneWidth;
+                xamlMember.Getter = get_62_HamburgerMenu_PaneWidth;
+                xamlMember.Setter = set_62_HamburgerMenu_PaneWidth;
                 break;
             case "Template10.Controls.HamburgerMenu.HamburgerButtonGridWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "HamburgerButtonGridWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_HamburgerMenu_HamburgerButtonGridWidth;
-                xamlMember.Setter = set_59_HamburgerMenu_HamburgerButtonGridWidth;
+                xamlMember.Getter = get_63_HamburgerMenu_HamburgerButtonGridWidth;
+                xamlMember.Setter = set_63_HamburgerMenu_HamburgerButtonGridWidth;
                 break;
             case "Template10.Controls.HamburgerMenu.OpenCloseMode":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "OpenCloseMode", "Template10.Controls.HamburgerMenu.OpenCloseModes");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_HamburgerMenu_OpenCloseMode;
-                xamlMember.Setter = set_60_HamburgerMenu_OpenCloseMode;
+                xamlMember.Getter = get_64_HamburgerMenu_OpenCloseMode;
+                xamlMember.Setter = set_64_HamburgerMenu_OpenCloseMode;
                 break;
             case "Template10.Controls.HamburgerMenu.HeaderContent":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "HeaderContent", "Windows.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_HamburgerMenu_HeaderContent;
-                xamlMember.Setter = set_61_HamburgerMenu_HeaderContent;
+                xamlMember.Getter = get_65_HamburgerMenu_HeaderContent;
+                xamlMember.Setter = set_65_HamburgerMenu_HeaderContent;
                 break;
             case "Template10.Controls.HamburgerMenu.IsOpen":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_HamburgerMenu_IsOpen;
-                xamlMember.Setter = set_62_HamburgerMenu_IsOpen;
+                xamlMember.Getter = get_66_HamburgerMenu_IsOpen;
+                xamlMember.Setter = set_66_HamburgerMenu_IsOpen;
                 break;
             case "Template10.Controls.HamburgerMenu.SecondaryButtons":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SecondaryButtons", "System.Collections.ObjectModel.ObservableCollection`1<Template10.Controls.HamburgerButtonInfo>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_HamburgerMenu_SecondaryButtons;
-                xamlMember.Setter = set_63_HamburgerMenu_SecondaryButtons;
+                xamlMember.Getter = get_67_HamburgerMenu_SecondaryButtons;
+                xamlMember.Setter = set_67_HamburgerMenu_SecondaryButtons;
                 break;
             case "Template10.Controls.HamburgerMenu.NavCommand":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavCommand", "Template10.Mvvm.DelegateCommand`1<Template10.Controls.HamburgerButtonInfo>");
-                xamlMember.Getter = get_64_HamburgerMenu_NavCommand;
+                xamlMember.Getter = get_68_HamburgerMenu_NavCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Controls.HamburgerMenu.PropertyChangedHandlers":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.HamburgerMenu");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PropertyChangedHandlers", "Object");
-                xamlMember.Getter = get_65_HamburgerMenu_PropertyChangedHandlers;
+                xamlMember.Getter = get_69_HamburgerMenu_PropertyChangedHandlers;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Controls.PageHeader.VisualStateNarrowMinWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateNarrowMinWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_PageHeader_VisualStateNarrowMinWidth;
-                xamlMember.Setter = set_66_PageHeader_VisualStateNarrowMinWidth;
+                xamlMember.Getter = get_70_PageHeader_VisualStateNarrowMinWidth;
+                xamlMember.Setter = set_70_PageHeader_VisualStateNarrowMinWidth;
                 break;
             case "Template10.Controls.PageHeader.VisualStateNormalMinWidth":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "VisualStateNormalMinWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_PageHeader_VisualStateNormalMinWidth;
-                xamlMember.Setter = set_67_PageHeader_VisualStateNormalMinWidth;
+                xamlMember.Getter = get_71_PageHeader_VisualStateNormalMinWidth;
+                xamlMember.Setter = set_71_PageHeader_VisualStateNormalMinWidth;
                 break;
             case "Template10.Controls.PageHeader.EllipsisVisibility":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "EllipsisVisibility", "Template10.Behaviors.EllipsisBehavior.Visibilities");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_PageHeader_EllipsisVisibility;
-                xamlMember.Setter = set_68_PageHeader_EllipsisVisibility;
+                xamlMember.Getter = get_72_PageHeader_EllipsisVisibility;
+                xamlMember.Setter = set_72_PageHeader_EllipsisVisibility;
                 break;
             case "Template10.Controls.PageHeader.PrimaryCommandsVisibility":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "PrimaryCommandsVisibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_PageHeader_PrimaryCommandsVisibility;
-                xamlMember.Setter = set_69_PageHeader_PrimaryCommandsVisibility;
+                xamlMember.Getter = get_73_PageHeader_PrimaryCommandsVisibility;
+                xamlMember.Setter = set_73_PageHeader_PrimaryCommandsVisibility;
                 break;
             case "Template10.Controls.PageHeader.BackButtonVisibility":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "BackButtonVisibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_PageHeader_BackButtonVisibility;
-                xamlMember.Setter = set_70_PageHeader_BackButtonVisibility;
+                xamlMember.Getter = get_74_PageHeader_BackButtonVisibility;
+                xamlMember.Setter = set_74_PageHeader_BackButtonVisibility;
                 break;
             case "Template10.Controls.PageHeader.BackButtonContent":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "BackButtonContent", "Windows.UI.Xaml.Controls.Symbol");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_71_PageHeader_BackButtonContent;
-                xamlMember.Setter = set_71_PageHeader_BackButtonContent;
+                xamlMember.Getter = get_75_PageHeader_BackButtonContent;
+                xamlMember.Setter = set_75_PageHeader_BackButtonContent;
                 break;
             case "Template10.Controls.PageHeader.Frame":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Frame", "Windows.UI.Xaml.Controls.Frame");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_PageHeader_Frame;
-                xamlMember.Setter = set_72_PageHeader_Frame;
+                xamlMember.Getter = get_76_PageHeader_Frame;
+                xamlMember.Setter = set_76_PageHeader_Frame;
                 break;
             case "Template10.Controls.PageHeader.EnableHamburgerMenuAutoLayout":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "EnableHamburgerMenuAutoLayout", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_PageHeader_EnableHamburgerMenuAutoLayout;
-                xamlMember.Setter = set_73_PageHeader_EnableHamburgerMenuAutoLayout;
+                xamlMember.Getter = get_77_PageHeader_EnableHamburgerMenuAutoLayout;
+                xamlMember.Setter = set_77_PageHeader_EnableHamburgerMenuAutoLayout;
                 break;
             case "Template10.Controls.PageHeader.Text":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.PageHeader");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Text", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_PageHeader_Text;
-                xamlMember.Setter = set_74_PageHeader_Text;
+                xamlMember.Getter = get_78_PageHeader_Text;
+                xamlMember.Setter = set_78_PageHeader_Text;
                 break;
             case "Template10.Controls.Resizer.ElementControl":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.Resizer");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "ElementControl", "Windows.UI.Xaml.Controls.Control");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_Resizer_ElementControl;
-                xamlMember.Setter = set_75_Resizer_ElementControl;
+                xamlMember.Getter = get_79_Resizer_ElementControl;
+                xamlMember.Setter = set_79_Resizer_ElementControl;
                 break;
             case "Template10.Controls.Resizer.GrabberBrush":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.Resizer");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "GrabberBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_Resizer_GrabberBrush;
-                xamlMember.Setter = set_76_Resizer_GrabberBrush;
+                xamlMember.Getter = get_80_Resizer_GrabberBrush;
+                xamlMember.Setter = set_80_Resizer_GrabberBrush;
                 break;
             case "Template10.Controls.Resizer.GrabberVisibility":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.Resizer");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "GrabberVisibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_Resizer_GrabberVisibility;
-                xamlMember.Setter = set_77_Resizer_GrabberVisibility;
+                xamlMember.Getter = get_81_Resizer_GrabberVisibility;
+                xamlMember.Setter = set_81_Resizer_GrabberVisibility;
                 break;
             case "Template10.Controls.Resizer.GrabberSize":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Controls.Resizer");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "GrabberSize", "Windows.Foundation.Size");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_78_Resizer_GrabberSize;
-                xamlMember.Setter = set_78_Resizer_GrabberSize;
+                xamlMember.Getter = get_82_Resizer_GrabberSize;
+                xamlMember.Setter = set_82_Resizer_GrabberSize;
                 break;
             case "Weather_App.Views.Busy.BusyText":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.Views.Busy");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "BusyText", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_79_Busy_BusyText;
-                xamlMember.Setter = set_79_Busy_BusyText;
+                xamlMember.Getter = get_83_Busy_BusyText;
+                xamlMember.Setter = set_83_Busy_BusyText;
                 break;
             case "Weather_App.Views.Busy.IsBusy":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.Views.Busy");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "IsBusy", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_80_Busy_IsBusy;
-                xamlMember.Setter = set_80_Busy_IsBusy;
+                xamlMember.Getter = get_84_Busy_IsBusy;
+                xamlMember.Setter = set_84_Busy_IsBusy;
                 break;
             case "Weather_App.ViewModels.DetailPageViewModel.Value":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.DetailPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_81_DetailPageViewModel_Value;
-                xamlMember.Setter = set_81_DetailPageViewModel_Value;
+                xamlMember.Getter = get_85_DetailPageViewModel_Value;
+                xamlMember.Setter = set_85_DetailPageViewModel_Value;
                 break;
             case "Template10.Mvvm.ViewModelBase.NavigationService":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Mvvm.ViewModelBase");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "NavigationService", "Template10.Services.NavigationService.INavigationService");
-                xamlMember.Getter = get_82_ViewModelBase_NavigationService;
-                xamlMember.Setter = set_82_ViewModelBase_NavigationService;
+                xamlMember.Getter = get_86_ViewModelBase_NavigationService;
+                xamlMember.Setter = set_86_ViewModelBase_NavigationService;
                 break;
             case "Template10.Mvvm.ViewModelBase.Dispatcher":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Mvvm.ViewModelBase");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Dispatcher", "Template10.Common.IDispatcherWrapper");
-                xamlMember.Getter = get_83_ViewModelBase_Dispatcher;
-                xamlMember.Setter = set_83_ViewModelBase_Dispatcher;
+                xamlMember.Getter = get_87_ViewModelBase_Dispatcher;
+                xamlMember.Setter = set_87_ViewModelBase_Dispatcher;
                 break;
             case "Template10.Mvvm.ViewModelBase.SessionState":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Mvvm.ViewModelBase");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SessionState", "Template10.Common.IStateItems");
-                xamlMember.Getter = get_84_ViewModelBase_SessionState;
-                xamlMember.Setter = set_84_ViewModelBase_SessionState;
+                xamlMember.Getter = get_88_ViewModelBase_SessionState;
+                xamlMember.Setter = set_88_ViewModelBase_SessionState;
                 break;
             case "Weather_App.ViewModels.MainPageViewModel.Value":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.MainPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_85_MainPageViewModel_Value;
-                xamlMember.Setter = set_85_MainPageViewModel_Value;
+                xamlMember.Getter = get_89_MainPageViewModel_Value;
+                xamlMember.Setter = set_89_MainPageViewModel_Value;
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_86_Interaction_Behaviors;
-                xamlMember.Setter = set_86_Interaction_Behaviors;
+                xamlMember.Getter = get_90_Interaction_Behaviors;
+                xamlMember.Setter = set_90_Interaction_Behaviors;
                 break;
             case "Template10.Behaviors.KeyBehavior.Actions":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_87_KeyBehavior_Actions;
+                xamlMember.Getter = get_91_KeyBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Behaviors.KeyBehavior.Key":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Key", "Windows.System.VirtualKey");
-                xamlMember.Getter = get_88_KeyBehavior_Key;
-                xamlMember.Setter = set_88_KeyBehavior_Key;
+                xamlMember.Getter = get_92_KeyBehavior_Key;
+                xamlMember.Setter = set_92_KeyBehavior_Key;
                 break;
             case "Template10.Behaviors.KeyBehavior.AssociatedObject":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_89_KeyBehavior_AssociatedObject;
+                xamlMember.Getter = get_93_KeyBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Behaviors.KeyBehavior.AndControl":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AndControl", "Boolean");
-                xamlMember.Getter = get_90_KeyBehavior_AndControl;
-                xamlMember.Setter = set_90_KeyBehavior_AndControl;
+                xamlMember.Getter = get_94_KeyBehavior_AndControl;
+                xamlMember.Setter = set_94_KeyBehavior_AndControl;
                 break;
             case "Template10.Behaviors.KeyBehavior.AndAlt":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AndAlt", "Boolean");
-                xamlMember.Getter = get_91_KeyBehavior_AndAlt;
-                xamlMember.Setter = set_91_KeyBehavior_AndAlt;
+                xamlMember.Getter = get_95_KeyBehavior_AndAlt;
+                xamlMember.Setter = set_95_KeyBehavior_AndAlt;
                 break;
             case "Template10.Behaviors.KeyBehavior.AndShift":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AndShift", "Boolean");
-                xamlMember.Getter = get_92_KeyBehavior_AndShift;
-                xamlMember.Setter = set_92_KeyBehavior_AndShift;
+                xamlMember.Getter = get_96_KeyBehavior_AndShift;
+                xamlMember.Setter = set_96_KeyBehavior_AndShift;
                 break;
             case "Template10.Behaviors.KeyBehavior.Event":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Event", "Template10.Behaviors.KeyBehavior.Kinds");
-                xamlMember.Getter = get_93_KeyBehavior_Event;
-                xamlMember.Setter = set_93_KeyBehavior_Event;
+                xamlMember.Getter = get_97_KeyBehavior_Event;
+                xamlMember.Setter = set_97_KeyBehavior_Event;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_94_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_98_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_95_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_95_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_99_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_99_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_96_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_96_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_100_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_100_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactivity.Behavior.AssociatedObject":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_97_Behavior_AssociatedObject;
+                xamlMember.Getter = get_101_Behavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Template10.Behaviors.FocusAction.TargetObject":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.FocusAction");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "TargetObject", "Windows.UI.Xaml.Controls.Control");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_98_FocusAction_TargetObject;
-                xamlMember.Setter = set_98_FocusAction_TargetObject;
+                xamlMember.Getter = get_102_FocusAction_TargetObject;
+                xamlMember.Setter = set_102_FocusAction_TargetObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.CallMethodAction.MethodName":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.CallMethodAction");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "MethodName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_99_CallMethodAction_MethodName;
-                xamlMember.Setter = set_99_CallMethodAction_MethodName;
+                xamlMember.Getter = get_103_CallMethodAction_MethodName;
+                xamlMember.Setter = set_103_CallMethodAction_MethodName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.CallMethodAction.TargetObject":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.CallMethodAction");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "TargetObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_100_CallMethodAction_TargetObject;
-                xamlMember.Setter = set_100_CallMethodAction_TargetObject;
+                xamlMember.Getter = get_104_CallMethodAction_TargetObject;
+                xamlMember.Setter = set_104_CallMethodAction_TargetObject;
                 break;
             case "Weather_App.ViewModels.SettingsPageViewModel.SettingsPartViewModel":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SettingsPartViewModel", "Weather_App.ViewModels.SettingsPartViewModel");
-                xamlMember.Getter = get_101_SettingsPageViewModel_SettingsPartViewModel;
+                xamlMember.Getter = get_105_SettingsPageViewModel_SettingsPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Weather_App.ViewModels.SettingsPageViewModel.AboutPartViewModel":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AboutPartViewModel", "Weather_App.ViewModels.AboutPartViewModel");
-                xamlMember.Getter = get_102_SettingsPageViewModel_AboutPartViewModel;
+                xamlMember.Getter = get_106_SettingsPageViewModel_AboutPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

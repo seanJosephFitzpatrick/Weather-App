@@ -7,8 +7,10 @@
       xmlns:controls="using:Template10.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:Weather_App.Views"
+      xmlns:viewModels="using:Weather_App.ViewModels"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d">
+      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d" Loaded="Page_Loaded">
+    
 
     <Page.DataContext>
         <vm:MainPageViewModel x:Name="ViewModel" />
@@ -80,19 +82,18 @@
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </TextBox>
+            
+            
 
         </controls:Resizer>
-
-        <Button x:Name="submitButton"
-                Click="{x:Bind ViewModel.GotoDetailsPage}" Content="Submit"
-                RelativePanel.AlignBottomWith="parameterResizer"
-                RelativePanel.RightOf="parameterResizer" />
-
-        <TextBlock x:Name="stateTextBox" Margin="16,16,0,0"
-                   RelativePanel.AlignLeftWith="parameterResizer"
-                   RelativePanel.Below="parameterResizer"
-                   Text="Current Visual State" />
-
+        <StackPanel>
+            <TextBlock x:Name="WindText" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="TempText1" HorizontalAlignment="Right" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="LocationText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="DescriptionText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+          
+        </StackPanel>
     </RelativePanel>
+     
 </Page>
 

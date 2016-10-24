@@ -14,3 +14,4 @@ C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\SharedLibrary\obj\x86\Debug\p
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\SharedLibrary\obj\x86\Debug\qualifiers.txt
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\SharedLibrary\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sean Fitzpatrick\Desktop\mobileappproject\SharedLibrary\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Sean Fitzpatrick\Desktop\mobileAppProject\SharedLibrary\obj\x86\Debug\SharedLibrary.csprojResolveAssemblyReference.cache

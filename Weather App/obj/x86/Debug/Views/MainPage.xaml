@@ -7,8 +7,10 @@
       xmlns:controls="using:Template10.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:Weather_App.Views"
+      xmlns:viewModels="using:Weather_App.ViewModels"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d">
+      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d"                     >
+    
 
     <Page.DataContext>
         <vm:MainPageViewModel x:ConnectionId='2' x:Name="ViewModel" />
@@ -54,9 +56,9 @@
 
             <!--  secondary commands  -->
             <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='11'                                         Label="Settings" />
-                <AppBarButton x:ConnectionId='12'                                        Label="Privacy" />
-                <AppBarButton x:ConnectionId='13'                                      Label="About" />
+                <AppBarButton x:ConnectionId='13'                                         Label="Settings" />
+                <AppBarButton x:ConnectionId='14'                                        Label="Privacy" />
+                <AppBarButton x:ConnectionId='15'                                      Label="About" />
             </controls:PageHeader.SecondaryCommands>
 
         </controls:PageHeader>
@@ -80,20 +82,19 @@
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </TextBox>
+            
+            
 
         </controls:Resizer>
-
-        <Button x:ConnectionId='9' x:Name="submitButton"
-                                                           Content="Submit"
-                RelativePanel.AlignBottomWith="parameterResizer"
-                RelativePanel.RightOf="parameterResizer" />
-
-        <TextBlock x:ConnectionId='10' x:Name="stateTextBox" Margin="16,16,0,0"
-                   RelativePanel.AlignLeftWith="parameterResizer"
-                   RelativePanel.Below="parameterResizer"
-                   Text="Current Visual State" />
-
+        <StackPanel>
+            <TextBlock x:ConnectionId='9' x:Name="WindText" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:ConnectionId='10' x:Name="TempText1" HorizontalAlignment="Right" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:ConnectionId='11' x:Name="LocationText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:ConnectionId='12' x:Name="DescriptionText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+          
+        </StackPanel>
     </RelativePanel>
+     
 </Page>
 
 
