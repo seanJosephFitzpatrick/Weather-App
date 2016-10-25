@@ -17,6 +17,36 @@ namespace Weather_App.ViewModels
     {
 
         /// <summary>
+        /// The <see cref="CurrentDay" /> property's name.
+        /// </summary>
+        public const string CurrentDayPropertyName = "CurrentDay";
+
+        private Day _currentDay = null;
+
+        /// <summary>
+        /// Sets and gets the CurrentDay property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public Day CurrentDay
+        {
+            get
+            {
+                return _currentDay;
+            }
+
+            set
+            {
+                if (_currentDay == value)
+                {
+                    return;
+                }
+
+                _currentDay = value;
+                RaisePropertyChanged(CurrentDayPropertyName);
+            }
+        }
+
+        /// <summary>
             /// The <see cref="DayList" /> property's name.
             /// </summary>
         public const string MyPropertyPropertyName = "MyProperty";
@@ -59,6 +89,7 @@ namespace Weather_App.ViewModels
                 DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(4) });
                 DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(5) });
                 DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(6) });
+                CurrentDay = DayList[0];
             }
             else {
 

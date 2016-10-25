@@ -16,21 +16,85 @@
         <vm:MainPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
 
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+ 
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+      
+
+        <controls:PageHeader x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
+                             RelativePanel.AlignRightWithPanel="True"
+                             RelativePanel.AlignTopWithPanel="True" Text="Main Page">
+        
+            <!--  secondary commands  -->
+            <controls:PageHeader.SecondaryCommands>
+                <AppBarButton Click="{x:Bind ViewModel.GotoSettings}" Label="Settings" />
+                <AppBarButton Click="{x:Bind ViewModel.GotoPrivacy}" Label="Privacy" />
+                <AppBarButton Click="{x:Bind ViewModel.GotoAbout}" Label="About" />
+            </controls:PageHeader.SecondaryCommands>
+            
+        </controls:PageHeader>
+
+        <Rectangle Name="RedRectangle"  
+                           Fill="Red"  
+                           Width="100"  
+                           Height="100"  
+                           RelativePanel.AlignRightWithPanel="True" />
+
+        <Rectangle Name="BlueRectangle"  
+                           Fill="Blue"  
+                           Width="50"  
+                           Height="50"  
+                           RelativePanel.LeftOf="RedRectangle" />
+
+        <Rectangle Name="GreenRectangle"  
+                           Fill="Green"  
+                           Width="50"  
+                           Height="50"  
+                           RelativePanel.AlignVerticalCenterWith="RedRectangle"  
+                           RelativePanel.AlignHorizontalCenterWithPanel="True" />
+
+        <Rectangle Name="YellowRectangle"  
+                           Fill="Yellow" 
+                           MinWidth="50"  
+                           MinHeight="50" 
+                           RelativePanel.AlignBottomWithPanel="True" 
+                           RelativePanel.AlignTopWith="PurpleRectangle"/>
+
+
+        <Rectangle Name="PurpleRectangle"  
+                           Fill="Purple"  
+                           MinWidth="50" MinHeight="50"  
+                           RelativePanel.Below="RedRectangle"  
+                           RelativePanel.AlignRightWith="RedRectangle" 
+                           RelativePanel.AlignLeftWith="GreenRectangle" 
+                            />
+
+        <!--
+           <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>-->
+            <!--Expand based on content inside
+        <RowDefinition Height="*"/>
+        -->
+        <!--Expand based on what space is left-->
+        <!--
         </Grid.RowDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}">
+        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
             <ListBox.Resources>
                 <DataTemplate x:Key="DayListTemplate">
                     <Grid Margin="10">
-                        <TextBlock Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
+                        <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
                     </Grid>
-                </DataTemplate>
-                <!--ItemsPanel - Panel that is put around all the items -->
+                </DataTemplate>-->
+                <!--ItemsPanel - Panel that is put around all the items 
                 <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+        -->
                     <!--
                     What is Virtualizing StackPanel
                     Virtualizing StackPanel generates container items when needed & throws them from memory when 
@@ -39,6 +103,7 @@
                     problem. 
                     Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
                     -->
+        <!--
                     <VirtualizingStackPanel Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListBox.Resources>
@@ -50,95 +115,20 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-    </Grid>
+        <Grid Grid.Row="1" DataContext="{Binding CurrentDay}">
+            <TextBlock DataContext="{Binding temp}"></TextBlock>
+        </Grid>
 
-
-    <!--
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
-                <VisualState x:Name="VisualStateNarrow">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource NarrowMinWidth}" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-    -->
-    <!--  TODO: change properties for narrow view  
-                        <Setter Target="stateTextBox.Text" Value="Narrow Visual State" />
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="VisualStateNormal">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource NormalMinWidth}" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-    -->
-    <!--  TODO: change properties for normal view  
-                        <Setter Target="stateTextBox.Text" Value="Normal Visual State" />
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="VisualStateWide">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{StaticResource WideMinWidth}" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-    -->
-    <!--  TODO: change properties for wide view  
-                        <Setter Target="stateTextBox.Text" Value="Wide Visual State" />
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-
-        <controls:PageHeader x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
-                             RelativePanel.AlignRightWithPanel="True"
-                             RelativePanel.AlignTopWithPanel="True" Text="Main Page">
+        </Grid>
         -->
-    <!--  secondary commands  
-            <controls:PageHeader.SecondaryCommands>
-                <AppBarButton Click="{x:Bind ViewModel.GotoSettings}" Label="Settings" />
-                <AppBarButton Click="{x:Bind ViewModel.GotoPrivacy}" Label="Privacy" />
-                <AppBarButton Click="{x:Bind ViewModel.GotoAbout}" Label="About" />
-            </controls:PageHeader.SecondaryCommands>
+    
 
-        </controls:PageHeader>
-
-        <controls:Resizer x:Name="parameterResizer" Margin="16,16,16,0"
-                          RelativePanel.AlignLeftWithPanel="True"
-                          RelativePanel.Below="pageHeader">
-
-            <TextBox MinWidth="150" MinHeight="62"
-                     Header="Parameter to pass"
-                     Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     TextWrapping="Wrap">
-                <Interactivity:Interaction.Behaviors>
-    -->
-    <!--  enable submit on enter key  
-                    <Behaviors:KeyBehavior Key="Enter">
-                        <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
-                    </Behaviors:KeyBehavior>
-    -->
-    <!--  focus on textbox when page loads  
-                    <Core:EventTriggerBehavior>
-                        <Behaviors:FocusAction />
-                    </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>
-            </TextBox>
-            
-            
-
-        </controls:Resizer>
-        <StackPanel>
-          
-            <TextBlock x:Name="WindText" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-            <TextBlock x:Name="TempText1" HorizontalAlignment="Right" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-            <TextBlock x:Name="LocationText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-            <TextBlock x:Name="DescriptionText" HorizontalAlignment="Center" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-          
-        </StackPanel>
+     
+   
     </RelativePanel>
-    -->
+    
+    
+    
 
 
 
