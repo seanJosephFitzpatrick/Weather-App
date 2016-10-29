@@ -30,13 +30,13 @@ namespace Weather_App.Views
             LocationService service = new LocationService();
 
             //Check if location is off on device
-            if (service.IsLocationServiceEnabled == true)
+           /* if (service.IsLocationServiceEnabled == true)
             {
                 //Display message that location is off
                 await new MessageDialog("This app needs to use your GPS to display information based on your current" +
                     " location. Turn on location services in settings.").ShowAsync();
 
-            }
+            }*/
 
 
             try

@@ -93,6 +93,16 @@ namespace Weather_App.ViewModels
             }
             else {
 
+                DayList = new ObservableCollection<Day>();
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(1) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(2) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(3) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(4) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(5) });
+                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(6) });
+                CurrentDay = DayList[0];
+
             }
         }
 

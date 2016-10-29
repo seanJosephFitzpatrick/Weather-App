@@ -16,85 +16,36 @@
         <vm:MainPageViewModel x:ConnectionId='2' x:Name="ViewModel" />
     </Page.DataContext>
 
- 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-      
-
-        <controls:PageHeader x:ConnectionId='3' x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
-                             RelativePanel.AlignRightWithPanel="True"
-                             RelativePanel.AlignTopWithPanel="True" Text="Main Page">
+    <Grid x:ConnectionId='3' x:Name="LayoutRoot" >
         
-            <!--  secondary commands  -->
-            <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='9'                                         Label="Settings" />
-                <AppBarButton x:ConnectionId='10'                                        Label="Privacy" />
-                <AppBarButton x:ConnectionId='11'                                      Label="About" />
-            </controls:PageHeader.SecondaryCommands>
-            
-        </controls:PageHeader>
-
-        <Rectangle x:ConnectionId='4' Name="RedRectangle"  
-                           Fill="Red"  
-                           Width="100"  
-                           Height="100"  
-                           RelativePanel.AlignRightWithPanel="True" />
-
-        <Rectangle x:ConnectionId='5' Name="BlueRectangle"  
-                           Fill="Blue"  
-                           Width="50"  
-                           Height="50"  
-                           RelativePanel.LeftOf="RedRectangle" />
-
-        <Rectangle x:ConnectionId='6' Name="GreenRectangle"  
-                           Fill="Green"  
-                           Width="50"  
-                           Height="50"  
-                           RelativePanel.AlignVerticalCenterWith="RedRectangle"  
-                           RelativePanel.AlignHorizontalCenterWithPanel="True" />
-
-        <Rectangle x:ConnectionId='7' Name="YellowRectangle"  
-                           Fill="Yellow" 
-                           MinWidth="50"  
-                           MinHeight="50" 
-                           RelativePanel.AlignBottomWithPanel="True" 
-                           RelativePanel.AlignTopWith="PurpleRectangle"/>
-
-
-        <Rectangle x:ConnectionId='8' Name="PurpleRectangle"  
-                           Fill="Purple"  
-                           MinWidth="50" MinHeight="50"  
-                           RelativePanel.Below="RedRectangle"  
-                           RelativePanel.AlignRightWith="RedRectangle" 
-                           RelativePanel.AlignLeftWith="GreenRectangle" 
-                            />
-
-        <!--
-           <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>-->
-            <!--Expand based on content inside
+                <RowDefinition Height="Auto"/>
+                <!--Expand based on content inside-->
+            
         <RowDefinition Height="*"/>
-        -->
+        
         <!--Expand based on what space is left-->
-        <!--
+       
         </Grid.RowDefinitions>
 
         <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
             <ListBox.Resources>
-                <DataTemplate x:Key="DayListTemplate">
-                    <Grid Margin="10">
-                        <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
-                        <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-                            <Rectangle.Fill>
-                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-                            </Rectangle.Fill>
-                        </Rectangle>
-                    </Grid>
-                </DataTemplate>-->
-                <!--ItemsPanel - Panel that is put around all the items 
+                    <DataTemplate x:Key="DayListTemplate">
+                        <Grid Margin="10">
+                            <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
+                            <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+                    </DataTemplate>
+                    <!--ItemsPanel - Panel that is put around all the items -->
+            
                 <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
-        -->
+            
+        
                     <!--
                     What is Virtualizing StackPanel
                     Virtualizing StackPanel generates container items when needed & throws them from memory when 
@@ -103,8 +54,8 @@
                     problem. 
                     Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
                     -->
-        <!--
-                    <VirtualizingStackPanel Orientation="Horizontal"/>
+        
+                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListBox.Resources>
             <ListBox.ItemsPanel>
@@ -119,13 +70,40 @@
             <TextBlock DataContext="{Binding temp}"></TextBlock>
         </Grid>
 
-        </Grid>
-        -->
+        <RelativePanel >
+
+
+
+            <controls:PageHeader x:ConnectionId='4' x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
+                             RelativePanel.AlignRightWithPanel="True"
+                             RelativePanel.AlignTopWithPanel="True" Text="Main Page">
+
+                <!--  secondary commands  -->
+                <controls:PageHeader.SecondaryCommands>
+                    <AppBarButton x:ConnectionId='5'                                         Label="Settings" />
+                    <AppBarButton x:ConnectionId='6'                                        Label="Privacy" />
+                    <AppBarButton x:ConnectionId='7'                                      Label="About" />
+                </controls:PageHeader.SecondaryCommands>
+
+            </controls:PageHeader>
+<!--
+            <Rectangle Name="DaysRectangle"  
+                           Fill="Red"  
+                           Width="100"  
+                           Height="100"  
+                           RelativePanel.Below="pageHeader"
+                   
+                   />
+            -->
+        </RelativePanel>
+
+    </Grid>
+        
     
 
      
    
-    </RelativePanel>
+   
     
     
     
