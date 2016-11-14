@@ -9,7 +9,7 @@
       xmlns:local="using:Weather_App.Views"
       xmlns:viewModels="using:Weather_App.ViewModels"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d" Loaded="Page_Loaded">
+      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d">
 
 
     <Page.DataContext>
@@ -66,9 +66,11 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Grid Grid.Row="1" DataContext="{Binding CurrentDay}">
-            <TextBlock DataContext="{Binding temp}"></TextBlock>
-        </Grid>
+        <GridView Grid.Row="1" DataContext="{Binding CurrentDay, Mode=TwoWay}">
+            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Text="Sean" ></TextBlock>
+            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="{Binding temp.max}"></TextBlock>
+            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="30" Text="Fitz" ></TextBlock>
+        </GridView>
 
         <RelativePanel >
 

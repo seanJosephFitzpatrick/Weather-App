@@ -4,13 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace SharedLibrary.Models
 {
+    public class Coord
+    {
+        public double lon { get; set; }
+        public double lat { get; set; }
+    }
+
+    public class City
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public Coord coord { get; set; }
+        public string country { get; set; }
+        public int population { get; set; }
+    }
+
+    public class Temp
+    {
+        public double day { get; set; }
+        public double min { get; set; }
+        public double max { get; set; }
+        public double night { get; set; }
+        public double eve { get; set; }
+        public double morn { get; set; }
+    }
+
+    public class Weather
+    {
+        public int id { get; set; }
+        public string main { get; set; }
+        public string description { get; set; }
+        public string icon { get; set; }
+    }
+
     public class Day
     {
-        private int _dt;
+        private List<Day> day = new List<Day>();
 
+        private int _dt;
         public int dt
         {
             //Modified from https://www.youtube.com/watch?v=zm2tOtr8ReM tutorial
@@ -40,24 +73,28 @@ namespace SharedLibrary.Models
 
         public DateTime Time
         {
-            get {  return _time; }
+            get { return _time; }
             set { _time = value; }
         }
 
 
-        public double temp { get; set; }
-        public double temp_min { get; set; }
-        public double temp_max { get; set; }
+        public Temp temp { get; set; }
         public double pressure { get; set; }
-        public double sea_level { get; set; }
-        public double grnd_level { get; set; }
         public int humidity { get; set; }
-        public int temp_kf { get; set; }
-        public int night { get; set; }
-        public int eve { get; set; }
-        public int morn { get; set; }
-        public string dt_txt { get; set; }
+        public List<Weather> weather { get; set; }
+        public double speed { get; set; }
+        public int deg { get; set; }
+        public int clouds { get; set; }
+        public double? rain { get; set; }
+    }
 
-    
+    public class RootObject
+    {
+        public City city { get; set; }
+        public string cod { get; set; }
+        public double message { get; set; }
+        public int cnt { get; set; }
+
+        public List<Day> list { get; set; }
     }
 }

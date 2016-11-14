@@ -80,30 +80,66 @@ namespace Weather_App.ViewModels
         {
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
-                Value = "Designtime value";
-                DayList = new ObservableCollection<Day>();
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(1) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(2) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(3) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(4) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(5) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(6) });
-                CurrentDay = DayList[0];
+              
             }
-            else {
 
+            try
+            {
+                loadData();
                 DayList = new ObservableCollection<Day>();
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(1) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(2) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(3) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(4) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(5) });
-                DayList.Add(new Day { temp = 20, Time = DateTime.Now.AddDays(6) });
                 CurrentDay = DayList[0];
 
             }
+            catch (ArgumentOutOfRangeException)
+            {
+
+                return;
+            }
+        }
+
+        public async void loadData()
+        {
+            await PopulateWeatherDataAsync();
+
+        }
+
+        public async Task PopulateWeatherDataAsync()
+        {
+
+            try
+            {
+                var position = await GeolocationVM.GetPosition();
+
+
+                var lat = position.Coordinate.Latitude;
+                var lon = position.Coordinate.Longitude;
+
+
+                //RootObject result = await APIDataVM.GetWeather(lat, lon);
+                var RootObject = await APIDataVM.GetWeather(lat, lon);
+
+
+                var Days = new ObservableCollection<Day>(RootObject.list);
+
+                //var Days = RootObject.list;
+
+
+
+
+                foreach (var list in Days)
+                {
+
+                    DayList.Add(list);
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+                // LocationText.Text = "Unable to access Weather";
+            }
+
         }
 
         string _Value = "Gas";

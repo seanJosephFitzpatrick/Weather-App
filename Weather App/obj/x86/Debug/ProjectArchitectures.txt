@@ -1,2 +1,2 @@
-C:\Users\Sean Fitzpatrick\Desktop\mobileAppProject\SharedLibrary\SharedLibrary.csproj;x86
-C:\Users\Sean Fitzpatrick\Desktop\mobileAppProject\Weather App\Weather App.csproj;x86
+C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\SharedLibrary.csproj;x86
+C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Weather App.csproj;x86
