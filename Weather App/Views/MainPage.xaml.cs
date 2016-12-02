@@ -18,8 +18,32 @@ namespace Weather_App.Views
         {
             InitializeComponent();
             NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-          
+
+         
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            var DayList = new ObservableCollection<Day>();
+
+          
+
+            try
+            {
+
+                foreach (var day in DayList)
+                {
+                    temp.Text = DayList[0].temp.max.ToString();
+                }
+
+            }
+            catch (IndexOutOfRangeException)
+            {
+
+                return;
+            }
+
+        }
     }
 }

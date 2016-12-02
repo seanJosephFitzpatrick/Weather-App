@@ -70,6 +70,7 @@ namespace SharedLibrary.Models
         }
 
         private DateTime _time;
+        internal IEnumerable<object> Daylist;
 
         public DateTime Time
         {

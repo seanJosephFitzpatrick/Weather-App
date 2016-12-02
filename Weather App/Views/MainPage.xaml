@@ -9,7 +9,7 @@
       xmlns:local="using:Weather_App.Views"
       xmlns:viewModels="using:Weather_App.ViewModels"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d">
+      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d" Loaded="Page_Loaded">
 
 
     <Page.DataContext>
@@ -32,15 +32,22 @@
         <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
             <ListBox.Resources>
                     <DataTemplate x:Key="DayListTemplate">
-                        <Grid Margin="10">
-                            <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
-                            <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-                                <Rectangle.Fill>
-                                    <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-                                </Rectangle.Fill>
-                            </Rectangle>
-                        </Grid>
-                    </DataTemplate>
+                        <Grid>
+                       
+                            
+                            <TextBlock HorizontalAlignment="Center"  Text="{Binding Time.Date.DayOfWeek, Mode=TwoWay}"></TextBlock>
+                            
+                        <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                            
+                            
+                        
+                    </Grid>
+               
+                </DataTemplate>
                     <!--ItemsPanel - Panel that is put around all the items -->
             
                 <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
@@ -66,13 +73,52 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <GridView Grid.Row="1" DataContext="{Binding CurrentDay, Mode=TwoWay}">
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Text="Sean" ></TextBlock>
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="{Binding temp.max}"></TextBlock>
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="30" Text="Fitz" ></TextBlock>
-        </GridView>
+      
+        <!--
 
-        <RelativePanel >
+        <RelativePanel Grid.Row="1" >
+            <ItemsControl ItemsSource="{Binding DayList}"  >
+                <ItemsControl.ItemTemplate >
+                    <DataTemplate >
+                        <TextBlock Text="{Binding temp.max}" FontSize="30" ></TextBlock>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </RelativePanel>
+        -->
+        <!--
+        <StackPanel>
+            <ItemsControl ItemsSource="{Binding DayList}" DisplayMemberPath="temp.max" >
+                <ItemsControl.ItemTemplate >
+                    <DataTemplate >
+                        <TextBlock Text="{Binding temp.max}" FontSize="30" ></TextBlock>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        -->
+        <!--
+        <GridView Grid.Row="2"  DataContext="DayList" >
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="viewModels:MainPageViewModel">
+                   <TextBlock Text="{Binding Daylist.temp.max, Mode=OneWay}" Width="200" Height="100"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        -->
+
+        <Grid Grid.Row="2">
+            <TextBlock x:Name="temp" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+
+
+
+
+
+
+
+
+            <RelativePanel >
 
 
 

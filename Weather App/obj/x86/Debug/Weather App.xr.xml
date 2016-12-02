@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="CurrentDay" />
-    <RootPropertyPathName Name="temp" />
-    <RootPropertyPathName Name="max" />
     <RootPropertyPathName Name="DayList" />
+    <RootPropertyPathName Name="CurrentDay" />
     <RootPropertyPathName Name="Time" />
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="DayOfWeek" />
@@ -87,7 +85,6 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
@@ -114,10 +111,12 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="LineHeight" />
-      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
@@ -128,6 +127,7 @@
       <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
       <RootProperty Name="Background" />
+      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Weather_App.ViewModels.DetailPageViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
@@ -187,10 +187,6 @@
       <RootProperty Name="Resources" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Label" />

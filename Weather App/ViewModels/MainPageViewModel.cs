@@ -10,6 +10,8 @@ using Windows.UI.Xaml;
 using SharedLibrary.SharedLibraryVM;
 using SharedLibrary.Models;
 using System.Collections.ObjectModel;
+using System.Collections;
+using Windows.Data.Json;
 
 namespace Weather_App.ViewModels
 {
@@ -43,6 +45,36 @@ namespace Weather_App.ViewModels
 
                 _currentDay = value;
                 RaisePropertyChanged(CurrentDayPropertyName);
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="TempList" /> property's name.
+        /// </summary>
+        public const string TempListPropertyName = "TempList";
+
+        private ObservableCollection<Day> _tempList = null;
+
+        /// <summary>
+        /// Sets and gets the TempList property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public ObservableCollection<Day> TempList
+        {
+            get
+            {
+                return _tempList;
+            }
+
+            set
+            {
+                if (_tempList == value)
+                {
+                    return;
+                }
+
+                _tempList = value;
+                RaisePropertyChanged(TempListPropertyName);
             }
         }
 
@@ -87,7 +119,10 @@ namespace Weather_App.ViewModels
             {
                 loadData();
                 DayList = new ObservableCollection<Day>();
+                
                 CurrentDay = DayList[0];
+             
+
 
             }
             catch (ArgumentOutOfRangeException)
@@ -102,6 +137,8 @@ namespace Weather_App.ViewModels
             await PopulateWeatherDataAsync();
 
         }
+
+      
 
         public async Task PopulateWeatherDataAsync()
         {
@@ -121,6 +158,9 @@ namespace Weather_App.ViewModels
 
                 var Days = new ObservableCollection<Day>(RootObject.list);
 
+              
+                
+
                 //var Days = RootObject.list;
 
 
@@ -128,8 +168,15 @@ namespace Weather_App.ViewModels
 
                 foreach (var list in Days)
                 {
-
+                   
                     DayList.Add(list);
+
+                    
+                    
+                    DayList[0].speed.ToString();
+
+                    DayList[0].temp.max.ToString();
+
                 }
 
 
@@ -141,6 +188,8 @@ namespace Weather_App.ViewModels
             }
 
         }
+
+  
 
         string _Value = "Gas";
         public string Value { get { return _Value; } set { Set(ref _Value, value); } }
