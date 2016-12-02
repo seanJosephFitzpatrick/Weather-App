@@ -17,7 +17,11 @@ namespace Weather_App.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        /*
+         The commented out code was for MVVM Pattern
+     */
 
+/*
         /// <summary>
         /// The <see cref="CurrentDay" /> property's name.
         /// </summary>
@@ -107,6 +111,7 @@ namespace Weather_App.ViewModels
                 RaisePropertyChanged(MyPropertyPropertyName);
             }
         }
+*/
 
         public MainPageViewModel()
         {
@@ -115,6 +120,7 @@ namespace Weather_App.ViewModels
               
             }
 
+/*
             try
             {
                 loadData();
@@ -130,8 +136,10 @@ namespace Weather_App.ViewModels
 
                 return;
             }
+*/
         }
-
+        
+/*
         public async void loadData()
         {
             await PopulateWeatherDataAsync();
@@ -188,8 +196,7 @@ namespace Weather_App.ViewModels
             }
 
         }
-
-  
+*/
 
         string _Value = "Gas";
         public string Value { get { return _Value; } set { Set(ref _Value, value); } }

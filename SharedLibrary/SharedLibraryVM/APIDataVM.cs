@@ -19,9 +19,11 @@ namespace SharedLibrary.SharedLibraryVM
             //Make call to web service
             var http = new HttpClient();
 
-            var url = String.Format("http://api.openweathermap.org/data/2.5/forecast/daily?lat={0}&lon={1}&cnt=10&appid=60543d045038ee177a09789c4171cee0&units=imperial", lat, lon);
+            //Return 10 days of json data
+            //var url = String.Format("http://api.openweathermap.org/data/2.5/forecast/daily?lat={0}&lon={1}&cnt=10&appid=60543d045038ee177a09789c4171cee0&units=imperial", lat, lon);
 
-            //var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid=60543d045038ee177a09789c4171cee0&units=imperial", lat, lon);
+            //Return current day of json data
+            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid=60543d045038ee177a09789c4171cee0&units=imperial", lat, lon);
             //response message
             var response = await http.GetAsync(url);
 

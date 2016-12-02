@@ -12,25 +12,6 @@ namespace SharedLibrary.Models
         public double lat { get; set; }
     }
 
-    public class City
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public Coord coord { get; set; }
-        public string country { get; set; }
-        public int population { get; set; }
-    }
-
-    public class Temp
-    {
-        public double day { get; set; }
-        public double min { get; set; }
-        public double max { get; set; }
-        public double night { get; set; }
-        public double eve { get; set; }
-        public double morn { get; set; }
-    }
-
     public class Weather
     {
         public int id { get; set; }
@@ -39,9 +20,55 @@ namespace SharedLibrary.Models
         public string icon { get; set; }
     }
 
-    public class Day
+    public class Main
     {
-        private List<Day> day = new List<Day>();
+        public double temp { get; set; }
+        public int pressure { get; set; }
+        public int humidity { get; set; }
+        public double temp_min { get; set; }
+        public double temp_max { get; set; }
+    }
+
+    public class Wind
+    {
+        public double speed { get; set; }
+        public double deg { get; set; }
+    }
+
+    public class Clouds
+    {
+        public int all { get; set; }
+    }
+
+    public class Sys
+    {
+        public int type { get; set; }
+        public int id { get; set; }
+        public double message { get; set; }
+        public string country { get; set; }
+        public int sunrise { get; set; }
+        public int sunset { get; set; }
+    }
+
+    public class RootObject
+    {
+        public Coord coord { get; set; }
+        public List<Weather> weather { get; set; }
+        public string @base { get; set; }
+        public Main main { get; set; }
+        public int visibility { get; set; }
+        public Wind wind { get; set; }
+        public Clouds clouds { get; set; }
+        public int dt { get; set; }
+        public Sys sys { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int cod { get; set; }
+    }
+
+    public class CurrentTime
+    {
+
 
         private int _dt;
         public int dt
@@ -51,6 +78,7 @@ namespace SharedLibrary.Models
             set
             {
                 _dt = value;
+
                 /*
                 epoch time - Taken from ( http://www.epochconverter.com/ )
                 The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), 
@@ -64,38 +92,19 @@ namespace SharedLibrary.Models
                 1 month (30.44 days)    2629743 seconds
                 1 year (365.24 days)    31556926 seconds
                  */
+
                 var epochTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
                 Time = epochTime.AddSeconds(value);
             }
         }
 
         private DateTime _time;
-        internal IEnumerable<object> Daylist;
+
 
         public DateTime Time
         {
             get { return _time; }
             set { _time = value; }
         }
-
-
-        public Temp temp { get; set; }
-        public double pressure { get; set; }
-        public int humidity { get; set; }
-        public List<Weather> weather { get; set; }
-        public double speed { get; set; }
-        public int deg { get; set; }
-        public int clouds { get; set; }
-        public double? rain { get; set; }
-    }
-
-    public class RootObject
-    {
-        public City city { get; set; }
-        public string cod { get; set; }
-        public double message { get; set; }
-        public int cnt { get; set; }
-
-        public List<Day> list { get; set; }
-    }
+    } 
 }

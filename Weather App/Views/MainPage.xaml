@@ -20,7 +20,7 @@
     <Grid x:Name="LayoutRoot" >
         
         <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
                 <!--Expand based on content inside-->
             
         <RowDefinition Height="*"/>
@@ -29,87 +29,27 @@
        
         </Grid.RowDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
-            <ListBox.Resources>
-                    <DataTemplate x:Key="DayListTemplate">
-                        <Grid>
-                       
-                            
-                            <TextBlock HorizontalAlignment="Center"  Text="{Binding Time.Date.DayOfWeek, Mode=TwoWay}"></TextBlock>
-                            
-                        <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-                            <Rectangle.Fill>
-                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-                            </Rectangle.Fill>
-                        </Rectangle>
-                            
-                            
-                        
-                    </Grid>
-               
-                </DataTemplate>
-                    <!--ItemsPanel - Panel that is put around all the items -->
-            
-                <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
-            
-        
-                    <!--
-                    What is Virtualizing StackPanel
-                    Virtualizing StackPanel generates container items when needed & throws them from memory when 
-                    they are no longer in the view. When the panel has huge number of items, at that time there 
-                    is no need to keep the extra items in memory which are not in view. This solves the memory 
-                    problem. 
-                    Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
-                    -->
-        
-                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListBox.Resources>
-            <ListBox.ItemsPanel>
-                <StaticResource ResourceKey="ItemsPanelTemplate1"/>
-            </ListBox.ItemsPanel>
-            <ListBox.ItemTemplate>
-                <StaticResource ResourceKey="DayListTemplate"/>
-            </ListBox.ItemTemplate>
-        </ListBox>
 
-      
-        <!--
 
-        <RelativePanel Grid.Row="1" >
-            <ItemsControl ItemsSource="{Binding DayList}"  >
-                <ItemsControl.ItemTemplate >
-                    <DataTemplate >
-                        <TextBlock Text="{Binding temp.max}" FontSize="30" ></TextBlock>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </RelativePanel>
-        -->
-        <!--
-        <StackPanel>
-            <ItemsControl ItemsSource="{Binding DayList}" DisplayMemberPath="temp.max" >
-                <ItemsControl.ItemTemplate >
-                    <DataTemplate >
-                        <TextBlock Text="{Binding temp.max}" FontSize="30" ></TextBlock>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+
+
+        <StackPanel Margin="0,50,0,0" Orientation="Horizontal" >
+            <StackPanel Background="ForestGreen">
+                <TextBlock x:Name="TempText" />
+            </StackPanel>
+            <StackPanel Background="Cyan">
+                <TextBlock x:Name="TempText1" HorizontalAlignment="Right" />
+            </StackPanel>
+            <StackPanel Background="BlueViolet">
+                <TextBlock x:Name="DescriptionText" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Background="Aquamarine">
+                <TextBlock x:Name="LocationText"  />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Background="Bisque">
+                <TextBlock x:Name="WindText" HorizontalAlignment="Center" />
+            </StackPanel>
         </StackPanel>
-        -->
-        <!--
-        <GridView Grid.Row="2"  DataContext="DayList" >
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="viewModels:MainPageViewModel">
-                   <TextBlock Text="{Binding Daylist.temp.max, Mode=OneWay}" Width="200" Height="100"/>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
-        -->
-
-        <Grid Grid.Row="2">
-            <TextBlock x:Name="temp" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        </Grid>
 
 
 
@@ -118,7 +58,10 @@
 
 
 
-            <RelativePanel >
+
+
+
+        <RelativePanel >
 
 
 
