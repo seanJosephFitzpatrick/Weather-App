@@ -1,0 +1,2 @@
+C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\BackgroundTask\BackgroundTask.csproj;x86
+C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\SharedLibrary.csproj;x86

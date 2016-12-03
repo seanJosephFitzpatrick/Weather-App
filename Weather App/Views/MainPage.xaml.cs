@@ -9,18 +9,57 @@ using SharedLibrary.SharedLibraryVM;
 using Windows.UI.Popups;
 using Windows.Devices.Geolocation;
 using Windows.System;
+using Windows.ApplicationModel.Background;
 
 namespace Weather_App.Views
 {
     public sealed partial class MainPage : Page
     {
+
+        private const string taskName = "WeatherBackgroundTask";
+        private const string taskEntryPoint = "BackgroundTasks.WeatherBackgroundTask";
+
         public MainPage()
         {
             InitializeComponent();
             NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-
-         
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.RegisterBackgroundTask();
+        }
+
+        private async void RegisterBackgroundTask()
+        {
+            var backgroundAccessStatus = await BackgroundExecutionManager.RequestAccessAsync();
+            if (backgroundAccessStatus == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity ||
+                backgroundAccessStatus == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity)
+            {
+                foreach (var task in BackgroundTaskRegistration.AllTasks)
+                {
+                    if (task.Value.Name == taskName)
+                    {
+                        task.Value.Unregister(true);
+                    }
+                }
+
+                try
+                {
+                    BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder();
+                    taskBuilder.Name = taskName;
+                    taskBuilder.TaskEntryPoint = taskEntryPoint;
+                    taskBuilder.SetTrigger(new TimeTrigger(15, false));
+                    var registration = taskBuilder.Register();
+                }
+                catch (System.Exception)
+                {
+
+                    return;
+                }
+            }
+        }
+
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {

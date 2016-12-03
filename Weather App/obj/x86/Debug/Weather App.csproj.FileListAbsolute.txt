@@ -424,18 +424,18 @@ C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\App
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Styles\Custom.xaml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\Busy.xaml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\DetailPage.xaml
-C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\MainPage.xaml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\SettingsPage.xaml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\Shell.xaml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\Splash.xaml
+C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\MainPage.xaml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\App.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Styles\Custom.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\Busy.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\DetailPage.xbf
-C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\MainPage.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\SettingsPage.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\Shell.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\Splash.xbf
+C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Views\MainPage.xbf
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Weather App.exe
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\Weather App.pdb
