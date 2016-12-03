@@ -30,7 +30,7 @@
 
         <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
             <ListBox.Resources>
-                <DataTemplate x:Key="DayListTemplate">
+                <DataTemplate x:Key="DayListTemplate" >
                     <Grid >
                         <StackPanel>
                             <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
