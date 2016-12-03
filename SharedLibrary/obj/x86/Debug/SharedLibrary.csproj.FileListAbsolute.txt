@@ -31,4 +31,3 @@ C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\obj\x86\Debug\p
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\obj\x86\Debug\qualifiers.txt
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\obj\x86\Debug\SharedLibrary.csprojResolveAssemblyReference.cache

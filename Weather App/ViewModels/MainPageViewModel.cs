@@ -17,11 +17,7 @@ namespace Weather_App.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        /*
-         The commented out code was for MVVM Pattern
-     */
-
-/*
+ 
         /// <summary>
         /// The <see cref="CurrentDay" /> property's name.
         /// </summary>
@@ -111,7 +107,7 @@ namespace Weather_App.ViewModels
                 RaisePropertyChanged(MyPropertyPropertyName);
             }
         }
-*/
+
 
         public MainPageViewModel()
         {
@@ -120,11 +116,11 @@ namespace Weather_App.ViewModels
               
             }
 
-/*
             try
             {
                 loadData();
                 DayList = new ObservableCollection<Day>();
+                
                 
                 CurrentDay = DayList[0];
              
@@ -136,10 +132,9 @@ namespace Weather_App.ViewModels
 
                 return;
             }
-*/
+
         }
         
-/*
         public async void loadData()
         {
             await PopulateWeatherDataAsync();
@@ -161,10 +156,12 @@ namespace Weather_App.ViewModels
 
 
                 //RootObject result = await APIDataVM.GetWeather(lat, lon);
-                var RootObject = await APIDataVM.GetWeather(lat, lon);
+               // var RootObject = await APIDataVM.GetWeatherDays(lat, lon);
+
+                RootObjectDays weather = await APIDataVM.GetWeatherDays(lat, lon);
 
 
-                var Days = new ObservableCollection<Day>(RootObject.list);
+                var Days = new ObservableCollection<Day>(weather.list);
 
               
                 
@@ -176,14 +173,12 @@ namespace Weather_App.ViewModels
 
                 foreach (var list in Days)
                 {
-                   
+                    //Covert Fahreheit to celsius
+                    list.temp.min = (((int)list.temp.min) - 32);
+                    list.temp.max = (((int)list.temp.max) - 32);
+
                     DayList.Add(list);
 
-                    
-                    
-                    DayList[0].speed.ToString();
-
-                    DayList[0].temp.max.ToString();
 
                 }
 
@@ -196,7 +191,6 @@ namespace Weather_App.ViewModels
             }
 
         }
-*/
 
         string _Value = "Gas";
         public string Value { get { return _Value; } set { Set(ref _Value, value); } }

@@ -66,9 +66,21 @@ namespace SharedLibrary.Models
         public int cod { get; set; }
     }
 
-    public class CurrentTime
+    public class RootObjectDays
     {
+        public City city { get; set; }
+        public string cod { get; set; }
+        public double message { get; set; }
+        public int cnt { get; set; }
+        public List<Weather> weather { get; set; }
 
+        public List<Day> list { get; set; }
+    }
+
+
+    public class Day
+    {
+        private List<Day> day = new List<Day>();
 
         private int _dt;
         public int dt
@@ -78,7 +90,6 @@ namespace SharedLibrary.Models
             set
             {
                 _dt = value;
-
                 /*
                 epoch time - Taken from ( http://www.epochconverter.com/ )
                 The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), 
@@ -92,7 +103,6 @@ namespace SharedLibrary.Models
                 1 month (30.44 days)    2629743 seconds
                 1 year (365.24 days)    31556926 seconds
                  */
-
                 var epochTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
                 Time = epochTime.AddSeconds(value);
             }
@@ -100,11 +110,40 @@ namespace SharedLibrary.Models
 
         private DateTime _time;
 
-
         public DateTime Time
         {
             get { return _time; }
             set { _time = value; }
         }
-    } 
+
+
+        public Temp temp { get; set; }
+        public double pressure { get; set; }
+        public int humidity { get; set; }
+        public double speed { get; set; }
+        public int deg { get; set; }
+        public int clouds { get; set; }
+        public double? rain { get; set; }
+    }
+
+    public class Temp
+    {
+        public double day { get; set; }
+        public double min { get; set; }
+        public double max { get; set; }
+        public double night { get; set; }
+        public double eve { get; set; }
+        public double morn { get; set; }
+    }
+
+    public class City
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public Coord coord { get; set; }
+        public string country { get; set; }
+        public int population { get; set; }
+    }
+
+
 }

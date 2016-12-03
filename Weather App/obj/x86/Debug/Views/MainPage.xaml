@@ -18,22 +18,80 @@
 
 
     <Grid x:ConnectionId='3' x:Name="LayoutRoot" >
-        
+
         <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <!--Expand based on content inside-->
-            
-        <RowDefinition Height="*"/>
-        
-        <!--Expand based on what space is left-->
-       
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
+            <ListBox.Resources>
+                <DataTemplate x:Key="DayListTemplate">
+                    <Grid >
+                        <StackPanel>
+                            <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
+                          
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="5" Text="{Binding temp.min, Mode=OneWay}"></TextBlock>
+                                    <StackPanel>
+                                        <TextBlock Text="&#186;"></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Margin="5" Text=" - "></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="5" Text="{Binding temp.max, Mode=OneWay}"></TextBlock>
+                                    <StackPanel>
+                                        <TextBlock Text="&#186;"></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        
+                        <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                       
+                    </Grid>
+                </DataTemplate>
+                <!--ItemsPanel - Panel that is put around all the items -->
+
+                <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+
+
+                    <!--
+                    What is Virtualizing StackPanel
+                    Virtualizing StackPanel generates container items when needed & throws them from memory when 
+                    they are no longer in the view. When the panel has huge number of items, at that time there 
+                    is no need to keep the extra items in memory which are not in view. This solves the memory 
+                    problem. 
+                    Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
+                    -->
+
+                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.Resources>
+            <ListBox.ItemsPanel>
+                <StaticResource ResourceKey="ItemsPanelTemplate1"/>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <StaticResource ResourceKey="DayListTemplate"/>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
 
 
 
 
-        <StackPanel Margin="0,50,0,0" Orientation="Horizontal" >
+        <StackPanel Grid.Row="1" Orientation="Horizontal" >
             <StackPanel Background="ForestGreen">
                 <TextBlock x:ConnectionId='12' x:Name="TempText" />
             </StackPanel>
