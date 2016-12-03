@@ -10,6 +10,7 @@ using Windows.UI.Popups;
 using Windows.Devices.Geolocation;
 using Windows.System;
 using Windows.ApplicationModel.Background;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Weather_App.Views
 {
@@ -96,7 +97,7 @@ namespace Weather_App.Views
                 // string icon = String.Format("ms-appx:///Assets/Weather/{0}.png", weather.weather[0].icon);
 
 
-                //ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+                ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
 
 
@@ -104,17 +105,21 @@ namespace Weather_App.Views
                 int fah = (((int)weather.main.temp) - 32);
                 int celcius = ((int)(fah * conv));
 
-                TempText.Text = ((int)weather.main.temp).ToString() + (char)176;
-                TempText1.Text = celcius.ToString() + (char)176 + "C";
-                DescriptionText.Text = weather.weather[0].description;
+                //list.temp.min = (((int)list.temp.min) - 32);
+                
+
+                TempText.Text = (((int)weather.main.temp_min)- 32).ToString() + (char)176;
+                
+               // TempText1.Text = celcius.ToString() + (char)176 + "C";
+               // DescriptionText.Text = weather.weather[0].description;
                 LocationText.Text = weather.name;
-                WindText.Text = ((int)weather.wind.speed).ToString();
+               // WindText.Text = ((int)weather.wind.speed).ToString();
 
 
             }
             catch (Exception)
             {
-                LocationText.Text = "Unable to access Weather";
+                //LocationText.Text = "Unable to access Weather";
             }
 
 

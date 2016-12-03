@@ -28,7 +28,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
+        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" 
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"> 
             <ListBox.Resources>
                 <DataTemplate x:Key="DayListTemplate" >
                     <Grid >
@@ -87,10 +88,37 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
+        <Grid Grid.Row="1" DataContext="{Binding CurrentDay}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                               Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Image x:Name="ResultImage" Width="100" Height="100">
+                    </Image>
+                </StackPanel>
+                <StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
+                       Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+            </StackPanel>
+
+
+           
+        </Grid>
 
 
 
-
+<!--
+        
         <StackPanel Grid.Row="1" Orientation="Horizontal" >
             <StackPanel Background="ForestGreen">
                 <TextBlock x:Name="TempText" />
@@ -108,7 +136,7 @@
                 <TextBlock x:Name="WindText" HorizontalAlignment="Center" />
             </StackPanel>
         </StackPanel>
-
+-->
 
 
 

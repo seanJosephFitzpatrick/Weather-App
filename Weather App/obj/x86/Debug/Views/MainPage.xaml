@@ -28,7 +28,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
+        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" 
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"> 
             <ListBox.Resources>
                 <DataTemplate x:Key="DayListTemplate" >
                     <Grid >
@@ -87,28 +88,55 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
+        <Grid Grid.Row="1" DataContext="{Binding CurrentDay}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock x:ConnectionId='10' x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                               Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Image x:ConnectionId='9' x:Name="ResultImage" Width="100" Height="100">
+                    </Image>
+                </StackPanel>
+                <StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:ConnectionId='8' x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
+                       Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+            </StackPanel>
+
+
+           
+        </Grid>
 
 
 
-
+<!--
+        
         <StackPanel Grid.Row="1" Orientation="Horizontal" >
             <StackPanel Background="ForestGreen">
-                <TextBlock x:ConnectionId='12' x:Name="TempText" />
+                <TextBlock x:Name="TempText" />
             </StackPanel>
             <StackPanel Background="Cyan">
-                <TextBlock x:ConnectionId='11' x:Name="TempText1" HorizontalAlignment="Right" />
+                <TextBlock x:Name="TempText1" HorizontalAlignment="Right" />
             </StackPanel>
             <StackPanel Background="BlueViolet">
-                <TextBlock x:ConnectionId='10' x:Name="DescriptionText" HorizontalAlignment="Center" />
+                <TextBlock x:Name="DescriptionText" HorizontalAlignment="Center" />
             </StackPanel>
             <StackPanel Grid.Row="1" Background="Aquamarine">
-                <TextBlock x:ConnectionId='9' x:Name="LocationText"  />
+                <TextBlock x:Name="LocationText"  />
             </StackPanel>
             <StackPanel Grid.Row="1" Background="Bisque">
-                <TextBlock x:ConnectionId='8' x:Name="WindText" HorizontalAlignment="Center" />
+                <TextBlock x:Name="WindText" HorizontalAlignment="Center" />
             </StackPanel>
         </StackPanel>
-
+-->
 
 
 

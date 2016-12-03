@@ -72,8 +72,8 @@ namespace SharedLibrary.Models
         public string cod { get; set; }
         public double message { get; set; }
         public int cnt { get; set; }
-        public List<Weather> weather { get; set; }
 
+        
         public List<Day> list { get; set; }
     }
 
@@ -122,8 +122,11 @@ namespace SharedLibrary.Models
         public int humidity { get; set; }
         public double speed { get; set; }
         public int deg { get; set; }
+        public List<Weather> weather { get; set; }
         public int clouds { get; set; }
         public double? rain { get; set; }
+        
+
     }
 
     public class Temp

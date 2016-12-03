@@ -156,7 +156,7 @@ namespace Weather_App.Weather_App_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[72];
+            _typeNameTable = new string[74];
             _typeNameTable[0] = "Template10.Common.BootStrapper";
             _typeNameTable[1] = "Windows.UI.Xaml.Application";
             _typeNameTable[2] = "Template10.Common.StateItems";
@@ -221,16 +221,18 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             _typeNameTable[61] = "Int32";
             _typeNameTable[62] = "System.DateTime";
             _typeNameTable[63] = "SharedLibrary.Models.Temp";
-            _typeNameTable[64] = "System.Nullable`1<Double>";
-            _typeNameTable[65] = "Weather_App.Views.MainPage";
-            _typeNameTable[66] = "Weather_App.ViewModels.SettingsPageViewModel";
-            _typeNameTable[67] = "Weather_App.ViewModels.SettingsPartViewModel";
-            _typeNameTable[68] = "Weather_App.ViewModels.AboutPartViewModel";
-            _typeNameTable[69] = "Weather_App.Views.SettingsPage";
-            _typeNameTable[70] = "Weather_App.Views.Shell";
-            _typeNameTable[71] = "Weather_App.Views.Splash";
+            _typeNameTable[64] = "System.Collections.Generic.List`1<SharedLibrary.Models.Weather>";
+            _typeNameTable[65] = "SharedLibrary.Models.Weather";
+            _typeNameTable[66] = "System.Nullable`1<Double>";
+            _typeNameTable[67] = "Weather_App.Views.MainPage";
+            _typeNameTable[68] = "Weather_App.ViewModels.SettingsPageViewModel";
+            _typeNameTable[69] = "Weather_App.ViewModels.SettingsPartViewModel";
+            _typeNameTable[70] = "Weather_App.ViewModels.AboutPartViewModel";
+            _typeNameTable[71] = "Weather_App.Views.SettingsPage";
+            _typeNameTable[72] = "Weather_App.Views.Shell";
+            _typeNameTable[73] = "Weather_App.Views.Splash";
 
-            _typeTable = new global::System.Type[72];
+            _typeTable = new global::System.Type[74];
             _typeTable[0] = typeof(global::Template10.Common.BootStrapper);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Template10.Common.StateItems);
@@ -295,14 +297,16 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             _typeTable[61] = typeof(global::System.Int32);
             _typeTable[62] = typeof(global::System.DateTime);
             _typeTable[63] = typeof(global::SharedLibrary.Models.Temp);
-            _typeTable[64] = typeof(global::System.Nullable<global::System.Double>);
-            _typeTable[65] = typeof(global::Weather_App.Views.MainPage);
-            _typeTable[66] = typeof(global::Weather_App.ViewModels.SettingsPageViewModel);
-            _typeTable[67] = typeof(global::Weather_App.ViewModels.SettingsPartViewModel);
-            _typeTable[68] = typeof(global::Weather_App.ViewModels.AboutPartViewModel);
-            _typeTable[69] = typeof(global::Weather_App.Views.SettingsPage);
-            _typeTable[70] = typeof(global::Weather_App.Views.Shell);
-            _typeTable[71] = typeof(global::Weather_App.Views.Splash);
+            _typeTable[64] = typeof(global::System.Collections.Generic.List<global::SharedLibrary.Models.Weather>);
+            _typeTable[65] = typeof(global::SharedLibrary.Models.Weather);
+            _typeTable[66] = typeof(global::System.Nullable<global::System.Double>);
+            _typeTable[67] = typeof(global::Weather_App.Views.MainPage);
+            _typeTable[68] = typeof(global::Weather_App.ViewModels.SettingsPageViewModel);
+            _typeTable[69] = typeof(global::Weather_App.ViewModels.SettingsPartViewModel);
+            _typeTable[70] = typeof(global::Weather_App.ViewModels.AboutPartViewModel);
+            _typeTable[71] = typeof(global::Weather_App.Views.SettingsPage);
+            _typeTable[72] = typeof(global::Weather_App.Views.Shell);
+            _typeTable[73] = typeof(global::Weather_App.Views.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -354,12 +358,14 @@ namespace Weather_App.Weather_App_XamlTypeInfo
         private object Activate_59_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::SharedLibrary.Models.Day>(); }
         private object Activate_60_Collection() { return new global::System.Collections.ObjectModel.Collection<global::SharedLibrary.Models.Day>(); }
         private object Activate_63_Temp() { return new global::SharedLibrary.Models.Temp(); }
-        private object Activate_65_MainPage() { return new global::Weather_App.Views.MainPage(); }
-        private object Activate_66_SettingsPageViewModel() { return new global::Weather_App.ViewModels.SettingsPageViewModel(); }
-        private object Activate_67_SettingsPartViewModel() { return new global::Weather_App.ViewModels.SettingsPartViewModel(); }
-        private object Activate_68_AboutPartViewModel() { return new global::Weather_App.ViewModels.AboutPartViewModel(); }
-        private object Activate_69_SettingsPage() { return new global::Weather_App.Views.SettingsPage(); }
-        private object Activate_70_Shell() { return new global::Weather_App.Views.Shell(); }
+        private object Activate_64_List() { return new global::System.Collections.Generic.List<global::SharedLibrary.Models.Weather>(); }
+        private object Activate_65_Weather() { return new global::SharedLibrary.Models.Weather(); }
+        private object Activate_67_MainPage() { return new global::Weather_App.Views.MainPage(); }
+        private object Activate_68_SettingsPageViewModel() { return new global::Weather_App.ViewModels.SettingsPageViewModel(); }
+        private object Activate_69_SettingsPartViewModel() { return new global::Weather_App.ViewModels.SettingsPartViewModel(); }
+        private object Activate_70_AboutPartViewModel() { return new global::Weather_App.ViewModels.AboutPartViewModel(); }
+        private object Activate_71_SettingsPage() { return new global::Weather_App.Views.SettingsPage(); }
+        private object Activate_72_Shell() { return new global::Weather_App.Views.Shell(); }
         private void MapAdd_2_StateItems(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -396,6 +402,12 @@ namespace Weather_App.Weather_App_XamlTypeInfo
         {
             var collection = (global::System.Collections.Generic.ICollection<global::SharedLibrary.Models.Day>)instance;
             var newItem = (global::SharedLibrary.Models.Day)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_64_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::SharedLibrary.Models.Weather>)instance;
+            var newItem = (global::SharedLibrary.Models.Weather)item;
             collection.Add(newItem);
         }
 
@@ -836,6 +848,7 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 userType.AddMemberName("humidity");
                 userType.AddMemberName("speed");
                 userType.AddMemberName("deg");
+                userType.AddMemberName("weather");
                 userType.AddMemberName("clouds");
                 userType.AddMemberName("rain");
                 xamlType = userType;
@@ -871,57 +884,74 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 64:   //  System.Nullable`1<Double>
+            case 64:   //  System.Collections.Generic.List`1<SharedLibrary.Models.Weather>
+                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_64_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 65:   //  SharedLibrary.Models.Weather
+                userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_65_Weather;
+                userType.AddMemberName("id");
+                userType.AddMemberName("main");
+                userType.AddMemberName("description");
+                userType.AddMemberName("icon");
+                xamlType = userType;
+                break;
+
+            case 66:   //  System.Nullable`1<Double>
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 65:   //  Weather_App.Views.MainPage
+            case 67:   //  Weather_App.Views.MainPage
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_65_MainPage;
+                userType.Activator = Activate_67_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 66:   //  Weather_App.ViewModels.SettingsPageViewModel
+            case 68:   //  Weather_App.ViewModels.SettingsPageViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_66_SettingsPageViewModel;
+                userType.Activator = Activate_68_SettingsPageViewModel;
                 userType.AddMemberName("SettingsPartViewModel");
                 userType.AddMemberName("AboutPartViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 67:   //  Weather_App.ViewModels.SettingsPartViewModel
+            case 69:   //  Weather_App.ViewModels.SettingsPartViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 68:   //  Weather_App.ViewModels.AboutPartViewModel
+            case 70:   //  Weather_App.ViewModels.AboutPartViewModel
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 69:   //  Weather_App.Views.SettingsPage
+            case 71:   //  Weather_App.Views.SettingsPage
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_69_SettingsPage;
+                userType.Activator = Activate_71_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 70:   //  Weather_App.Views.Shell
+            case 72:   //  Weather_App.Views.Shell
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_70_Shell;
+                userType.Activator = Activate_72_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Weather_App.Views.Splash
+            case 73:   //  Weather_App.Views.Splash
                 userType = new global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1935,52 +1965,102 @@ namespace Weather_App.Weather_App_XamlTypeInfo
             var that = (global::SharedLibrary.Models.Day)instance;
             that.deg = (global::System.Int32)Value;
         }
-        private object get_98_Day_clouds(object instance)
+        private object get_98_Day_weather(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            return that.weather;
+        }
+        private void set_98_Day_weather(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Day)instance;
+            that.weather = (global::System.Collections.Generic.List<global::SharedLibrary.Models.Weather>)Value;
+        }
+        private object get_99_Weather_id(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            return that.id;
+        }
+        private void set_99_Weather_id(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            that.id = (global::System.Int32)Value;
+        }
+        private object get_100_Weather_main(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            return that.main;
+        }
+        private void set_100_Weather_main(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            that.main = (global::System.String)Value;
+        }
+        private object get_101_Weather_description(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            return that.description;
+        }
+        private void set_101_Weather_description(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            that.description = (global::System.String)Value;
+        }
+        private object get_102_Weather_icon(object instance)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            return that.icon;
+        }
+        private void set_102_Weather_icon(object instance, object Value)
+        {
+            var that = (global::SharedLibrary.Models.Weather)instance;
+            that.icon = (global::System.String)Value;
+        }
+        private object get_103_Day_clouds(object instance)
         {
             var that = (global::SharedLibrary.Models.Day)instance;
             return that.clouds;
         }
-        private void set_98_Day_clouds(object instance, object Value)
+        private void set_103_Day_clouds(object instance, object Value)
         {
             var that = (global::SharedLibrary.Models.Day)instance;
             that.clouds = (global::System.Int32)Value;
         }
-        private object get_99_Day_rain(object instance)
+        private object get_104_Day_rain(object instance)
         {
             var that = (global::SharedLibrary.Models.Day)instance;
             return that.rain;
         }
-        private void set_99_Day_rain(object instance, object Value)
+        private void set_104_Day_rain(object instance, object Value)
         {
             var that = (global::SharedLibrary.Models.Day)instance;
             that.rain = (global::System.Nullable<global::System.Double>)Value;
         }
-        private object get_100_MainPageViewModel_DayList(object instance)
+        private object get_105_MainPageViewModel_DayList(object instance)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             return that.DayList;
         }
-        private void set_100_MainPageViewModel_DayList(object instance, object Value)
+        private void set_105_MainPageViewModel_DayList(object instance, object Value)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             that.DayList = (global::System.Collections.ObjectModel.ObservableCollection<global::SharedLibrary.Models.Day>)Value;
         }
-        private object get_101_MainPageViewModel_Value(object instance)
+        private object get_106_MainPageViewModel_Value(object instance)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             return that.Value;
         }
-        private void set_101_MainPageViewModel_Value(object instance, object Value)
+        private void set_106_MainPageViewModel_Value(object instance, object Value)
         {
             var that = (global::Weather_App.ViewModels.MainPageViewModel)instance;
             that.Value = (global::System.String)Value;
         }
-        private object get_102_SettingsPageViewModel_SettingsPartViewModel(object instance)
+        private object get_107_SettingsPageViewModel_SettingsPartViewModel(object instance)
         {
             var that = (global::Weather_App.ViewModels.SettingsPageViewModel)instance;
             return that.SettingsPartViewModel;
         }
-        private object get_103_SettingsPageViewModel_AboutPartViewModel(object instance)
+        private object get_108_SettingsPageViewModel_AboutPartViewModel(object instance)
         {
             var that = (global::Weather_App.ViewModels.SettingsPageViewModel)instance;
             return that.AboutPartViewModel;
@@ -2646,40 +2726,70 @@ namespace Weather_App.Weather_App_XamlTypeInfo
                 xamlMember.Getter = get_97_Day_deg;
                 xamlMember.Setter = set_97_Day_deg;
                 break;
+            case "SharedLibrary.Models.Day.weather":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "weather", "System.Collections.Generic.List`1<SharedLibrary.Models.Weather>");
+                xamlMember.Getter = get_98_Day_weather;
+                xamlMember.Setter = set_98_Day_weather;
+                break;
+            case "SharedLibrary.Models.Weather.id":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Weather");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "id", "Int32");
+                xamlMember.Getter = get_99_Weather_id;
+                xamlMember.Setter = set_99_Weather_id;
+                break;
+            case "SharedLibrary.Models.Weather.main":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Weather");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "main", "String");
+                xamlMember.Getter = get_100_Weather_main;
+                xamlMember.Setter = set_100_Weather_main;
+                break;
+            case "SharedLibrary.Models.Weather.description":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Weather");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "description", "String");
+                xamlMember.Getter = get_101_Weather_description;
+                xamlMember.Setter = set_101_Weather_description;
+                break;
+            case "SharedLibrary.Models.Weather.icon":
+                userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Weather");
+                xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "icon", "String");
+                xamlMember.Getter = get_102_Weather_icon;
+                xamlMember.Setter = set_102_Weather_icon;
+                break;
             case "SharedLibrary.Models.Day.clouds":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "clouds", "Int32");
-                xamlMember.Getter = get_98_Day_clouds;
-                xamlMember.Setter = set_98_Day_clouds;
+                xamlMember.Getter = get_103_Day_clouds;
+                xamlMember.Setter = set_103_Day_clouds;
                 break;
             case "SharedLibrary.Models.Day.rain":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SharedLibrary.Models.Day");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "rain", "System.Nullable`1<Double>");
-                xamlMember.Getter = get_99_Day_rain;
-                xamlMember.Setter = set_99_Day_rain;
+                xamlMember.Getter = get_104_Day_rain;
+                xamlMember.Setter = set_104_Day_rain;
                 break;
             case "Weather_App.ViewModels.MainPageViewModel.DayList":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.MainPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "DayList", "System.Collections.ObjectModel.ObservableCollection`1<SharedLibrary.Models.Day>");
-                xamlMember.Getter = get_100_MainPageViewModel_DayList;
-                xamlMember.Setter = set_100_MainPageViewModel_DayList;
+                xamlMember.Getter = get_105_MainPageViewModel_DayList;
+                xamlMember.Setter = set_105_MainPageViewModel_DayList;
                 break;
             case "Weather_App.ViewModels.MainPageViewModel.Value":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.MainPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_101_MainPageViewModel_Value;
-                xamlMember.Setter = set_101_MainPageViewModel_Value;
+                xamlMember.Getter = get_106_MainPageViewModel_Value;
+                xamlMember.Setter = set_106_MainPageViewModel_Value;
                 break;
             case "Weather_App.ViewModels.SettingsPageViewModel.SettingsPartViewModel":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "SettingsPartViewModel", "Weather_App.ViewModels.SettingsPartViewModel");
-                xamlMember.Getter = get_102_SettingsPageViewModel_SettingsPartViewModel;
+                xamlMember.Getter = get_107_SettingsPageViewModel_SettingsPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Weather_App.ViewModels.SettingsPageViewModel.AboutPartViewModel":
                 userType = (global::Weather_App.Weather_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Weather_App.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Weather_App.Weather_App_XamlTypeInfo.XamlMember(this, "AboutPartViewModel", "Weather_App.ViewModels.AboutPartViewModel");
-                xamlMember.Getter = get_103_SettingsPageViewModel_AboutPartViewModel;
+                xamlMember.Getter = get_108_SettingsPageViewModel_AboutPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }
