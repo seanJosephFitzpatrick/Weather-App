@@ -33,33 +33,43 @@ namespace Weather_App.Views
 
         private async void RegisterBackgroundTask()
         {
-            var backgroundAccessStatus = await BackgroundExecutionManager.RequestAccessAsync();
-            if (backgroundAccessStatus == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity ||
-                backgroundAccessStatus == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity)
+
+            try
             {
-                foreach (var task in BackgroundTaskRegistration.AllTasks)
+                var backgroundAccessStatus = await BackgroundExecutionManager.RequestAccessAsync();
+                if (backgroundAccessStatus == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity ||
+                    backgroundAccessStatus == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity)
                 {
-                    if (task.Value.Name == taskName)
+                    foreach (var task in BackgroundTaskRegistration.AllTasks)
                     {
-                        task.Value.Unregister(true);
+                        if (task.Value.Name == taskName)
+                        {
+                            task.Value.Unregister(true);
+                        }
+                    }
+
+                    try
+                    {
+                        BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder();
+                        taskBuilder.Name = taskName;
+                        taskBuilder.TaskEntryPoint = taskEntryPoint;
+                        taskBuilder.SetTrigger(new TimeTrigger(15, false));
+                        var registration = taskBuilder.Register();
+                    }
+                    catch (System.Exception)
+                    {
+
+                        return;
                     }
                 }
+            }
+            catch (System.Exception)
+            {
 
-                try
-                {
-                    BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder();
-                    taskBuilder.Name = taskName;
-                    taskBuilder.TaskEntryPoint = taskEntryPoint;
-                    taskBuilder.SetTrigger(new TimeTrigger(15, false));
-                    var registration = taskBuilder.Register();
-                }
-                catch (System.Exception)
-                {
-
-                    return;
-                }
+                return;
             }
         }
+ 
 
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -72,42 +82,18 @@ namespace Weather_App.Views
                 var lat = position.Coordinate.Latitude;
                 var lon = position.Coordinate.Longitude;
 
-                //var lat = 53.2707;
-                //var lon = -9.0568;
-
-
-
                 //Call ApiManager
                 RootObject weather = await APIDataVM.GetWeather(lat, lon);
-
-                //Schedule update
-                //var uri = String.Format("http://weatherservice71390.azurewebsites.net/?lat={0}&lon={1}", lat, lon);
-
-                //var tileContent = new Uri(uri);
-                //var requestedInterval = PeriodicUpdateRecurrence.HalfHour;
-
-                //var updater = TileUpdateManager.CreateTileUpdaterForApplication();
-                //updater.StartPeriodicUpdate(tileContent, requestedInterval);
-
-                //gets icons from openweathermap
-                //string icon = String.Format("http://openweathermap.org/img/w/{0}.png", weather.weather[0].icon);
 
                 //gets icons from Assets folder - URI for acccess local resources ms-appx:///
                 string icon = String.Format("ms-appx:///Icons/{0}.png", weather.weather[0].icon.Replace("d","").Replace("n",""));
 
-
-
                 ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
-
-
-
+                /*
                 double conv = .5556;
                 int fah = (((int)weather.main.temp) - 32);
                 int celcius = ((int)(fah * conv));
-
-                //list.temp.min = (((int)list.temp.min) - 32);
-                
-
+                */
                 TempText.Text = (((int)weather.main.temp_min)- 32).ToString() + (char)176;
                 
                // TempText1.Text = celcius.ToString() + (char)176 + "C";
@@ -119,7 +105,7 @@ namespace Weather_App.Views
             }
             catch (Exception)
             {
-                //LocationText.Text = "Unable to access Weather";
+                LocationText.Text = "Unable to access Weather";
             }
 
 

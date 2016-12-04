@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Data.Xml.Dom;
 using Windows.ApplicationModel.Background;
+using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
 namespace BackgroundTask
@@ -28,7 +28,7 @@ namespace BackgroundTask
 
             RootObject weather = await APIDataVM.GetWeather(lat, lon);
 
-            string icon = String.Format("ms-appx:///Assets/Weather/{0}.png", weather.weather[0].icon);
+            string icon = String.Format("ms-appx:///Icons/{0}.png", weather.weather[0].icon.Replace("d", "").Replace("n", ""));
 
             var updater = TileUpdateManager.CreateTileUpdaterForApplication();
             updater.EnableNotificationQueue(true);
@@ -38,7 +38,7 @@ namespace BackgroundTask
 
             XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
             tileTextAttributes[0].InnerText = weather.name;
-            tileTextAttributes[1].InnerText = ("Tempreture : " + ((int)weather.main.temp).ToString() + "F");
+            tileTextAttributes[1].InnerText = ("Tempreture : " + (((int)weather.main.temp_min) - 32).ToString() + (char)176);
             tileTextAttributes[2].InnerText = weather.weather[0].description;
             tileTextAttributes[3].InnerText = ("Speed : " + ((int)weather.wind.speed).ToString());
 
@@ -53,5 +53,6 @@ namespace BackgroundTask
             // Inform the system that the task is finished.
             deferral.Complete();
         }
+
     }
 }
