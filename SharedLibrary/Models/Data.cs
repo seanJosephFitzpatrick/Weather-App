@@ -124,8 +124,13 @@ namespace SharedLibrary.Models
         public int deg { get; set; }
         public List<Weather> weather { get; set; }
         public int clouds { get; set; }
-        public double? rain { get; set; }
-        
+        public double? rain { get; set; }  
+
+        public string iconString {
+            get {
+                return "/Icons/" + weather[0].icon.Replace("d", "").Replace("n", "") + ".png";
+            }
+        }
 
     }
 

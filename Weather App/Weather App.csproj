@@ -128,6 +128,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Help.htm" />
+    <Content Include="Icons\01.png" />
+    <Content Include="Icons\02.png" />
+    <Content Include="Icons\03.png" />
+    <Content Include="Icons\04.png" />
+    <Content Include="Icons\09.png" />
+    <Content Include="Icons\10.png" />
+    <Content Include="Icons\11.png" />
+    <Content Include="Icons\13.png" />
+    <Content Include="Icons\50.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

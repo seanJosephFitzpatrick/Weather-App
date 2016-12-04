@@ -397,8 +397,32 @@
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Help.htm">
       <PackagePath>Help.htm</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\01.png">
+      <PackagePath>Icons\01.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\02.png">
+      <PackagePath>Icons\02.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\03.png">
+      <PackagePath>Icons\03.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\04.png">
+      <PackagePath>Icons\04.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\09.png">
+      <PackagePath>Icons\09.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\10.png">
+      <PackagePath>Icons\10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\11.png">
+      <PackagePath>Icons\11.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\13.png">
+      <PackagePath>Icons\13.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Icons\50.png">
+      <PackagePath>Icons\50.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -426,6 +450,9 @@
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\bin\x86\Debug\Weather App.xr.xml">
       <PackagePath>Weather App.xr.xml</PackagePath>

@@ -90,11 +90,11 @@ namespace Weather_App.Views
                 //updater.StartPeriodicUpdate(tileContent, requestedInterval);
 
                 //gets icons from openweathermap
-                string icon = String.Format("http://openweathermap.org/img/w/{0}.png", weather.weather[0].icon);
+                //string icon = String.Format("http://openweathermap.org/img/w/{0}.png", weather.weather[0].icon);
 
-                
+                //gets icons from Assets folder - URI for acccess local resources ms-appx:///
+                string icon = String.Format("ms-appx:///Icons/{0}.png", weather.weather[0].icon.Replace("d","").Replace("n",""));
 
-                // string icon = String.Format("ms-appx:///Assets/Weather/{0}.png", weather.weather[0].icon);
 
 
                 ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
@@ -111,7 +111,7 @@ namespace Weather_App.Views
                 TempText.Text = (((int)weather.main.temp_min)- 32).ToString() + (char)176;
                 
                // TempText1.Text = celcius.ToString() + (char)176 + "C";
-               // DescriptionText.Text = weather.weather[0].description;
+                DescriptionText.Text = weather.weather[0].description;
                 LocationText.Text = weather.name;
                // WindText.Text = ((int)weather.wind.speed).ToString();
 
