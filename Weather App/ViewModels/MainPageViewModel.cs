@@ -13,6 +13,7 @@ using System.Collections.ObjectModel;
 using System.Collections;
 using Windows.Data.Json;
 
+
 namespace Weather_App.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
@@ -156,8 +157,8 @@ namespace Weather_App.ViewModels
 
 
                 //RootObject result = await APIDataVM.GetWeather(lat, lon);
-               // var RootObject = await APIDataVM.GetWeatherDays(lat, lon);
-
+                // var RootObject = await APIDataVM.GetWeatherDays(lat, lon);
+                
                 RootObjectDays weather = await APIDataVM.GetWeatherDays(lat, lon);
 
 

@@ -22,13 +22,14 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" 
-                 ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"> 
+        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                 ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" >
+
             <ListBox.Resources>
                 <DataTemplate x:Key="DayListTemplate" >
                     <Grid >
@@ -103,26 +104,29 @@
                 </Rectangle.Fill>
 
             </Rectangle>
+            <ProgressRing x:ConnectionId='8' Name="progressRing" Foreground="White" IsActive="False" Height="80" Width="80" Grid.RowSpan="2" />
 
                 <StackPanel>
                 <StackPanel>
-                    <TextBlock x:ConnectionId='11' x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    <TextBlock x:ConnectionId='12' x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
                                Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
                 </StackPanel>
                 <StackPanel>
-                    <Image x:ConnectionId='9' x:Name="ResultImage" Width="200" Height="200"></Image>
-                    <TextBlock x:ConnectionId='10' x:Name="DescriptionText" HorizontalAlignment="Center"></TextBlock>
+                    <Image x:ConnectionId='10' x:Name="ResultImage" Width="200" Height="200"></Image>
+                    <TextBlock x:ConnectionId='11' x:Name="DescriptionText" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <TextBlock x:ConnectionId='8' x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
+                <TextBlock x:ConnectionId='9' x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
                        Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
             </StackPanel>
 
+            
 
-           
+
+
         </Grid>
 
 

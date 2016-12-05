@@ -35,7 +35,6 @@ C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\obj\x86\Debug\S
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\x86\Debug\SharedLibrary.dll
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\x86\Debug\SharedLibrary.pdb
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\x86\Debug\SharedLibrary.pri
-C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\x86\Debug\SharedLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\x86\Debug\SharedLibrary.dll
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\x86\Debug\SharedLibrary.pdb
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\x86\Debug\priconfig.xml

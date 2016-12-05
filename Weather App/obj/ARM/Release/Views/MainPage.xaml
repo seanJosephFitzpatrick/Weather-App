@@ -27,8 +27,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" 
-                 ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"> 
+        <ProgressRing x:ConnectionId='4' Name="progressRing" IsActive="False" Height="80" Width="80" Grid.RowSpan="2" />
+
+        <ListBox 
+                 ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" >
+
             <ListBox.Resources>
                 <DataTemplate x:Key="DayListTemplate" >
                     <Grid >
@@ -76,7 +79,8 @@
                     Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
                     -->
 
-                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"/>
+                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"
+                                            ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
                 </ItemsPanelTemplate>
             </ListBox.Resources>
             <ListBox.ItemsPanel>
@@ -106,23 +110,25 @@
 
                 <StackPanel>
                 <StackPanel>
-                    <TextBlock x:ConnectionId='11' x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    <TextBlock x:ConnectionId='12' x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
                                Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
                 </StackPanel>
                 <StackPanel>
-                    <Image x:ConnectionId='9' x:Name="ResultImage" Width="200" Height="200"></Image>
-                    <TextBlock x:ConnectionId='10' x:Name="DescriptionText" HorizontalAlignment="Center"></TextBlock>
+                    <Image x:ConnectionId='10' x:Name="ResultImage" Width="200" Height="200"></Image>
+                    <TextBlock x:ConnectionId='11' x:Name="DescriptionText" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <TextBlock x:ConnectionId='8' x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
+                <TextBlock x:ConnectionId='9' x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
                        Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
             </StackPanel>
 
+            
 
-           
+
+
         </Grid>
 
 
@@ -161,15 +167,15 @@
 
 
 
-            <controls:PageHeader x:ConnectionId='4' x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
+            <controls:PageHeader x:ConnectionId='5' x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
                              RelativePanel.AlignRightWithPanel="True"
                              RelativePanel.AlignTopWithPanel="True" Text="Main Page">
 
                 <!--  secondary commands  -->
                 <controls:PageHeader.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='5'                                         Label="Settings" />
-                    <AppBarButton x:ConnectionId='6'                                        Label="Privacy" />
-                    <AppBarButton x:ConnectionId='7'                                      Label="About" />
+                    <AppBarButton x:ConnectionId='6'                                         Label="Settings" />
+                    <AppBarButton x:ConnectionId='7'                                        Label="Privacy" />
+                    <AppBarButton x:ConnectionId='8'                                      Label="About" />
                 </controls:PageHeader.SecondaryCommands>
 
             </controls:PageHeader>

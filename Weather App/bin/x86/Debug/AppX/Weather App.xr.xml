@@ -105,6 +105,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="IsActive" />
+      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
@@ -175,10 +176,10 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalContentAlignment" />
-      <RootMethod Name="GetVerticalScrollBarVisibility" />
-      <RootMethod Name="SetVerticalScrollBarVisibility" />
       <RootMethod Name="GetHorizontalScrollBarVisibility" />
       <RootMethod Name="SetHorizontalScrollBarVisibility" />
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />

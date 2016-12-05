@@ -922,6 +922,15 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* pthis, 
+					global::System.Runtime.InteropServices.HSTRING arg0)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* pthis, 
 					global::System.Runtime.InteropServices.HSTRING arg0, 
 					void* arg1)
 		{
@@ -1021,15 +1030,6 @@ namespace McgInterop
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::Windows.UI.Xaml.GridLength arg0)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* pthis, 
-					global::System.Runtime.InteropServices.HSTRING arg0)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;

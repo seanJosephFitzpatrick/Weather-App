@@ -76,6 +76,7 @@ namespace Weather_App.Views
         {
             try
             {
+                progressRing.IsActive = true;
                 //call GetPosition
                 var position = await GeolocationVM.GetPosition();
 
@@ -84,6 +85,7 @@ namespace Weather_App.Views
 
                 //Call ApiManager
                 RootObject weather = await APIDataVM.GetWeather(lat, lon);
+                progressRing.IsActive = false;
 
                 //gets icons from Assets folder - URI for acccess local resources ms-appx:///
                 string icon = String.Format("ms-appx:///Icons/{0}.png", weather.weather[0].icon.Replace("d","").Replace("n",""));
