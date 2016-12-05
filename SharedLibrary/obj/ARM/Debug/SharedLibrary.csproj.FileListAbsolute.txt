@@ -1,0 +1,16 @@
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\ARM\Debug\SharedLibrary.dll
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\ARM\Debug\SharedLibrary.pdb
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\ARM\Debug\SharedLibrary.pri
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\SharedLibrary.dll
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\SharedLibrary.pdb
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\priconfig.xml
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\priconfig.xml.intermediate
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\layout.resfiles
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\layout.resfiles.intermediate
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\resources.resfiles
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\resources.resfiles.intermediate
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\pri.resfiles
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\pri.resfiles.intermediate
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\qualifiers.txt
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\qualifiers.txt.intermediate
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt

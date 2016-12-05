@@ -1,0 +1,2 @@
+"/t:SharedLibrary.Models.RootObject,SharedLibrary,json"
+"/t:SharedLibrary.Models.RootObjectDays,SharedLibrary,json"

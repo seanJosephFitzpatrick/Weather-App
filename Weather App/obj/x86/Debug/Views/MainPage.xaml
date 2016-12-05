@@ -7,9 +7,8 @@
       xmlns:controls="using:Template10.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:Weather_App.Views"
-      xmlns:viewModels="using:Weather_App.ViewModels"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:vm="using:Weather_App.ViewModels" mc:Ignorable="d">
+      xmlns:vm="using:Weather_App.ViewModels"                      mc:Ignorable="d">
 
 
     <Page.DataContext>
@@ -18,34 +17,57 @@
 
 
     <Grid x:ConnectionId='3' x:Name="LayoutRoot" >
-        
+
         <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <!--Expand based on content inside-->
-            
-        <RowDefinition Height="*"/>
-        
-        <!--Expand based on what space is left-->
-       
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ListBox ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                 ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" >
+
             <ListBox.Resources>
-                    <DataTemplate x:Key="DayListTemplate">
-                        <Grid Margin="10">
+                <DataTemplate x:Key="DayListTemplate" >
+                    <Grid >
+                        <StackPanel>
                             <TextBlock Margin="5" Text="{Binding Time.Date.DayOfWeek, Mode=OneWay}"></TextBlock>
-                            <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-                                <Rectangle.Fill>
-                                    <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-                                </Rectangle.Fill>
-                            </Rectangle>
-                        </Grid>
-                    </DataTemplate>
-                    <!--ItemsPanel - Panel that is put around all the items -->
-            
+                          
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="5" Text="{Binding temp.min, Mode=OneWay}"></TextBlock>
+                                    <StackPanel>
+                                        <TextBlock Text="&#186;"></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Margin="5" Text=" - "></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="5" Text="{Binding temp.max, Mode=OneWay}"></TextBlock>
+                                    <StackPanel>
+                                        <TextBlock Text="&#186;"></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        
+                        <Rectangle Height="3" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                       
+                    </Grid>
+                </DataTemplate>
+                <!--ItemsPanel - Panel that is put around all the items -->
+
                 <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
-            
-        
+
+
                     <!--
                     What is Virtualizing StackPanel
                     Virtualizing StackPanel generates container items when needed & throws them from memory when 
@@ -54,7 +76,7 @@
                     problem. 
                     Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
                     -->
-        
+
                     <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListBox.Resources>
@@ -66,11 +88,78 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <GridView Grid.Row="1" DataContext="{Binding CurrentDay, Mode=TwoWay}">
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Text="Sean" ></TextBlock>
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="{Binding temp.max}"></TextBlock>
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="30" Text="Fitz" ></TextBlock>
-        </GridView>
+        <Grid Grid.Row="1" DataContext="{Binding CurrentDay}" Background="Cyan">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1C82E8"/>
+                        <GradientStop Color="#FF157EE8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+
+            </Rectangle>
+            <ProgressRing x:ConnectionId='8' Name="progressRing" Foreground="White" IsActive="False" Height="80" Width="80" Grid.RowSpan="2" />
+
+                <StackPanel>
+                <StackPanel>
+                    <TextBlock x:ConnectionId='12' x:Name="LocationText" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                               Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Image x:ConnectionId='10' x:Name="ResultImage" Width="200" Height="200"></Image>
+                    <TextBlock x:ConnectionId='11' x:Name="DescriptionText" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+                <StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:ConnectionId='9' x:Name="TempText" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding temp}" 
+                       Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+            </StackPanel>
+
+            
+
+
+
+        </Grid>
+
+
+
+<!--
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" >
+            <StackPanel Background="ForestGreen">
+                <TextBlock x:Name="TempText" />
+            </StackPanel>
+            <StackPanel Background="Cyan">
+                <TextBlock x:Name="TempText1" HorizontalAlignment="Right" />
+            </StackPanel>
+            <StackPanel Background="BlueViolet">
+                <TextBlock x:Name="DescriptionText" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Background="Aquamarine">
+                <TextBlock x:Name="LocationText"  />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Background="Bisque">
+                <TextBlock x:Name="WindText" HorizontalAlignment="Center" />
+            </StackPanel>
+        </StackPanel>
+-->
+
+
+
+
+
+
+
+
+
 
         <RelativePanel >
 

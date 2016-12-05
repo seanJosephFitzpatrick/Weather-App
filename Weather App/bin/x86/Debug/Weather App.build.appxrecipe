@@ -10,19 +10,19 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>4ee23969-0dea-4a9b-a157-72d3423f55c3</PackageIdentityName>
     <PackageIdentityPublisher>CN=Sean Fitzpatrick</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\bin\x86\Debug\Weather App.exe">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\bin\x86\Debug\Weather App.exe">
       <PackagePath>entrypoint\Weather App.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
@@ -391,43 +391,83 @@
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\.nuget\packages\Template10\1.1.12\lib\uap10.0\Template10Library.dll">
       <PackagePath>Template10Library.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\SharedLibrary\bin\x86\Debug\SharedLibrary.dll">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\bin\x86\Debug\SharedLibrary.dll">
       <PackagePath>SharedLibrary.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Help.htm">
-      <PackagePath>Help.htm</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\BackgroundTask\bin\x86\Debug\BackgroundTask.winmd">
+      <PackagePath>BackgroundTask.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\BageLogo.scale-200.png">
+      <PackagePath>Assets\BageLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\bin\x86\Debug\Weather App.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\01.png">
+      <PackagePath>Icons\01.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\02.png">
+      <PackagePath>Icons\02.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\03.png">
+      <PackagePath>Icons\03.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\04.png">
+      <PackagePath>Icons\04.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\09.png">
+      <PackagePath>Icons\09.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\10.png">
+      <PackagePath>Icons\10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\11.png">
+      <PackagePath>Icons\11.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\13.png">
+      <PackagePath>Icons\13.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Icons\50.png">
+      <PackagePath>Icons\50.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Help.htm">
+      <PackagePath>Help.htm</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\bin\x86\Debug\Weather App.xr.xml">
       <PackagePath>Weather App.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
@@ -457,11 +497,11 @@
     <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\.nuget\packages\Template10\1.1.12\lib\uap10.0\Template10Library\Themes\Resizer.xaml">
       <PackagePath>Template10Library\Themes\Resizer.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\sjf2\Weather-App\Weather App\bin\x86\Debug\Core\Weather App.exe">
+    <AppxPackagedFile Include="C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\bin\x86\Debug\Core\Weather App.exe">
       <PackagePath>Weather App.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

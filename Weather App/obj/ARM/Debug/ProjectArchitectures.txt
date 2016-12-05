@@ -1,0 +1,2 @@
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\SharedLibrary.csproj;arm
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\Weather App\Weather App.csproj;arm

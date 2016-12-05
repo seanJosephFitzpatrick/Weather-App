@@ -10,12 +10,15 @@ using Windows.UI.Xaml;
 using SharedLibrary.SharedLibraryVM;
 using SharedLibrary.Models;
 using System.Collections.ObjectModel;
+using System.Collections;
+using Windows.Data.Json;
+
 
 namespace Weather_App.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-
+ 
         /// <summary>
         /// The <see cref="CurrentDay" /> property's name.
         /// </summary>
@@ -43,6 +46,36 @@ namespace Weather_App.ViewModels
 
                 _currentDay = value;
                 RaisePropertyChanged(CurrentDayPropertyName);
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="TempList" /> property's name.
+        /// </summary>
+        public const string TempListPropertyName = "TempList";
+
+        private ObservableCollection<Day> _tempList = null;
+
+        /// <summary>
+        /// Sets and gets the TempList property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public ObservableCollection<Day> TempList
+        {
+            get
+            {
+                return _tempList;
+            }
+
+            set
+            {
+                if (_tempList == value)
+                {
+                    return;
+                }
+
+                _tempList = value;
+                RaisePropertyChanged(TempListPropertyName);
             }
         }
 
@@ -76,6 +109,7 @@ namespace Weather_App.ViewModels
             }
         }
 
+
         public MainPageViewModel()
         {
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
@@ -87,7 +121,11 @@ namespace Weather_App.ViewModels
             {
                 loadData();
                 DayList = new ObservableCollection<Day>();
+                
+                
                 CurrentDay = DayList[0];
+             
+
 
             }
             catch (ArgumentOutOfRangeException)
@@ -95,13 +133,16 @@ namespace Weather_App.ViewModels
 
                 return;
             }
-        }
 
+        }
+        
         public async void loadData()
         {
             await PopulateWeatherDataAsync();
 
         }
+
+      
 
         public async Task PopulateWeatherDataAsync()
         {
@@ -116,10 +157,15 @@ namespace Weather_App.ViewModels
 
 
                 //RootObject result = await APIDataVM.GetWeather(lat, lon);
-                var RootObject = await APIDataVM.GetWeather(lat, lon);
+                // var RootObject = await APIDataVM.GetWeatherDays(lat, lon);
+                
+                RootObjectDays weather = await APIDataVM.GetWeatherDays(lat, lon);
 
 
-                var Days = new ObservableCollection<Day>(RootObject.list);
+                var Days = new ObservableCollection<Day>(weather.list);
+
+              
+                
 
                 //var Days = RootObject.list;
 
@@ -128,8 +174,13 @@ namespace Weather_App.ViewModels
 
                 foreach (var list in Days)
                 {
+                    //Covert Fahreheit to celsius
+                    list.temp.min = (((int)list.temp.min) - 32);
+                    list.temp.max = (((int)list.temp.max) - 32);
 
                     DayList.Add(list);
+
+
                 }
 
 
