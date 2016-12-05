@@ -15,12 +15,12 @@ In order to use the application you must first have Microsoft Visual Studio 2015
 
 If you want Template 10, just open up Visual Studio 2015 and search "Template 10" in the Extension Manager. After you install it, when you go File>New>Project the Template 10 project template will be in your list.
 
-##Nuget Packages Installed
-Template 10
-Newtonsoft.Json
-Mvvmlight
-Microsoft.Xaml.Behaviors.Uwp.Managed
-Microsoft.NETCore.UniversalWindowsPlatform
+##Nuget Packages Installed         
+Template 10            
+Newtonsoft.Json           
+Mvvmlight           
+Microsoft.Xaml.Behaviors.Uwp.Managed              
+Microsoft.NETCore.UniversalWindowsPlatform            
  
 
 ####Git Clone
