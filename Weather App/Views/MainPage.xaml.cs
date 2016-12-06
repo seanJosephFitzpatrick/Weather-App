@@ -17,9 +17,6 @@ namespace Weather_App.Views
     public sealed partial class MainPage : Page
     {
 
-        private const string taskName = "WeatherBackgroundTask";
-        private const string taskEntryPoint = "BackgroundTasks.WeatherBackgroundTask";
-
         public MainPage()
         {
             InitializeComponent();
@@ -30,6 +27,9 @@ namespace Weather_App.Views
         {
             this.RegisterBackgroundTask();
         }
+
+        private const string taskName = "WeatherBackgroundTask";
+        private const string taskEntryPoint = "BackgroundTask.WeatherBackgroundTask";
 
         private async void RegisterBackgroundTask()
         {
@@ -69,8 +69,6 @@ namespace Weather_App.Views
                 return;
             }
         }
- 
-
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {

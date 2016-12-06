@@ -25,7 +25,7 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.WeatherBackgroundTask">
+        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTask.WeatherBackgroundTask">
           <BackgroundTasks>
             <Task Type="timer" />
           </BackgroundTasks>
