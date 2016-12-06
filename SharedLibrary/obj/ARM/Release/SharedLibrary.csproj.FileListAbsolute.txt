@@ -14,3 +14,4 @@ C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Release\p
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Release\qualifiers.txt
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Release\qualifiers.txt.intermediate
 C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Sean Fitzpatrick\Desktop\ui\Weather-App\SharedLibrary\obj\ARM\Release\SharedLibrary.csprojResolveAssemblyReference.cache

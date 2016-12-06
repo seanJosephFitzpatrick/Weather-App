@@ -22,14 +22,12 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ProgressRing x:ConnectionId='4' Name="progressRing" IsActive="False" Height="80" Width="80" Grid.RowSpan="2" />
-
-        <ListBox 
+        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                  ItemsSource="{Binding DayList}" SelectedItem="{Binding CurrentDay}" >
 
             <ListBox.Resources>
@@ -79,8 +77,7 @@
                     Read more at http://www.kunal-chowdhury.com/2009/05/what-is-virtualizing-stackpanel.html#oLQOSY1ZL7SWERDH.99
                     -->
 
-                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"
-                                            ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                    <VirtualizingStackPanel Margin="0,45,0,0" Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListBox.Resources>
             <ListBox.ItemsPanel>
@@ -107,6 +104,7 @@
                 </Rectangle.Fill>
 
             </Rectangle>
+            <ProgressRing x:ConnectionId='8' Name="progressRing" Foreground="White" IsActive="False" Height="80" Width="80" Grid.RowSpan="2" />
 
                 <StackPanel>
                 <StackPanel>
@@ -167,15 +165,15 @@
 
 
 
-            <controls:PageHeader x:ConnectionId='5' x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
+            <controls:PageHeader x:ConnectionId='4' x:Name="pageHeader" RelativePanel.AlignLeftWithPanel="True"
                              RelativePanel.AlignRightWithPanel="True"
                              RelativePanel.AlignTopWithPanel="True" Text="Main Page">
 
                 <!--  secondary commands  -->
                 <controls:PageHeader.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='6'                                         Label="Settings" />
-                    <AppBarButton x:ConnectionId='7'                                        Label="Privacy" />
-                    <AppBarButton x:ConnectionId='8'                                      Label="About" />
+                    <AppBarButton x:ConnectionId='5'                                         Label="Settings" />
+                    <AppBarButton x:ConnectionId='6'                                        Label="Privacy" />
+                    <AppBarButton x:ConnectionId='7'                                      Label="About" />
                 </controls:PageHeader.SecondaryCommands>
 
             </controls:PageHeader>
